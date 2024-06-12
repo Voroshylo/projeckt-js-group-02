@@ -1,5 +1,6 @@
+
 import Swiper from 'swiper';
-import 'swiper/swiper-bundle.min.css';
+import 'swiper/swiper-bundle.css'; // виправлений шлях до CSS файлу
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 

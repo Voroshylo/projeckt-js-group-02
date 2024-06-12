@@ -1,3 +1,4 @@
+
 .review-container {
   display: flex;
   align-items: center;
@@ -15,6 +16,8 @@
   line-height: 1.23;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center; /* Центрування тексту */
+  width: 100%;
 }
 
 .reviews-swiper {
@@ -30,29 +33,27 @@
   flex: 0 0 auto;
   width: 100%;
   box-sizing: border-box;
+  position: relative; /* Додаємо для позиціонування кнопок навігації */
+}
+
+.button-prev, .button-next {
+  display: flex;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(41, 41, 41, 0.30);
+  fill: transparent;
+  stroke: #fafafa;
 }
 
 .button-prev {
-  display: flex;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid rgba(41, 41, 41, 0.30);
-  fill: transparent;
-  stroke: #fafafa;
   transform: rotate(180deg);
-}
-
-.button-next {
-  display: flex;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid rgba(41, 41, 41, 0.30);
-  fill: transparent;
-  stroke: #fafafa;
 }
 
 .review-list {
   display: flex;
+  list-style: none; /* Видаляємо маркери списку */
+  padding: 0; /* Видаляємо відступи */
+  margin: 0; /* Видаляємо відступи */
 }
 
 .review-list-item {
@@ -65,6 +66,7 @@
   padding: 20px 16px;
   min-height: 238px;
   overflow: hidden;
+  position: relative; /* Для позиціонування кнопок навігації */
 }
 
 .review-section-text {
@@ -104,10 +106,8 @@
   display: flex;
   flex-direction: row;
   position: absolute;
-  top: 50%;
-  width: 100%;
-  justify-content: space-between;
-  transform: translateY(-50%);
+  bottom: 10px; /* Позиціонування у правому нижньому куті */
+  right: 10px;  /* Позиціонування у правому нижньому куті */
 }
 
 .review-icon-next, .review-icon-back {
