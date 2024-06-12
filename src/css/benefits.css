@@ -1,0 +1,89 @@
+/*=====MOBILE STYLES===== */
+
+.benefits {}
+
+.container {}
+
+.benefits-title {
+    font-family: Impact, sans-serif;
+    font-weight: 400;
+    font-size: 52px;
+    /* font-size: 108px; */
+    /* line-height: 1.15; */
+    line-height: 1.23;
+    /* letter-spacing: 0.02em; */
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #000;
+    /* max-width: 320px; */
+}
+
+.benefits-title-span {
+    color: #00B068;
+}
+
+.benefits-list {}
+
+.benefits-item {}
+
+.benefits-item-container {}
+
+.benefits-icon {}
+
+.benefits-item-title {}
+
+.benefits-text {}
+
+/* ==================================== */
+
+/*=====TABLET STYLES===== */
+
+@media screen and (min-width: 768px) {
+    .benefits {}
+
+    .container {}
+
+    .benefits-title {}
+
+    .benefits-title-span {}
+
+    .benefits-list {}
+
+    .benefits-item {}
+
+    .benefits-item-container {}
+
+    .benefits-icon {}
+
+    .benefits-item-title {}
+
+    .benefits-text {}
+}
+
+/* ==================================== */
+
+/*=====DEKSTOP STYLES===== */
+
+@media screen and (min-width: 1280px) {
+    .benefits {}
+
+    .container {}
+
+    .benefits-title {}
+
+    .benefits-title-span {}
+
+    .benefits-list {}
+
+    .benefits-item {}
+
+    .benefits-item-container {}
+
+    .benefits-icon {}
+
+    .benefits-item-title {}
+
+    .benefits-text {}
+}
+
+/* ==================================== */
