@@ -28,19 +28,22 @@
 }
 
 .faq-title {
-    color: var(--text-color);
+    font-family: Impact, sans-serif;
     font-weight: 400;
-    letter-spacing: 0.03em;
-    line-height: 123%;
-    max-width: 320px;
-    margin: 0;
+    font-size: 108px;
+    line-height: 1.24;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     margin-bottom: 40px;
-    text-align: left;
+    
 }
 
 .faq-title-span {
-    color: var(--accent-green);
+    color: #00B068;
+}
+
+.faq-item-title {
+    color: #00B068;
 }
 
 /* -------320-------- */
