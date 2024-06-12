@@ -1,0 +1,40 @@
+.review-container{
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+.review-section-title {
+color:  #292929;
+/* Mobile/h2-360 */
+font-family: Impact;
+font-size: 52px;
+font-style: normal;
+font-weight: 400;
+line-height: 1.23; 
+letter-spacing: 0/03em;
+text-transform: uppercase;
+}
+
+.button-prev {
+display: flex;
+padding: 12px;
+border-radius: 8px;
+border: 1px solid rgba(41, 41, 41, 0.30);
+fill: transparent;
+stroke: #fafafa;
+transform: rotate(180deg);
+}
+.button-next{
+display: flex;
+padding: 12px;
+border-radius: 8px;
+border: 1px solid rgba(41, 41, 41, 0.30);
+fill: transparent;
+stroke: #fafafa;
+}
+#reviews-list{
+display: flex;
+}
+/* reviews  */
+
