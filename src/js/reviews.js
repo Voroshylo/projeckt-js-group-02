@@ -1,6 +1,7 @@
-
+javascript
+Копіювати код
 import Swiper from 'swiper';
-import 'swiper/swiper-bundle.css'; // виправлений шлях до CSS файлу
+import 'swiper/swiper-bundle.css'; 
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
