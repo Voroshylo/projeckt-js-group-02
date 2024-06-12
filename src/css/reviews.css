@@ -4,7 +4,8 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  position: relative; /* Для позиціонування навігаційних стрілок */
+   position: relative;  
+  /* Для позиціонування навігаційних стрілок   */
 }
 
 .review-section-title {
@@ -125,4 +126,9 @@
   justify-content: center;
   width: 40px;
   height: 40px;
+}
+
+/* тимчасово,щоб бачити межі  */
+.review-container, .reviews-swiper, .review-list-item {
+  border: 1px solid red; /* Для відладки, щоб бачити межі елементів */
 }
