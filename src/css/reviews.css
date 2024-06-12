@@ -1,94 +1,63 @@
-.review-container{
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
+.review-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative; /* Для позиціонування навігаційних стрілок */
 }
+
 .review-section-title {
-color:  #292929;
-/* Mobile/h2-360 */
-font-family: Impact;
-font-size: 52px;
-font-style: normal;
-font-weight: 400;
-line-height: 1.23; 
-letter-spacing: 0/03em;
-text-transform: uppercase;
+  color: #292929;
+  font-family: Impact;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.23;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.reviews-swiper {
+  width: 100%;
+  overflow: hidden; /* Додаємо, щоб приховати зайвий контент */
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  flex: 0 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .button-prev {
-display: flex;
-padding: 12px;
-border-radius: 8px;
-border: 1px solid rgba(41, 41, 41, 0.30);
-fill: transparent;
-stroke: #fafafa;
-transform: rotate(180deg);
-}
-.button-next{
-display: flex;
-padding: 12px;
-border-radius: 8px;
-border: 1px solid rgba(41, 41, 41, 0.30);
-fill: transparent;
-stroke: #fafafa;
-}
-
-/* reviews  */
-
-.review-list{
-
-}
-
-.review-list-item{
-    border-radius: 16px;
-background:  #E4E5E6;
-
-
-
-
-
-}
-.review-section-text {
-  color: #141414;
-  font-family: 'Inter Tight';
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 18px;
-  margin-bottom: 40px;
-}
-
-.review-list-item {
-  max-width: 100%;
-  border-radius: 24px;
-  border: 1px solid rgba(122, 49, 69, 0.3);
-  background: #fbfbfb;
- 
-  min-height: 168px;
-  overflow: hidden;
-}
-
-.review-list-item:nth-child(2) {
-  display: none;
-}
-.review-avatar-text{
-    display: flex;
-
-    flex-wrap: nowrap;
-
-}
-
-.review-section-img {
   display: flex;
-  margin: 0 auto;
-  justify-content: center;
-  margin-bottom: 24px;
-  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-  border-radius: 50%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(41, 41, 41, 0.30);
+  fill: transparent;
+  stroke: #fafafa;
+  transform: rotate(180deg);
 }
 
+.button-next {
+  display: flex;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(41, 41, 41, 0.30);
+  fill: transparent;
+  stroke: #fafafa;
+}
+
+.review-list {
+  display: flex;
+}
 
 .review-list-item {
+  border-radius: 16px;
+  background: #E4E5E6;
   max-width: 100%;
   border-radius: 24px;
   border: 1px solid rgba(122, 49, 69, 0.3);
@@ -98,10 +67,19 @@ background:  #E4E5E6;
   overflow: hidden;
 }
 
-.review-list-item:nth-child(2) {
-  display: none;
+.review-section-text {
+  color: #141414;
+  font-family: 'Inter Tight';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  margin-bottom: 40px;
 }
 
+.review-avatar-text {
+  display: flex;
+  flex-wrap: nowrap;
+}
 
 .review-section-img {
   display: flex;
@@ -112,30 +90,39 @@ background:  #E4E5E6;
   border-radius: 50%;
 }
 
-.review-section-title{
-color: var #292929;
-font-family: Poppins;
-font-size: 16px;
-font-style: normal;
-font-weight: 600;
-line-height: 1.5;
-letter-spacing: 0.03em;
+.review-section-title {
+  color: #292929;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
 }
 
-
-
-
-
-
-
-
-
-
-.review-arrow-nav{
-display: flex;
-flex-direction: row;
-
+.review-arrow-nav {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  justify-content: space-between;
+  transform: translateY(-50%);
 }
-.review-icon-next {
-fill: black;
+
+.review-icon-next, .review-icon-back {
+  fill: black;
+}
+
+/* Навігаційні стрілки */
+.review-arrow-nav .button-prev,
+.review-arrow-nav .button-next {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
 }
