@@ -4,7 +4,8 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  position: relative; /* Для позиціонування навігаційних стрілок */
+   position: relative;  
+  /* Для позиціонування навігаційних стрілок   */
 }
 
 .review-section-title {
