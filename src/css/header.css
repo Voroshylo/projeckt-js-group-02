@@ -11,12 +11,15 @@ color:aquamarine;
     display: flex;
     /*  border-bottom: 1px solid #E7E9FC; */
     align-items: center;
+   
 }
 
 .header-navigation {
     display: flex;
     align-items: center;
     flex-grow: 1;
+    justify-content: space-between;
+    
     /* margin-right: 332px; */
     /*  justify-content: space-between; */
 }
@@ -55,11 +58,12 @@ color: var(--Accet-green, #00B068);
     text-transform: uppercase;
    
 }
-
+ 
 .nav-menu {
     display: flex;
     gap: 40px;
     /* padding: 24px 0; */
+   
 }
 
 .nav-link {
