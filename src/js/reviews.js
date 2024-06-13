@@ -62,7 +62,7 @@ function renderReviews(reviews) {
 // Функція для отримання відгуків з бекенду
 async function fetchReviews() {
   try {
-    const response = await fetch('https://your-backend-api.com/reviews');
+    const response = await fetch('https://???/...');
     if (!response.ok) {
       throw new Error('Failed to fetch reviews');
     }
