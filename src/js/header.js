@@ -21,6 +21,7 @@ export function changeThema(element) {
     const data = JSON.parse(localStorage.getItem("typeThema"));
     console.log("localStore Thema:", data.colorThema);
     if (data.colorThema == 'dark') {
+        
         if (nowThema.classList.contains("darkthema")) {
             nowThema.classList.remove("darkthema");
        }
