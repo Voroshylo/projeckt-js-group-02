@@ -1,3 +1,4 @@
+
 .header {
 color:aquamarine;
 }
@@ -11,7 +12,8 @@ color:aquamarine;
     display: flex;
     /*  border-bottom: 1px solid #E7E9FC; */
     align-items: center;
-   
+ /*   justify-content: left; */
+ 
 }
 
 .header-navigation {
@@ -102,4 +104,22 @@ color: var(--Accet-green, #00B068);
     line-height: 1.5;
     letter-spacing: 0.02em;
     /*          */
+}
+
+.darkthema {
+    color: #fff;
+    background-color: #000;
+
+
+}
+.lightthema {
+    color: #000;
+    background-color: #fff;
+}
+.switchThema {
+
+}
+.switchthema-icon {
+   height: 32px; 
+   width: 42px;
 }
