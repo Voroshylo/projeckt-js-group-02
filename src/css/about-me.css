@@ -1,0 +1,194 @@
+.section.about {
+  margin: 0 auto;
+  max-width: 335px;
+}
+.about-me-container {
+  width: 320px;
+  align-content: center;
+  margin: 0 auto;
+}
+.title {
+  text-align: left;
+  font-family: Impact;
+  font-size: 52px;
+  line-height: 64px;
+  letter-spacing: 1.8;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+.spanabout {
+  color: #00b068;
+}
+
+.about-photo img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  margin-bottom: 40px;
+}
+.title-about {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 40px; /* 125% */
+  letter-spacing: 0.5px;
+  margin-bottom: 32px;
+}
+.photo-back {
+  display: none;
+}
+.information-about {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+.information-about:not(:last-child) {
+  margin-bottom: 24px;
+}
+.title-about.education {
+  margin-top: 40px;
+}
+
+.about-me-item {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+}
+.about-me-item:last-child {
+  margin-bottom: 40px;
+}
+.about-me-item.bl {
+  margin-bottom: 0px;
+}
+.about-me-item::before {
+  content: '•';
+  color: #00b068;
+  margin-right: 18px;
+  width: 4px;
+  height: 4px;
+}
+.section.about {
+  margin-bottom: 80px;
+  margin-top: 80px;
+}
+.about-me-briefcase,
+.about-role {
+  width: 320px;
+}
+
+@media screen and (min-width: 768px) {
+  .section.about {
+    margin-bottom: 124px;
+    margin-top: 124px;
+    max-width: 768px;
+  }
+  .about-me-container {
+    align-content: center;
+    width: auto;
+  }
+  .title {
+    font-size: 108px;
+    line-height: 1.15;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+  }
+  .about-me-container.container {
+    padding: 0 32px;
+    max-width: 768px;
+  }
+  .about-photo img {
+    border-radius: 16px;
+    width: 336px;
+    margin-bottom: 60px;
+    padding-top: 336px;
+  }
+  .container-photo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .title-about {
+    font-size: 36px;
+    letter-spacing: 0.5px;
+    line-height: 48px;
+    text-align: start;
+    margin-bottom: 32px;
+  }
+  .information-about {
+    margin-bottom: 24px;
+    width: 336px;
+  }
+  .wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+  }
+  .title-about.education {
+    margin-top: 0;
+  }
+  .wrapper-briefcase {
+    display: flex;
+    gap: 32px;
+    position: relative;
+  }
+  .about-me-briefcase,
+  .about-role {
+    width: 336px;
+  }
+  .photo-back {
+    float: right;
+    right: 32px;
+    bottom: 156px;
+    display: flex;
+    padding: 26.378px 0px 0px 3.298px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .wrapper {
+    justify-content: end;
+  }
+  .about-me-container.container {
+    max-width: 1280px;
+  }
+  .information-about {
+    width: 488px;
+    margin-bottom: 0px;
+  }
+  .about-photo img {
+    margin-right: 136px;
+    border-radius: 16px;
+    width: 384px;
+    padding-top: 272px;
+    margin-bottom: 80px;
+  }
+
+  .wrapper-briefcase {
+    gap: 160px;
+  }
+  .about-role {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .photo-back {
+    float: right;
+    display: inline-flex;
+    padding: 30.149px 0px 0px 3.77px;
+    justify-content: center;
+    align-items: center;
+  }
+  .wrapper-briefcase {
+    margin-left: 180px;
+  }
+  .about-me-briefcase {
+    width: 384px;
+  }
+  .section.about {
+    max-width: 1280px;
+  }
+}
