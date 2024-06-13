@@ -1,10 +1,17 @@
 
+.reviews {
+  display:flex; 
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+  height: 360px;
+}
+
 .review-container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-   position: relative;  
   /* Для позиціонування навігаційних стрілок   */
 }
 
@@ -16,14 +23,15 @@
   font-weight: 400;
   line-height: 1.23;
   letter-spacing: 0.03em;
-  text-transform: uppercase;
-  text-align: center; /* Центрування тексту */
+  text-align: center; 
   width: 100%;
 }
 
 .reviews-swiper {
   width: 100%;
   overflow: hidden; /* Додаємо, щоб приховати зайвий контент */
+  display: flex;
+  flex-direction: column;
 }
 
 .swiper-wrapper {
@@ -34,30 +42,29 @@
   flex: 0 0 auto;
   width: 100%;
   box-sizing: border-box;
-  position: relative; /* Додаємо для позиціонування кнопок навігації */
+  
 }
-
+.review-arrow-nav{
+  display: flex;
+  justify-content:flex-end;
+}
 .button-prev, .button-next {
   display: flex;
   padding: 12px;
+  width: 40px;
+  height: 40px;
   border-radius: 8px;
   border: 1px solid rgba(41, 41, 41, 0.30);
   fill: transparent;
   stroke: #fafafa;
 }
-
-.button-prev {
-  transform: rotate(180deg);
-}
-
-.review-list {
+.review-list{
   display: flex;
-  list-style: none; /* Видаляємо маркери списку */
-  padding: 0; /* Видаляємо відступи */
-  margin: 0; /* Видаляємо відступи */
+  
 }
-
-.review-list-item {
+.review-list-item{
+  display: flex;
+  flex-direction: column;
   border-radius: 16px;
   background: #E4E5E6;
   max-width: 100%;
@@ -67,27 +74,28 @@
   padding: 20px 16px;
   min-height: 238px;
   overflow: hidden;
-  position: relative; /* Для позиціонування кнопок навігації */
+  
 }
-
 .review-section-text {
-  color: #141414;
-  font-family: 'Inter Tight';
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 18px;
-  margin-bottom: 40px;
+color:  #292929;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 300;
+line-height: 1.5;
+letter-spacing: 0.03em;
+align-self: stretch;
 }
 
 .review-avatar-text {
   display: flex;
   flex-wrap: nowrap;
 }
-
 .review-section-img {
   display: flex;
-  margin: 0 auto;
-  justify-content: center;
+  width: 40px;
+  height: 40px;
+  justify-content: flex-start;
   margin-bottom: 24px;
   transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
   border-radius: 50%;
@@ -106,10 +114,7 @@
 .review-arrow-nav {
   display: flex;
   flex-direction: row;
-  position: absolute;
-  bottom: 10px; /* Позиціонування у правому нижньому куті */
-  right: 10px;  /* Позиціонування у правому нижньому куті */
-}
+  }
 
 .review-icon-next, .review-icon-back {
   fill: black;
@@ -132,3 +137,30 @@
 .review-container, .reviews-swiper, .review-list-item {
   border: 1px solid red; /* Для відладки, щоб бачити межі елементів */
 }
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+
+  .reviews {
+  display:flex; 
+  justify-content: center;
+  align-items: center;
+  width: 768px;
+  height: 288px;
+}
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+.reviews {
+  display:flex; 
+  justify-content: center;
+  align-items: center;
+  width: 1280px;
+  height: 500px;
+}
+  }
