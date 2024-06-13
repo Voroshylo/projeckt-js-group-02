@@ -1,3 +1,21 @@
+.faq-title {
+    font-family: Impact, sans-serif;
+    font-weight: 400;
+    font-size: 108px;
+    line-height: 1.24;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+
+}
+
+.faq-title-span {
+    color: #00B068;
+}
+
+.faq-item-title {
+    color: #00B068;
+}
 
 
 /* --------- */
@@ -7,21 +25,15 @@
 
 .faq-title {
     font-family: Impact, sans-serif;
+    color: var(--text-color);
     font-weight: 400;
-    font-size: 108px;
-    line-height: 1.24;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.03em;
+    line-height: 123%;
+    max-width: 320px;
+    margin: 0;
     text-transform: uppercase;
     margin-bottom: 40px;
-    
-}
-
-.faq-title-span {
-    color: #00B068;
-}
-
-.faq-item-title {
-    color: #00B068;
+    text-align: left;
 }
 
 /* -------320-------- */

@@ -20,7 +20,7 @@ const changeArrovSvg = event => {
 
   const itemArrowSvgEL = itemWrapEL.querySelector('.faq-scroll-button-icon');
 
-  const svgID = isActive ? '#icon-Arrow-Up-Quetions' : '#icon-Arrow-Down-Quetions';
+  const svgID = isActive ? '#icon-Arrow-Up-Quetion' : '#icon-Arrow-Down-Quetions';
 
   itemArrowSvgEL.innerHTML = `<use href="${spriteSvg}${svgID}"></use>`;
 };
