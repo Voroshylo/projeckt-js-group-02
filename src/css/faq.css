@@ -1,26 +1,4 @@
-/* @media only screen and (min-width: 1280px) {
-  
-} */
-@media only screen and (min-width: 1280px) {
-    .wrapper-faq {
-        background-image: url('../img/faq/faq-desk.png');
-        background-repeat: no-repeat;
-        background-position: bottom 0px left 0px;
-    }
 
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-        .wrapper-faq {
-            background-image: url('../img/faq/faq-desk-2x.png');
-            background-size: 50%;
-        }
-    }
-}
-
-.ac .item-title-wrap.ac-trigger::after {
-    content: '';
-}
 
 /* --------- */
 .faq-scroll-button-icon {
@@ -146,4 +124,28 @@
     .faq-list .faq-item-title {
         max-width: 488px;
     }
+}
+
+/* @media only screen and (min-width: 1280px) {
+  
+} */
+@media only screen and (min-width: 1280px) {
+    .wrapper-faq {
+        background-image: url('../img/faq/faq-desk.png');
+        background-repeat: no-repeat;
+        background-position: bottom 0px left 0px;
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .wrapper-faq {
+            background-image: url('../img/faq/faq-desk-2x.png');
+            background-size: 50%;
+        }
+    }
+}
+
+.ac .item-title-wrap.ac-trigger::after {
+    content: '';
 }
