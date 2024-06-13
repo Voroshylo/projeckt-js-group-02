@@ -2,7 +2,7 @@ import Swiper from 'swiper';
 import 'swiper/swiper-bundle.css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
-import { Navigation, Keyboard } from 'swiper/modules';
+import { Navigation, Keyboard, Scrollbar} from 'swiper/modules';
 
 // Ініціалізація Swiper
 const swiper = new Swiper('.reviews-swiper', {
@@ -12,29 +12,32 @@ const swiper = new Swiper('.reviews-swiper', {
     nextEl: '.button-next',
     prevEl: '.button-prev',
   },
+
+
+ 
   keyboard: {
     enabled: true,
     onlyInViewport: true,
   },
-  modules: [Navigation, Keyboard],
+  modules: [Navigation, Keyboard, Scrollbar ],
   breakpoints: {
     // when window width is >= 320px
     320: {
       slidesPerView: 1,
-      spaceBetween: 
+      // spaceBetween: 
     },
-    // when window width is >= 480px
-    480: {
+    // when window width is >= 768px
+    768: {
       slidesPerView: 1,
-      spaceBetween: 
+      // spaceBetween: 
     },
-    // when window width is >= 640px
-    640: {
+    // when window width is >= 1280px
+    1280: {
       slidesPerView: 2,
       spaceBetween: 32
     }
   }
-});
+  });
 
 // Функція для відображення повідомлення про помилку
 function showError(message) {
@@ -50,10 +53,10 @@ function cardTemplate(review) {
           <p class="review-section-text">${review.author}</p>
           <div class="review-avatar-text">
         <img
-         srcset="${review.avatar_url}"
-         class="review-section-img"
-         src="${review.avatar_url}"
-         alt="Avatar"/>
+        srcset="${review.avatar_url}"
+        class="review-section-img"
+        src="${review.avatar_url}"
+        alt="Avatar"/>
             <h3 class="review-section-title">${review.review}</h3>
           </div>
         </li>`;
