@@ -1,130 +1,169 @@
-.footer {
-    text-align: center;
-    background-color: #f1f1f1;
-    position: relative;
-    width: 100%;
-    bottom: 0;
-}
-
-.footer-logo {
-    font-family: Impact, sans-serif;
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 32px;
-    letter-spacing: 1.5px;
-    text-align: left;
-    font-weight: bold;
-}
-
-.span {
-    color: #00B068;
-}
-
-.footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer li {
-    display: inline;
-}
-
-.footer a {
-    text-decoration: none;
-    color: #000;
-}
-
-.footer a:hover {
-    text-decoration: underline;
-}
-
-
-
-/* мобільна версія */
-
-@media (max-width: 360px) {
     .footer {
-        padding: 40px 20px 24px 20px;
+        text-align: center;
+        position: relative;
+        width: 100%;
+        bottom: 0;
+        padding: 20px;
         border: 1px 0px 0px 0px;
         border-top: 1px solid #E4E5E6
     }
 
     .footer-logo {
-        font-family: Impact;
+        font-family: Impact, sans-serif;
         font-size: 32px;
         font-weight: 400;
         line-height: 32px;
         letter-spacing: 1.5px;
         text-align: left;
-        padding-bottom: 32px;
+        text-decoration: none;
     }
 
-    .footer ul {
-        text-align: left;
-        padding-bottom: 40px;
-
+    .span {
+        color: #00B068;
     }
 
-    .footer li {
-        font-family: Poppins;
+    .footer-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-line {
+        display: inline;
+        font-family: Poppins, sans-serif;
         font-size: 16px;
         font-weight: 300;
         line-height: 24px;
         letter-spacing: 0.5px;
         text-align: left;
-        display: block;
-        padding-bottom: 24px;
     }
 
-    .footer li:last-child {
-        padding-bottom: 0;
+    .footer-link {
+        text-decoration: none;
+        color: #000;
     }
 
-    .footer p {
-        font-family: Poppins;
+    .footer-link:hover {
+        color: #00B068;
+    }
+
+    .footer-text {
+        font-family: Poppins, sans-serif;
         font-size: 16px;
         font-weight: 300;
         line-height: 24px;
         letter-spacing: 0.5px;
         text-align: center;
-        margin: 0 auto;
+        margin: 10px 0 0 0;
     }
-}
 
-          /* Версія для планшетів */
+    /* Мобільна версія */
+    @media (max-width: 360px) {
+        .footer {
+            padding: 40px 20px 24px 20px;
+        }
 
-          @media (min-width: 361px) and (max-width: 768px) {
-              .footer {
-                  padding: 40px 32px 24px 32px;
-              }
-    
-              .footer-logo {
-                  text-align: left;
-                  padding-bottom: 32px;
-              }
-    
-              .footer ul {
-                  display: flex;
-                  gap: 40px;
-    
-              }
-    
-              .footer li {
-                  font-family: Poppins, sans-serif;
-                  font-size: 16px;
-                  font-weight: 300;
-                  line-height: 24px;
-                  letter-spacing: 0.5px;
-                  text-align: left;
-                  display: block;
-                  padding-bottom: 0;
-              }
-    
-              .footer p {
-                  margin: 0;
-                  text-align: right;
-                  padding-top: 40px;
-                  padding-right: 32px;
-              }
-          }
+        .footer-logo {
+            text-align: left;
+            padding-bottom: 32px;
+        }
+
+        .footer-list {
+            text-align: left;
+            padding-bottom: 40px;
+
+        }
+
+        .footer-line {
+            display: block;
+            padding-bottom: 24px;
+        }
+
+        .footer li:last-child {
+            padding-bottom: 0;
+        }
+
+        .footer-text {
+            text-align: center;
+            margin: 0 auto;
+            white-space: pre-line;
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+    }
+
+
+    /* Версія для планшетів */
+
+    @media (min-width: 361px) and (max-width: 768px) {
+        .footer {
+            padding: 40px 32px 24px 32px;
+        }
+
+        .footer-logo {
+            text-align: left;
+            padding-bottom: 32px;
+        }
+
+        .footer-list {
+            display: flex;
+            gap: 40px;
+        }
+
+        .footer-line {
+            padding-bottom: 0;
+        }
+
+        .footer-text {
+            margin: 0;
+            text-align: right;
+            padding-top: 40px;
+            padding-right: 32px;
+        }
+    }
+
+    /* Повноекранна версія */
+
+    @media (min-width: 769px) {
+
+        .footer-content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 32px;
+        }
+
+        .footer-logo {
+            font-size: 32px;
+            line-height: 32px;
+            text-align: left;
+
+        }
+
+        .footer-line {
+            margin-right: 40px;
+        }
+
+        .footer li:last-child {
+            margin-right: 0;
+        }
+
+        .footer-link {
+            font-family: Poppins, sans-serif;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 24px;
+            letter-spacing: 0.5px;
+            text-align: left;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .footer-text {
+            font-size: 16px;
+            margin: 0 auto;
+            text-align: right;
+            padding-right: 32px;
+        }
+    }

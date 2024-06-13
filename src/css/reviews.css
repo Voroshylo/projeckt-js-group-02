@@ -1,54 +1,75 @@
-.review-container{
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
+
+.review-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+   position: relative;  
+  /* Для позиціонування навігаційних стрілок   */
 }
+
 .review-section-title {
-color:  #292929;
-/* Mobile/h2-360 */
-font-family: Impact;
-font-size: 52px;
-font-style: normal;
-font-weight: 400;
-line-height: 1.23; 
-letter-spacing: 0/03em;
-text-transform: uppercase;
+  color: #292929;
+  font-family: Impact;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.23;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center; /* Центрування тексту */
+  width: 100%;
+}
+
+.reviews-swiper {
+  width: 100%;
+  overflow: hidden; /* Додаємо, щоб приховати зайвий контент */
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  flex: 0 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative; /* Додаємо для позиціонування кнопок навігації */
+}
+
+.button-prev, .button-next {
+  display: flex;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(41, 41, 41, 0.30);
+  fill: transparent;
+  stroke: #fafafa;
 }
 
 .button-prev {
-display: flex;
-padding: 12px;
-border-radius: 8px;
-border: 1px solid rgba(41, 41, 41, 0.30);
-fill: transparent;
-stroke: #fafafa;
-transform: rotate(180deg);
-}
-.button-next{
-display: flex;
-padding: 12px;
-border-radius: 8px;
-border: 1px solid rgba(41, 41, 41, 0.30);
-fill: transparent;
-stroke: #fafafa;
+  transform: rotate(180deg);
 }
 
-/* reviews  */
-
-.review-list{
-
+.review-list {
+  display: flex;
+  list-style: none; /* Видаляємо маркери списку */
+  padding: 0; /* Видаляємо відступи */
+  margin: 0; /* Видаляємо відступи */
 }
 
-.review-list-item{
-    border-radius: 16px;
-background:  #E4E5E6;
-
-
-
-
-
+.review-list-item {
+  border-radius: 16px;
+  background: #E4E5E6;
+  max-width: 100%;
+  border-radius: 24px;
+  border: 1px solid rgba(122, 49, 69, 0.3);
+  background: #fbfbfb;
+  padding: 20px 16px;
+  min-height: 238px;
+  overflow: hidden;
+  position: relative; /* Для позиціонування кнопок навігації */
 }
+
 .review-section-text {
   color: #141414;
   font-family: 'Inter Tight';
@@ -58,24 +79,9 @@ background:  #E4E5E6;
   margin-bottom: 40px;
 }
 
-.review-list-item {
-  max-width: 100%;
-  border-radius: 24px;
-  border: 1px solid rgba(122, 49, 69, 0.3);
-  background: #fbfbfb;
- 
-  min-height: 168px;
-  overflow: hidden;
-}
-
-.review-list-item:nth-child(2) {
-  display: none;
-}
-.review-avatar-text{
-    display: flex;
-
-    flex-wrap: nowrap;
-
+.review-avatar-text {
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .review-section-img {
@@ -87,67 +93,42 @@ background:  #E4E5E6;
   border-radius: 50%;
 }
 
-
-.review-list-item {
-  max-width: 100%;
-  border-radius: 24px;
-  border: 1px solid rgba(122, 49, 69, 0.3);
-  background: #fbfbfb;
-  padding: 20px 16px;
-  min-height: 238px;
-  overflow: hidden;
+.review-section-title {
+  color: #292929;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
 }
 
-.review-list-item:nth-child(2) {
-  display: none;
-}
-
-
-.review-section-img {
+.review-arrow-nav {
   display: flex;
-  margin: 0 auto;
-  justify-content: center;
-  margin-bottom: 24px;
-  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  flex-direction: row;
+  position: absolute;
+  bottom: 10px; /* Позиціонування у правому нижньому куті */
+  right: 10px;  /* Позиціонування у правому нижньому куті */
+}
+
+.review-icon-next, .review-icon-back {
+  fill: black;
+}
+
+/* Навігаційні стрілки */
+.review-arrow-nav .button-prev,
+.review-arrow-nav .button-next {
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
 }
 
-.review-section-title{
-color: var #292929;
-font-family: Poppins;
-font-size: 16px;
-font-style: normal;
-font-weight: 600;
-line-height: 1.5;
-letter-spacing: 0.03em;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.review-arrow-nav{
-display: flex;
-flex-direction: row;
-
-}
-.review-icon-next {
-fill: black;
+/* тимчасово,щоб бачити межі  */
+.review-container, .reviews-swiper, .review-list-item {
+  border: 1px solid red; /* Для відладки, щоб бачити межі елементів */
 }
