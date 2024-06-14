@@ -1,4 +1,4 @@
-   .footer {
+   .footer-blok {
        text-align: center;
        position: relative;
        width: 100%;
@@ -68,7 +68,7 @@
    /* Мобільна версія */
 
    @media (max-width: 360px) {
-       .footer {
+       .footer-blok {
            padding: 40px 20px 24px 20px;
        }
 
@@ -107,7 +107,7 @@
    /* Версія для планшетів */
 
    @media (min-width: 361px) and (max-width: 768px) {
-       .footer {
+       .footer-blok {
            padding: 40px 32px 24px 32px;
        }
 
@@ -181,3 +181,20 @@
            padding-right: 32px;
        }
    }
+
+         /* Темна тема */
+         
+         .dark-theme {
+             background-color: #000;
+             color: #fff;
+         }
+    
+         .dark-theme .footer-logo,
+         .dark-theme .footer-link,
+         .dark-theme .footer-text {
+             color: #fff;
+         }
+    
+         .dark-theme .footer-link:hover {
+             color: #00B068;
+         }
