@@ -12,9 +12,6 @@ const swiper = new Swiper('.reviews-swiper', {
     nextEl: '.button-next',
     prevEl: '.button-prev',
   },
-
-
- 
   keyboard: {
     enabled: true,
     onlyInViewport: true,
@@ -50,14 +47,14 @@ function showError(message) {
 function cardTemplate(review) {
   console.log(review);
   return `<li class="swiper-slide review-list-item">
-          <p class="review-section-text">${review.author}</p>
+          <p class="review-section-text">${review.review}</p>
           <div class="review-avatar-text">
         <img
         srcset="${review.avatar_url}"
         class="review-section-img"
         src="${review.avatar_url}"
         alt="Avatar"/>
-            <h3 class="review-section-title">${review.review}</h3>
+            <h3 class="review-section-title">${review.author}</h3>
           </div>
         </li>`;
 }

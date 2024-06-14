@@ -4,16 +4,16 @@
   justify-content: center;
   align-items: center;
   width: 320px;
-  height: 360px;
+  
 }
 
-/* .review-container {
+ .review-container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   
-} */
+} 
 
 .review-section-title {
   color: #292929;
@@ -28,7 +28,6 @@
 }
 
 .reviews-swiper {
-  width: 100%;
   overflow: hidden; /* Додаємо, щоб приховати зайвий контент */
   display: flex;
   flex-direction: column;
@@ -39,10 +38,7 @@
 }
 
 .swiper-slide {
-  flex: 0 0 auto;
-  width: 100%;
-  box-sizing: border-box;
-  
+  display: flex; 
 }
 .review-arrow-nav{
   display: flex;
@@ -53,10 +49,11 @@
   padding: 12px;
   width: 40px;
   height: 40px;
-  border-radius: 8px;
-  border: 1px solid rgba(41, 41, 41, 0.30);
   fill: transparent;
   stroke: #fafafa;
+  border-radius: 8px;
+  border: 1px solid rgba(41, 41, 41, 0.30);
+  gap: 10px ;
 }
 .review-list{
   display: flex;
@@ -65,14 +62,15 @@
 .review-list-item{
   display: flex;
   flex-direction: column;
+  gap: 24px;
   border-radius: 16px;
   background: #E4E5E6;
   max-width: 100%;
   border-radius: 24px;
   border: 1px solid rgba(122, 49, 69, 0.3);
-  background: #fbfbfb;
-  padding: 20px 16px;
-  min-height: 238px;
+  padding: 32px;
+  min-height: 296px;
+  width: 320px;
   overflow: hidden;
   
 }
@@ -84,12 +82,18 @@ font-style: normal;
 font-weight: 300;
 line-height: 1.5;
 letter-spacing: 0.03em;
-align-self: stretch;
+
 }
 
 .review-avatar-text {
   display: flex;
+  flex-direction: row;
   flex-wrap: nowrap;
+  column-gap: 16px;
+  margin-top: 24px;
+  width: 40px;
+  height: 40px;
+
 }
 .review-section-img {
   display: flex;
@@ -111,13 +115,11 @@ align-self: stretch;
   letter-spacing: 0.03em;
 }
 
-.review-arrow-nav {
-  display: flex;
-  flex-direction: row;
-  }
+
 
 .review-icon-next, .review-icon-back {
   fill: black;
+
 }
 
 /* Навігаційні стрілки */
@@ -133,10 +135,13 @@ align-self: stretch;
   height: 40px;
 }
 
-/* тимчасово,щоб бачити межі  */
-.review-container, .reviews-swiper, .review-list-item {
-  border: 1px solid red; /* Для відладки, щоб бачити межі елементів */
+.review-arrow-nav{
+  display:flex;
+  flex-direction: row;
+  column-gap: 16px;
+  justify-content: flex-end;
 }
+
 
 @media screen and (min-width: 768px) {
   .container {
