@@ -111,6 +111,17 @@
 
 }
 
+.review-section-text {
+  color: #292929;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  align-self: stretch;
+}
+
 .review-avatar-text {
   display: flex;
   align-items: center;
@@ -139,6 +150,10 @@
   letter-spacing: 0.03em;
 }
 
+.review-arrow-nav {
+  display: flex;
+  flex-direction: row;
+}
 
 
 /* .review-icon-next,

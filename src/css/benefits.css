@@ -125,24 +125,25 @@
         }
     } */
 
-    /* .benefits {
+    .benefits {
         position: relative;
     }
 
     .benefits-image {
         display: block;
         position: absolute;
-        top: 0;
-        right: 0;
+        /* top: 32px;
+        right: 0; */
         left: 754px;
         bottom: 760px;
-    } */
+    }
 
-    /* @media screen and (min-width: 1281px; ) {
+    @media screen and (min-width: 1281px) {
         .benefits-image {
-            left: auto;
+            left: 55%;
+            right: 32px
         }
-    } */
+    }
 
 
     .benefits-title {
