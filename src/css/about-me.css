@@ -2,6 +2,7 @@
   margin: 0 auto;
   max-width: 335px;
 }
+
 .about-me-container {
   width: 320px;
   align-content: center;
@@ -71,8 +72,6 @@
   height: 4px;
 }
 .section.about {
-  margin-bottom: 80px;
-  margin-top: 80px;
 }
 .about-me-briefcase,
 .about-role {
