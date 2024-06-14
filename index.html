@@ -15,7 +15,7 @@
     <script type="module" crossorigin src="/projeckt-js-group-02/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/projeckt-js-group-02/assets/vendor-655b9ae0.js">
     <link rel="stylesheet" href="/projeckt-js-group-02/assets/vendor-82a7aa7f.css">
-    <link rel="stylesheet" href="/projeckt-js-group-02/assets/index-05fa264c.css">
+    <link rel="stylesheet" href="/projeckt-js-group-02/assets/index-10281492.css">
   </head>
   <body>
     <header class="home-header">
@@ -696,7 +696,86 @@
   </div>
 </section>
 
-      
+      <section class="Work-Together">
+    <div class="Container">
+      <h2 class="Work-TogetherTitle">
+        LET'S <span class="WorkWord">WORK </span
+        ><span class="NewLine">TOGETHER</span>
+      </h2>
+      <h3 class="Work-Together-text">Contact me to transform your ideas into exceptional solutions.</h3>
+      <ul class="ContactsList">
+        <li class="ContactItem">
+          <svg class="Contact-icon" width="24" height="24">
+            <use href="/projeckt-js-group-02/assets/sprite-2af47d92.svg#icon-phone-lets-work-together"></use>
+          </svg>  
+          <a class="ContactLink" href="tel:+380904567890">+38 090 456 78 90</a>
+        </li>
+        <li class="ContactItem">
+            <svg class="Contact-icon" width="24" height="24">
+                <use href="/projeckt-js-group-02/assets/sprite-2af47d92.svg#icon-mail-lets-work-together"></use>
+              </svg> 
+          <a class="ContactLink" href="mailto:lloydjefferson@gmail.com">
+            lloydjefferson@gmail.com</a>
+        </li>
+        <li class="ContactItem">
+            <svg class="Contact-icon" width="24" height="24">
+                <use href="/projeckt-js-group-02/assets/sprite-2af47d92.svg#icon-location-lets-work-together"></use>
+              </svg>
+          <a class="ContactLink" href="https://www.google.com/maps/search/?api=1&query=USA,+New+York" target="_blank">
+            USA, New York</a>
+        </li>
+      </ul>
+      <form id="Work-Together-Form" class="Filling-Form" autocomplete="off">
+        <div class="Filling-Input-Item">
+            <input
+              class="Filling-Input"
+              type="email"
+              name="email"
+              pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+              placeholder="Your email*"
+              required
+            />
+            <p class="Filling-Result-Msg"></p>
+            </div>
+            <div class="Filling-Input-Item">
+            <input
+              class="Filling-Input2"
+              type="text"
+              name="comment"
+              pattern="[\S\s]+[\S]+"
+              placeholder="Message"
+              data-value
+              required
+            />
+        </div>
+        <button class="SubmitBtn" type="submit">SEND MESSAGE</button>
+      </form>
+    </div>
+    </section>
+      <div class="Work-Together-ModalWrapper">
+        <div class="Container Work-Together-ModalContainer">
+          <div class="Work-Together-Modal">
+            <button class="Work-Together-ModalClose" type="button">
+              <svg
+                class="Work-Together-CloseIcon"
+                width="24"
+                height="24"
+                aria-label="close"
+              >
+                <use href="./img/icons.svg#icon-Vector-close-modal-lets-work"></use>
+              </svg>
+            </button>
+            <ul class="Work-Together-ModalList">
+              <li class="Work-Together-ModalTitle">
+                <h2 id="Work-Together-ModalRespTitle"></h2>
+              </li>
+              <li class="Work-Together-ModalText">
+                <p id="Work-Together-ModalRespMessage"></p>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </div>
     </main>
     <footer id="footer">
     <div class="footer-blok container">
