@@ -1,10 +1,10 @@
-
 .reviews {
-  display:flex; 
+  display: flex;
   justify-content: center;
   align-items: center;
-  width: 320px;
-  height: 360px;
+  /* width: 320px; */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .review-container {
@@ -12,7 +12,8 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  /* Для позиціонування навігаційних стрілок   */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .review-section-title {
@@ -23,74 +24,88 @@
   font-weight: 400;
   line-height: 1.23;
   letter-spacing: 0.03em;
-  text-align: center; 
+  text-align: center;
   width: 100%;
+  margin-bottom: 40px;
 }
 
 .reviews-swiper {
   width: 100%;
-  overflow: hidden; /* Додаємо, щоб приховати зайвий контент */
+  overflow: hidden;
+  /* Додаємо, щоб приховати зайвий контент */
   display: flex;
   flex-direction: column;
 }
 
 .swiper-wrapper {
   display: flex;
+
 }
 
 .swiper-slide {
-  flex: 0 0 auto;
-  width: 100%;
-  box-sizing: border-box;
-  
-}
-.review-arrow-nav{
   display: flex;
-  justify-content:flex-end;
+  justify-content: center;
+  background-color: #797979;
+  box-sizing: border-box;
 }
-.button-prev, .button-next {
+
+.review-arrow-nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-prev,
+.button-next {
   display: flex;
   padding: 12px;
   width: 40px;
   height: 40px;
-  border-radius: 8px;
-  border: 1px solid rgba(41, 41, 41, 0.30);
   fill: transparent;
   stroke: #fafafa;
+  border-radius: 8px;
+  border: 1px solid rgba(41, 41, 41, 0.30);
+  gap: 10px;
 }
-.review-list{
+
+.review-list {
   display: flex;
-  
 }
-.review-list-item{
+
+.review-list-item {
   display: flex;
   flex-direction: column;
+  gap: 24px;
   border-radius: 16px;
   background: #E4E5E6;
   max-width: 100%;
   border-radius: 24px;
   border: 1px solid rgba(122, 49, 69, 0.3);
-  background: #fbfbfb;
-  padding: 20px 16px;
-  min-height: 238px;
+  padding: 32px;
+  min-height: 296px;
+  width: 100%;
+  /* Встановлення ширини в 100% для адаптивності */
+  max-width: 320px;
+  /* Встановлення максимального розміру */
   overflow: hidden;
-  
+
 }
+
 .review-section-text {
-color:  #292929;
-font-family: Poppins;
-font-size: 16px;
-font-style: normal;
-font-weight: 300;
-line-height: 1.5;
-letter-spacing: 0.03em;
-align-self: stretch;
+  color: #292929;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  align-self: stretch;
 }
 
 .review-avatar-text {
   display: flex;
   flex-wrap: nowrap;
 }
+
 .review-section-img {
   display: flex;
   width: 40px;
@@ -114,17 +129,20 @@ align-self: stretch;
 .review-arrow-nav {
   display: flex;
   flex-direction: row;
-  }
+}
 
-.review-icon-next, .review-icon-back {
+.review-icon-next,
+.review-icon-back {
   fill: black;
+
 }
 
 /* Навігаційні стрілки */
 .review-arrow-nav .button-prev,
 .review-arrow-nav .button-next {
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
+  border-radius: 8px;
+  border: 1px solid rgba(41, 41, 41, 0.30);
+  border-radius: 20%;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -134,9 +152,21 @@ align-self: stretch;
 }
 
 /* тимчасово,щоб бачити межі  */
-.review-container, .reviews-swiper, .review-list-item {
-  border: 1px solid red; /* Для відладки, щоб бачити межі елементів */
+.review-container,
+.reviews-swiper,
+.review-list-item {
+  border: 1px solid red;
+  /* Для відладки,
+  щоб бачити межі елементів */
 }
+
+.review-arrow-nav {
+  display: flex;
+  flex-direction: row;
+  column-gap: 16px;
+  justify-content: flex-end;
+}
+
 
 @media screen and (min-width: 768px) {
   .container {
@@ -144,23 +174,24 @@ align-self: stretch;
   }
 
   .reviews {
-  display:flex; 
-  justify-content: center;
-  align-items: center;
-  width: 768px;
-  height: 288px;
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 768px;
+    height: 288px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
   .container {
     max-width: 1280px;
   }
-.reviews {
-  display:flex; 
-  justify-content: center;
-  align-items: center;
-  width: 1280px;
-  height: 500px;
-}
+
+  .reviews {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1280px;
+    height: 500px;
   }
+}
