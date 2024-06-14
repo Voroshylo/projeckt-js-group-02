@@ -7,13 +7,13 @@
   height: 360px;
 }
 
-.review-container {
+/* .review-container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  /* Для позиціонування навігаційних стрілок   */
-}
+  
+} */
 
 .review-section-title {
   color: #292929;
