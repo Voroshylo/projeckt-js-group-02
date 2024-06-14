@@ -21,12 +21,12 @@ const swiper = new Swiper('.reviews-swiper', {
     // when window width is >= 320px
     320: {
       slidesPerView: 1,
-      // spaceBetween: 
+      
     },
     // when window width is >= 768px
     768: {
       slidesPerView: 1,
-      // spaceBetween: 
+      
     },
     // when window width is >= 1280px
     1280: {

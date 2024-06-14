@@ -3,16 +3,18 @@
   display:flex; 
   justify-content: center;
   align-items: center;
-  width: 320px;
-  
+  /* width: 320px; */
+  width: 100%;
+  box-sizing: border-box; 
 }
 
- .review-container {
+.review-container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  
+  width: 100%;
+  box-sizing: border-box;
 } 
 
 .review-section-title {
@@ -25,24 +27,32 @@
   letter-spacing: 0.03em;
   text-align: center; 
   width: 100%;
+  margin-bottom: 40px;
 }
 
 .reviews-swiper {
-  overflow: hidden; /* Додаємо, щоб приховати зайвий контент */
-  display: flex;
-  flex-direction: column;
-}
+overflow: hidden; /* Додаємо, щоб приховати зайвий контент */
+display: flex;
+flex-direction: column;
+width: 100%;
+
+} 
 
 .swiper-wrapper {
   display: flex;
+  
 }
 
 .swiper-slide {
-  display: flex; 
+  display: flex;
+  justify-content: center; 
+  background-color: #797979;
+  box-sizing: border-box;
 }
 .review-arrow-nav{
   display: flex;
   justify-content:flex-end;
+  margin-top: 24px; 
 }
 .button-prev, .button-next {
   display: flex;
@@ -57,6 +67,7 @@
 }
 .review-list{
   display: flex;
+  width: 100%;
   
 }
 .review-list-item{
@@ -70,7 +81,8 @@
   border: 1px solid rgba(122, 49, 69, 0.3);
   padding: 32px;
   min-height: 296px;
-  width: 320px;
+   width: 100%; /* Встановлення ширини в 100% для адаптивності */
+  max-width: 320px; /* Встановлення максимального розміру */
   overflow: hidden;
   
 }
@@ -86,15 +98,12 @@ letter-spacing: 0.03em;
 }
 
 .review-avatar-text {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  column-gap: 16px;
-  margin-top: 24px;
-  width: 40px;
-  height: 40px;
-
-}
+ display: flex;
+  align-items: center;
+  margin-top: 24px; 
+  /* width: 40px;
+  height: 40px; */
+} 
 .review-section-img {
   display: flex;
   width: 40px;
@@ -155,6 +164,11 @@ letter-spacing: 0.03em;
   width: 768px;
   height: 288px;
 }
+.swiper-slide{
+width:704;
+/* height:224; */
+ height: auto;
+}
 }
 
 @media screen and (min-width: 1280px) {
@@ -166,6 +180,7 @@ letter-spacing: 0.03em;
   justify-content: center;
   align-items: center;
   width: 1280px;
-  height: 500px;
+  /* height: 500px; */
+   height: auto;
 }
   }
