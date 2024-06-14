@@ -49,6 +49,10 @@
     padding-left: 16px;
   }
 
+  .ContactLink:hover {
+    color: #00B068;
+  }
+
   #Work-Together-Form{
     margin-top: 40px;
 
@@ -99,6 +103,10 @@
     gap: 10px;
     background-color: #00B068;
     border: 1px solid rgba(0, 0, 0, 0);
+  }
+
+  .SubmitBtn:hover{
+    background-color: #009156;
   }
 
   .Work-Together-ModalWrapper {
@@ -174,4 +182,103 @@
   line-height: 1.5;
   letter-spacing: 0.05em;
   color: #292929;
+}
+
+@media screen and (min-width: 768px) {
+  .Work-Together{
+    margin-bottom: 124px;
+    margin-top: 124px;
+    max-width: 768px;
+  }
+
+  .Work-TogetherTitle{
+    margin-top: 124px;
+    text-align: left;
+    font-size: 108px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    font-weight: 400;
+  } 
+  
+  .Work-Together-text{
+    margin-top: 60px;
+    width: 488px;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  .ContactsList{
+    margin-top: 32px;
+    gap: 16px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  #Work-Together-Form{
+    margin-top: 60px;
+
+  }
+
+  .Filling-Input-Item{
+    margin-bottom: 32px;
+  }
+
+  .Filling-Input{
+    width: 704px;
+    height: 48px;
+  }
+
+  .Filling-Input2{
+    width: 704px;
+    height: 128px;
+  }
+
+  .SubmitBtn{
+    width: 180px;
+    height: 48px;
+  }
+  
+  .Work-Together-ModalContainer {
+    width: 492px;
+    height: 280px;
+  }
+  
+  .Work-Together-Modal {
+    border-radius: 16px;
+    height: 280px;
+    width: 492px;
+}
+
+   .IsOpen {
+    overflow: hidden;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.Work-Together-ModalClose {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    background-color: #292929;
+}
+
+.Work-Together-ModalTitle {
+  padding-top: 64px ;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.Work-Together-ModalText {
+  padding-top: 16px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+}
+
+@media screen and (min-width: 1280px) {
+  
 }
