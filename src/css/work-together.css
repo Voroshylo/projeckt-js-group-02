@@ -1,7 +1,26 @@
 .Work-Together{
+    display: flex;
+    justify-content: center;
     margin: 0 auto;
     max-width: 335px;
   }
+
+  
+
+  /* .work-together {
+        background-image: url(../img/work-together/work-desk.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top right;
+    }
+
+    @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .work-together {
+            background-image: url(../img/work-together/work-desk-2x.png);
+        }
+    } */
 
   .Work-TogetherTitle{
     margin-top: 80px;
@@ -185,6 +204,23 @@
 }
 
 @media screen and (min-width: 768px) {
+
+  .Container {
+    background-image: url('../img/work-together/work-desk.png');
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 336px 260px;
+  }
+
+ @media screen and (min-device-pixel-ratio: 2),
+   (min-resolution: 192dpi),
+   (min-resolution: 2dppx) {
+
+  .work-together {
+    background-image: url('../img/work-together/work-desk-2x.png');
+   }
+ } 
+
   .Work-Together{
     margin-bottom: 124px;
     margin-top: 124px;
@@ -279,6 +315,21 @@
 }
 }
 
-@media screen and (min-width: 1280px) {
-  
+@media only screen and (min-width: 1280px) {
+
+  .Container {
+    background-image: url('../img/work-together/work-desk.png');
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 526px 408px;
+  } 
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+
+ .work-together {
+   background-image: url('../img/work-together/work-desk-2x.png');
+ }
+} 
 }
