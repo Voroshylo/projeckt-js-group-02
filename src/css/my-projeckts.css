@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
 }
 .projects-title {
 color: var(--Black, #292929);
@@ -94,7 +94,6 @@ display: flex;
 align-items: center;
 justify-content: center;
 margin-left: auto;
-
 }
 .btn-projects-icon{
   margin-left: 12px;
