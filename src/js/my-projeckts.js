@@ -117,6 +117,7 @@ function loadProjects() {
     li.classList.add('projects-li');
     
     li.innerHTML = `
+    <div class="div-projects">
       <img
         class="projects-img"
         srcset="${project.imgSrcSet}"
@@ -124,8 +125,9 @@ function loadProjects() {
         alt="${project.alt}"
         width="320"
       />
-      <div class="div-projects-h-p">
+      </div>
         <h3 class="projects-h">${project.tech}</h3>
+        <div class="div-p-a">
         <p class="projects-p">${project.description}</p>
         <a href="${project.link}" class="projects-btn">
           VISIT
@@ -133,7 +135,8 @@ function loadProjects() {
             <use href="${spriteSvg}#icon-Vector-Projects"></use>
           </svg>
         </a>
-      </div>
+        </div>
+      
     `;
 
     projectsUl.appendChild(li);
