@@ -18,7 +18,7 @@ import project9 from '../img/my-projeckts/9.jpg';
 import project9Retina from '../img/my-projeckts/9-2x.jpg';
 import project10 from '../img/my-projeckts/10.jpg';
 import project10Retina from '../img/my-projeckts/10-2x.jpg';
-
+import spriteSvg from '../img/sprite.svg'
 const projects = [
   {
     imgSrc: project1,
