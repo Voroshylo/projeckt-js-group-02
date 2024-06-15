@@ -89,6 +89,12 @@
      <symbol id="close" viewBox="0 0 19 19">
         <path d="M18.6667 1.88L16.7867 0L9.33333 7.45334L1.88 0L0 1.88L7.45334 9.33333L0 16.7867L1.88 18.6667L9.33333 11.2133L16.7867 18.6667L18.6667 16.7867L11.2133 9.33333L18.6667 1.88Z"/>
       </symbol>
+<symbol id="icon-Button-down" viewBox="0 0 32 32">
+<path stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M22 13l-6 6-6-6"></path>
+</symbol>
+<symbol id="icon-Button-up" viewBox="0 0 32 32">
+<path stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M22 19l-6-6-6 6"></path>
+</symbol>
   </defs>
 </svg>
 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none">

@@ -19,7 +19,10 @@
 
 /* --------- */
 .faq-scroll-button-icon {
-    --color3: var(--text-color);
+stroke: #000000;
+fill: none;
+width: 32px;
+height: 32px;
 }
 
 .faq-title {
