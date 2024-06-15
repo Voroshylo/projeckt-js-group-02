@@ -22,8 +22,7 @@ if (!data) {
 else {
 
      if (data.colorThema === 'dark') {
-        
-      
+              
             nowThema.classList.remove("darkthema");
     
         nowThema.classList.add('darkthema');
