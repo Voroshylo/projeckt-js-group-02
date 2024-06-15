@@ -2,17 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* width: 320px; */
-  /* width: 100%; */
   box-sizing: border-box;
 }
 
 .review-container {
   display: flex;
-  /* align-items: center;
-  justify-content: center; */
   flex-direction: column;
-  /* width: 100%; */
   box-sizing: border-box;
 }
 
@@ -28,26 +23,28 @@
 }
 
 #reviews-list-id {
-gap: 32px;
+  display: flex;        /* Встановлює flex-контейнер */
+  gap: 32px;            /* Відстань між дочірніми елементами у flex-контейнері */
+  padding: 0;           /* Внутрішні відступи відсутні */
+  margin: 0;            /* Зовнішні відступи відсутні */
+  list-style: none;     /* Відміняє маркери списку для <ul> або <ol> */
 }
-
+#list-item-id{
+  margin-bottom: 24px;
+}
 .review-section-title {
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.03em;
-  /* margin-bottom: 40px; */
   margin-left: 16px;
 }
 
 .reviews-swiper {
   overflow: hidden;
-  /* Додаємо, щоб приховати зайвий контент */
   display: flex;
   flex-direction: column;
-  /* width: 100%; */
-
-}
+  }
 
 .swiper-wrapper {
   align-items: center;
@@ -64,7 +61,6 @@ gap: 32px;
 .review-arrow-nav {
   display: flex;
   justify-content: flex-end;
-  /* margin-top: 24px; */
 }
 
 .button-prev,
@@ -73,35 +69,18 @@ gap: 32px;
   padding: 8px;
   width: 40px;
   height: 40px;
-  /* fill: transparent; */
-  /* stroke: #fafafa; */
   border-radius: 8px;
   border: 1px solid rgba(41, 41, 41, 0.30);
   gap: 10px;
 }
 
-/* .review-list {
-  display: flex;
-  width: 100%;
-
-} */
-
 .review-list-item {
-  /* display: flex;
-  flex-direction: column;
-  gap: 24px; */
   border-radius: 16px;
   background: #E4E5E6;
-  /* max-width: 100%; */
-  /* border-radius: 24px; */
-  /* border: 1px solid rgba(122, 49, 69, 0.3); */
   padding: 32px;
   min-height: 296px;
-  
   width: 320px;
- 
   overflow: hidden;
-
 }
 
 .review-section-text {
@@ -112,7 +91,6 @@ gap: 32px;
   font-weight: 300;
   line-height: 1.5;
   letter-spacing: 0.03em;
-
 }
 
 .review-section-text {
@@ -130,17 +108,9 @@ gap: 32px;
   display: flex;
   align-items: center;
   margin-top: 24px;
-  /* width: 40px;
-  height: 40px; */
 }
 
 .review-section-img {
-  /* display: flex; */
-  /* width: 40px;
-  height: 40px; */
-  /* justify-content: flex-start; */
-  /* margin-bottom: 24px; */
-  /* transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1); */
   border-radius: 50%;
 }
 
@@ -159,11 +129,11 @@ gap: 32px;
   flex-direction: row;
 }
 
-
-.review-icon-next{
+.review-icon-next,
+.review-icon-back {
   fill: none;
-  stroke:  black;
-} 
+  stroke: black;
+}
 
 /* Навігаційні стрілки */
 .review-arrow-nav .button-prev,
@@ -195,17 +165,6 @@ gap: 32px;
 
 
 @media screen and (min-width: 768px) {
-  /* .container {
-    width: 768px;
-  } */
-
-  /* .reviews {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 768px;
-    height: 288px;
-  } */
 
   .review-list-item {
     width: 704px !important;
@@ -222,18 +181,6 @@ gap: 32px;
 }
 
 @media screen and (min-width: 1280px) {
-  /* .container {
-    max-width: 1280px;
-  } */
-
-  /* .reviews {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 1280px;
-    height: 500px;
-    height: auto;
-  } */
 
   .review-list-item {
     width: 592px !important;
