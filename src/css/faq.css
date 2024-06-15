@@ -1,10 +1,11 @@
 .faq-title {
-    font-family: Impact, sans-serif;
-    font-weight: 400;
-    font-size: 108px;
-    line-height: 1.24;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+font-family: Impact;
+font-size: 52px;
+font-style: normal;
+font-weight: 400;
+line-height: 64px; /* 123.077% */
+letter-spacing: 1.8px;
+text-transform: uppercase;
     margin-bottom: 40px;
 
 }
@@ -101,8 +102,10 @@ height: 32px;
 
     .faq-title {
         max-width: 592px;
-        line-height: 115%;
-        letter-spacing: 0.02em;
+font-size: 108px;
+font-weight: 400;
+line-height: 124px; /* 114.815% */
+letter-spacing: 1.8px;
         margin-bottom: 60px;
     }
 
