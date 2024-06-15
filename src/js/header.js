@@ -23,7 +23,7 @@ else {
 
      if (data.colorThema === 'dark') {
               
-          //  nowThema.classList.remove("darkthema");
+            nowThema.classList.remove("darkthema");
     
      nowThema.classList.add('darkthema');
 // nowThema.classList.add('themeDark');
@@ -94,7 +94,7 @@ export function changeThema(element) {
 
   menuBtnRef.addEventListener("click", () => {
     const expanded =
-     menuBtnRef.getAttribute("aria-expanded") === 'true' || false;
+    menuBtnRef.getAttribute("aria-expanded") === 'true' || false;
     
     const styleValue = "background-image: url('../img/header/Group-64.png')";
     
