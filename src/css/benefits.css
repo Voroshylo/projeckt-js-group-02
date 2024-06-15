@@ -5,6 +5,10 @@
     justify-content: center;
 }
 
+.benefits-image {
+    display: none;
+}
+
 .benefits-title {
     font-family: Impact, sans-serif;
     font-weight: 400;

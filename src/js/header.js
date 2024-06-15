@@ -17,36 +17,29 @@ if (!data) {
     dataThema.colorThema = "light";
      nowThema.classList.add('lightthema');
     localStorage.setItem(storageTheme, JSON.stringify(dataThema));
-   // return;
+   
 }
 else {
 
      if (data.colorThema === 'dark') {
-        
-       // if (nowThema.classList.contains("darkthema")) {
+              
             nowThema.classList.remove("darkthema");
-      // }
-        //dataThema.colorThema = "light";
-        //localStorage.setItem(storageTheme, JSON.stringify(dataThema));
+    
         nowThema.classList.add('darkthema');
 
         const data = JSON.parse(localStorage.getItem(storageTheme));
         console.log("localStore Thema is LIGHT:", data.colorThema);
         
-       // return;      
+            
     }
     else { 
-        // if (nowThema.classList.contains("lightthema")) {
-        //    nowThema.classList.remove("lightthema");
-      // }
-        //  dataThema.colorThema = "dark";
-       // localStorage.setItem(storageTheme, JSON.stringify(dataThema));
+      
         nowThema.classList.add('lightthema');
        
         const data = JSON.parse(localStorage.getItem(storageTheme));
     console.log("localStore Thema is DARK:", data.colorThema);
 
-      //  return;   
+      
     }
 }
 
@@ -97,15 +90,24 @@ export function changeThema(element) {
 (() => {
   const menuBtnRef = document.querySelector("[date-menu-button]");
   const mobileMenuRef = document.querySelector("[date-menu]");
- // const searchRef = document.querySelector(".form-search");
+  
+
   menuBtnRef.addEventListener("click", () => {
-      const expanded =
-          menuBtnRef.getAttribute("aria-expanded") === 'true' || false;
-      
+    const expanded =
+     menuBtnRef.getAttribute("aria-expanded") === 'true' || false;
+    
+    const styleValue = "background-image: url('../img/header/Group-64.png')";
+    
       menuBtnRef.classList.toggle("is-open");
-      menuBtnRef.setAttribute("aria-expanded", !expanded);
+    menuBtnRef.setAttribute("aria-expanded", !expanded);
+     if (mobileMenuRef.hasAttribute("style")) {
+       mobileMenuRef.removeAttribute("style");
+    }
+    else {
+      mobileMenuRef.setAttribute("style", styleValue);
+    } 
+    
       mobileMenuRef.classList.toggle("is-open");
-     // searchRef.classList.toggle("is-open");
       document.body.classList.toggle("is-open");
 
   });
