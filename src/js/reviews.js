@@ -2,7 +2,7 @@ import Swiper from 'swiper';
 import 'swiper/swiper-bundle.css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
-import { Navigation, Keyboard, Scrollbar} from 'swiper/modules';
+import { Navigation, Keyboard, Scrollbar } from 'swiper/modules';
 
 // Ініціалізація Swiper
 const swiper = new Swiper('.reviews-swiper', {
@@ -16,25 +16,23 @@ const swiper = new Swiper('.reviews-swiper', {
     enabled: true,
     onlyInViewport: true,
   },
-  modules: [Navigation, Keyboard, Scrollbar ],
+  modules: [Navigation, Keyboard, Scrollbar],
   breakpoints: {
     // when window width is >= 320px
     320: {
       slidesPerView: 1,
-      
     },
     // when window width is >= 768px
     768: {
       slidesPerView: 1,
-      
     },
     // when window width is >= 1280px
     1280: {
       slidesPerView: 2,
-      spaceBetween: 32
-    }
-  }
-  });
+      spaceBetween: 32,
+    },
+  },
+});
 
 // Функція для відображення повідомлення про помилку
 function showError(message) {
@@ -45,15 +43,16 @@ function showError(message) {
 }
 
 function cardTemplate(review) {
-  console.log(review);
-  return `<li class="swiper-slide review-list-item">
+  return `<li class="swiper-slide review-list-item" id="list-item-id">
           <p class="review-section-text">${review.review}</p>
           <div class="review-avatar-text">
         <img
         srcset="${review.avatar_url}"
         class="review-section-img"
         src="${review.avatar_url}"
-        alt="Avatar"/>
+        alt="Avatar"
+        width="40"
+        height="40"/>
             <h3 class="review-section-title">${review.author}</h3>
           </div>
         </li>`;
@@ -64,7 +63,7 @@ function cardsTemplate(reviews) {
 }
 
 function renderReviews(reviews) {
-  const reviewList = document.getElementById('reviews-list');
+  const reviewList = document.getElementById('reviews-list-id');
   const markup = cardsTemplate(reviews);
   reviewList.innerHTML = markup;
   swiper.update();
@@ -80,16 +79,15 @@ async function fetchReviews() {
       throw new Error('Failed to fetch reviews');
     }
     const data = await response.json();
-    console.log(data);
     if (data && data.length > 0) {
       renderReviews(data);
     } else {
       showError('No reviews found');
-      document.getElementById('reviews-list').innerHTML = '<p>Not found</p>';
+      document.getElementById('reviews-list-id').innerHTML = '<p>Not found</p>';
     }
   } catch (error) {
     showError('An error occurred while fetching reviews');
-    document.getElementById('reviews-list').innerHTML = '<p>Not found</p>';
+    document.getElementById('reviews-list-id').innerHTML = '<p>Not found</p>';
   }
 }
 

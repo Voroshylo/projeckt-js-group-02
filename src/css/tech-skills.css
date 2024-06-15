@@ -12,6 +12,19 @@
     --third-family: "Montserrat", sans-serif;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 .container_tech_skills {
     overflow: hidden;
 }
@@ -24,9 +37,11 @@
     max-width: 360px;
     margin-right: auto;
     margin-left: auto;
+    padding-bottom: 80px;
 }
 
 .marquee {
+    display: flex;
     font-weight: 500;
     font-size: 32px;
     line-height: 1.25em;
@@ -47,19 +62,20 @@
 
 }
 
-body.dark_theme .marquee {
+body.darkthema .marquee {
     background: #214136;
     color: var(--white);
 }
 
 .marquee_incline {
+    display: flex;
     background: var(--light-grey);
     transform: rotate(+2deg);
     left: -3px;
     z-index: 1;
 }
 
-body.dark_theme .marquee_incline {
+body.darkthema .marquee_incline {
     background: #2a2d32;
     color: #14c57c;
 }
@@ -86,21 +102,55 @@ body.dark_theme .marquee_incline {
     color: var(--accet-green);
 }
 
-.icon-svg {
-    padding: 0 15px 10px 15px;
-    fill: #00b068;
+.marquee-ul {
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0 20px 0 0;
 }
 
-body.dark_theme .icon-svg {
-    fill: #14C57C;
+.marquee-li {}
+
+.marquee-li-incline {}
+
+.marquee-li::before {
+    content: '•';
+    border-radius: 2px;
+    color: var(--accet-green);
+    width: 8px;
+    height: 8px;
+    padding: 0 20px 0 20px;
 }
 
-.svg-incline {
-    fill: #292929;
+body.darkthema .marquee-li::before {
+    color: #14C57C;
+
 }
 
-body.dark_theme .svg-incline {
-    fill: #F0F0F0;
+.marquee-li-incline::before {
+    content: '•';
+    border-radius: 2px;
+    color: var(--black);
+    width: 8px;
+    height: 8px;
+    padding: 0 20px 0 20px;
+}
+
+body.darkthema .marquee-li-incline::before {
+    color: var(--white);
+
+}
+
+.marquee-li:first-child::before {
+    padding: 0 20px 0 0;
+}
+
+.marquee-li-incline:first-child::before {
+    padding: 0 20px 0 0;
+}
+
+ul {
+    list-style: none;
 }
 
 @keyframes marqueeLine {
@@ -127,6 +177,7 @@ body.dark_theme .svg-incline {
     .tech-skills {
         height: 282px;
         max-width: 768px;
+        padding-bottom: 124px;
     }
 }
 
@@ -137,5 +188,6 @@ body.dark_theme .svg-incline {
 
     .tech-skills {
         max-width: 1280px;
+        padding-bottom: 165px;
     }
 }
