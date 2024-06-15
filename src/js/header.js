@@ -23,10 +23,10 @@ else {
 
      if (data.colorThema === 'dark') {
               
-            nowThema.classList.remove("darkthema");
+          //  nowThema.classList.remove("darkthema");
     
-        nowThema.classList.add('darkthema');
-
+     nowThema.classList.add('darkthema');
+// nowThema.classList.add('themeDark');
         const data = JSON.parse(localStorage.getItem(storageTheme));
         console.log("localStore Thema is LIGHT:", data.colorThema);
         
@@ -99,7 +99,7 @@ export function changeThema(element) {
     const styleValue = "background-image: url('../img/header/Group-64.png')";
     
       menuBtnRef.classList.toggle("is-open");
-    menuBtnRef.setAttribute("aria-expanded", !expanded);
+     menuBtnRef.setAttribute("aria-expanded", !expanded);
      if (mobileMenuRef.hasAttribute("style")) {
        mobileMenuRef.removeAttribute("style");
     }
