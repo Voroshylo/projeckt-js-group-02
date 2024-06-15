@@ -19,6 +19,7 @@ import project9Retina from '../img/my-projeckts/9-2x.jpg';
 import project10 from '../img/my-projeckts/10.jpg';
 import project10Retina from '../img/my-projeckts/10-2x.jpg';
 import spriteSvg from '../img/sprite.svg'
+
 const projects = [
   {
     imgSrc: project1,
@@ -129,7 +130,7 @@ function loadProjects() {
         <a href="${project.link}" class="projects-btn">
           VISIT
           <svg class="btn-projects-icon" width="14" height="14">
-            <use href="../img/sprite.svg#icon-Vector-Projects"></use>
+            <use href="${spriteSvg}#icon-Vector-Projects"></use>
           </svg>
         </a>
       </div>
