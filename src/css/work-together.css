@@ -1,4 +1,4 @@
-.Work-Together{
+.work-together{
     display: flex;
     justify-content: center;
     margin: 0 auto;
@@ -20,7 +20,7 @@
         }
     } */
 
-  .Work-TogetherTitle{
+  .work-together-title{
     margin-top: 80px;
     color: #292929;
     text-align: left;
@@ -31,15 +31,15 @@
     font-weight: 400;
   } 
 
-  .WorkWord{
+  .workword{
     color: #00B068;
   }
 
-  .NewLine{
+  .newline{
     color: #00B068;
   }
 
-  .Work-Together-text{
+  .work-together-text{
     margin-top: 40px;
     width: 320px;
     color: #292929;
@@ -51,12 +51,18 @@
     letter-spacing: 0.05em;
   }
 
-  .ContactsList{
+  .contacts-list{
     margin-top: 32px;
     gap: 16px;
   }
 
-  .ContactLink{
+  .contact-item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  .contact-link{
     color:#292929;
     font-family: 'Poppins';
     font-size: 16px;
@@ -67,19 +73,19 @@
     transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1), background 500ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .ContactLink:hover {
+  .contact-link:hover {
     color: #00B068;
   }
 
-  #Work-Together-Form{
+  #work-together-form{
     margin-top: 40px;
   }
 
-  .Filling-Input-Item{
+  .filling-input-item{
     margin-bottom: 32px;
   }
 
-  .Filling-Input{
+  .filling-input{
     width: 288px;
     height: 16px;
     background-color: #e4e5e6;
@@ -92,7 +98,7 @@
     line-height: 1.5;
   }
 
-  .Filling-Input2{
+  .filling-input2{
     width: 288px;
     height: 96px;
     background-color: #e4e5e6;
@@ -105,7 +111,7 @@
     line-height: 1.5;
   }
 
-  .SubmitBtn{
+  .submitbtn{
     width: 320px;
     height: 48px;
     color: #f0f0f0;
@@ -123,11 +129,11 @@
     transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1), background 500ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .SubmitBtn:hover{
+  .submitbtn:hover{
     background-color: #009156;
   }
 
-  .Work-Together-ModalWrapper {
+  .work-together-modal-wrapper {
     position: fixed;
     top: 0;
     left: 0;
@@ -141,7 +147,7 @@
     transition: opacity 500ms ease-in, visibility 500ms ease-in;
   }
   
-  .Work-Together-ModalContainer {
+  .work-together-modalcontainer {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -150,13 +156,14 @@
     height: 328px;
   }
   
-  .Work-Together-Modal {
+  .work-together-modal {
+    padding: 48px 32px;
     position: relative;
     background-color: #f0f0f0;
     border: 1px solid rgba(0, 0, 0, 0);
     border-radius: 20px;
-    height: 328px;
-    width: 320px;
+    /*height: 328px;
+    width: 320px;*/
 }
 
    .IsOpen {
@@ -166,7 +173,7 @@
     pointer-events: auto;
 }
 
-.Work-Together-ModalClose {
+.work-together-modal-close {
     position: absolute;
     top: 16px;
     right: 16px;
@@ -177,15 +184,15 @@
     transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1), background 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.Work-Together-CloseIcon{
+.work-together-close-icon{
  
   stroke: #292929;
 }
 
-.Work-Together-ModalTitle {
-  padding-top: 38px ;
+.work-together-modal-title {
+  /*padding-top: 38px ;
   padding-left: 32px;
-  padding-right: 32px;
+  padding-right: 32px;*/
   text-align: center;
   font-family: 'Poppins';
   font-weight: 400;
@@ -193,12 +200,13 @@
   line-height: 1.5;
   letter-spacing: 0.05em;
   color: #00B068;
+  margin-bottom: 16px;
 }
 
-.Work-Together-ModalText {
-  padding-top: 16px;
+.work-together-modal-text {
+  /*padding-top: 16px;
   padding-left: 32px;
-  padding-right: 32px;
+  padding-right: 32px;*/
   text-align: center;
   font-family: 'Poppins';
   font-weight: 300;
@@ -210,7 +218,7 @@
 
 @media screen and (min-width: 768px) {
 
-  .Container {
+  .container {
     background-image: url('../img/work-together/work-desk.png');
     background-position: top right;
     background-repeat: no-repeat;
@@ -226,13 +234,13 @@
    }
  } 
 
-  .Work-Together{
+  .work-together{
     margin-bottom: 124px;
     margin-top: 124px;
     max-width: 768px;
   }
 
-  .Work-TogetherTitle{
+  .work-together-title{
     margin-top: 124px;
     text-align: left;
     font-size: 108px;
@@ -241,53 +249,59 @@
     font-weight: 400;
   } 
   
-  .Work-Together-text{
+  .work-together-text{
     margin-top: 60px;
     width: 488px;
     font-size: 20px;
     line-height: 1.6;
   }
 
-  .ContactsList{
+  .contacts-list{
     margin-top: 32px;
     gap: 16px;
     display: flex;
     flex-direction: row;
   }
 
-  #Work-Together-Form{
+  .contact-item{
+    display: flex;
+    align-items: center;
+  }
+
+  #work-together-form{
     margin-top: 60px;
 
   }
 
-  .Filling-Input-Item{
+  .filling-input-item{
     margin-bottom: 32px;
   }
 
-  .Filling-Input{
+  .filling-input{
     width: 704px;
     height: 48px;
   }
 
-  .Filling-Input2{
+  .filling-input2{
     width: 704px;
     height: 128px;
   }
 
-  .SubmitBtn{
+  .submitbtn{
     width: 180px;
     height: 48px;
   }
   
-  .Work-Together-ModalContainer {
+  .work-together-modalcontainer {
     width: 492px;
     height: 280px;
   }
   
-  .Work-Together-Modal {
+  .work-together-modal {
+    padding: 64px 54px;
     border-radius: 16px;
-    height: 280px;
-    width: 492px;
+    /*height: 280px;
+    width: 492px;*/
 }
 
    .IsOpen {
@@ -297,7 +311,7 @@
     pointer-events: auto;
 }
 
-.Work-Together-ModalClose {
+.work-together-modal-close {
     position: absolute;
     top: 16px;
     right: 16px;
@@ -308,41 +322,41 @@
 
 }
 
-.Work-Together-ModalTitle {
-  padding-top: 64px ;
+.work-together-modal-title {
+  /*padding-top: 64px ;
   padding-left: 40px;
-  padding-right: 40px;
+  padding-right: 40px;*/
 }
 
-.Work-Together-ModalText {
-  padding-top: 16px;
+.work-together-modal-text {
+  /*padding-top: 16px;
   padding-left: 40px;
-  padding-right: 40px;
+  padding-right: 40px;*/
 }
 }
 
 @media only screen and (min-width: 1280px) {
 
-  .Container {
+  .container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 136px;
   }
 
-  .Left-Column {
+  .left-column {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .Right-Column {
+  .right-column {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
   }
 
-  .Container {
+  .container {
     background-image: url('../img/work-together/work-desk.png');
     background-position: top right;
     background-repeat: no-repeat;
@@ -352,12 +366,12 @@
   @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
-    .Container {
+    .container {
       background-image: url('../img/work-together/work-desk-2x.png');
     }
   }
 
-  .Work-TogetherTitle {
+  .work-together-title {
     margin-top: 0;
     color: #292929;
     text-align: left;
@@ -368,7 +382,7 @@
     font-weight: 400;
   }
 
-  .Work-Together-text {
+  .work-together-text {
     margin-top: 80px;
     width: 488px;
     font-size: 20px;
@@ -376,39 +390,44 @@
     letter-spacing: 0.05em;
   }
 
-  .ContactsList {
+  .contacts-list {
     width: 488px;
-    margin-top: 120px;
+    margin-top: 110px;
     gap: 16px;
     display: flex;
     flex-direction: column;
   }
 
-  .ContactLink {
-    width: 154px;
+  .contact-item{
+    display: flex;
+    align-items: center;
   }
 
-  #Work-Together-Form {
+  .contact-link {
+    /*width: 154px;*/
+  }
+
+  #work-together-form {
     position: relative;
     margin-top: 455px;
   }
 
-  .Filling-Input-Item {
+  .filling-input-item {
     width: 592px;
     margin-bottom: 32px;
   }
 
-  .Filling-Input {
+  .filling-input {
     width: 560px;
     height: 24px;
   }
 
-  .Filling-Input2 {
+  .filling-input2 {
     width: 560px;
     height: 72px;
   }
 
-  .SubmitBtn {
+  .submitbtn {
     width: 180px;
     height: 48px;
     color: #f0f0f0;

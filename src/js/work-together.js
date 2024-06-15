@@ -4,13 +4,13 @@ import 'izitoast/dist/css/iziToast.min.css';
 const InputLengthBeforeCut = 20;
 
 const wtGlobal = {
-    wtFillingForm: document.querySelector('#Work-Together-Form'),
-    wtModal: document.querySelector('.Work-Together-ModalWrapper'),
-    wtResultMsg: document.querySelector('.Filling-Result-Msg'),
-    wtModalRespTitle: document.querySelector('#Work-Together-ModalRespTitle'),
-    wtModalRespMessage: document.querySelector('#Work-Together-ModalRespMessage'),
-    wtModalClose: document.querySelector('.Work-Together-ModalClose'),
-    wtModalBox: document.querySelector('.Work-Together-Modal')
+    wtFillingForm: document.querySelector('#work-together-form'),
+    wtModal: document.querySelector('.work-together-modal-wrapper'),
+    wtResultMsg: document.querySelector('.filling-result-msg'),
+    wtModalRespTitle: document.querySelector('#work-together-modal-resp-title'),
+    wtModalRespMessage: document.querySelector('#work-together-modal-resp-message'),
+    wtModalClose: document.querySelector('.work-together-modal-close'),
+    wtModalBox: document.querySelector('.work-together-modal')
 };
 
 wtGlobal.wtFillingForm.addEventListener('submit', sendWtUserData);
@@ -33,6 +33,7 @@ async function sendWtUserData(event) {
     try {
       const response = await PostRequest(email, comment);
       handleSuccess(response); 
+      wtGlobal.wtFillingForm.reset(); // Очищення форми після успішного відправлення
     } catch (error) {
       handleFailure(error);
     }
