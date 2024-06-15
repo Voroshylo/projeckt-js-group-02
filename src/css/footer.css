@@ -1,183 +1,119 @@
-   .footer {
-       text-align: center;
-       position: relative;
-       width: 100%;
-       bottom: 0;
-       padding: 20px;
-       border: 1px 0px 0px 0px;
-       border-top: 1px solid #E4E5E6;
-   }
+.footer-blok {
+    width: 100%;
+    border: 1px 0px 0px 0px;
+    border-top: 1px solid #E4E5E6;
+}
+.footer-content {
+    display: flex;
+    flex-direction: column;
+}
+.footer-logo {
+    font-family: Impact, sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 1.5px;
+    text-align: left;
+    text-decoration: none;
+    color: #000;
+    align-self: flex-start;
+}
+.span {
+    color: #00B068;
+}
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.footer-line {
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+}
+.footer-link {
+    text-decoration: none;
+    color: #000;
+}
+.footer-link:hover {
+    color: #00B068;
+}
+.footer-text {
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    margin: 0;
+}
 
-   .footer-content {
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-   }
+/* Мобільна версія */
 
-   .footer-logo {
-       font-family: Impact, sans-serif;
-       font-size: 32px;
-       font-weight: 400;
-       line-height: 32px;
-       letter-spacing: 1.5px;
-       text-align: left;
-       text-decoration: none;
-       color: #000;
-       align-self: flex-start;
-   }
+@media (max-width: 360px) {
+.footer-logo {
+    padding-bottom: 32px;
+}
+.footer-content {
+    align-items: flex-start;
+    padding: 40px 20px;
+}
+.footer-list {
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+}
+.footer-line {
+    display: flex;
+}
+.footer-line:last-child {
+    padding-bottom: 0;
+}
+.footer-text {
+    margin: 0 auto;
+    padding: 0 80px 24px 80px;
+}
+}
 
-   .span {
-       color: #00B068;
-   }
+/* Версія для планшетів */
 
-   .footer-list {
-       list-style: none;
-       padding: 0;
-       margin: 0;
-   }
+@media (min-width: 361px) and (max-width: 768px) {
+.footer-content {
+    align-items: flex-start;
+    padding: 40px 32px;
+}
+.footer-logo {
+    padding-bottom: 32px;
+}
+.footer-list {
+    gap: 40px;
+}
+.footer-text {
+    margin: 0;
+    text-align: right;
+    padding-right: 32px;
+    padding-bottom: 24px
+}
+}
 
-   .footer-line {
-       display: inline;
-       font-family: Poppins, sans-serif;
-       font-size: 16px;
-       font-weight: 300;
-       line-height: 24px;
-       letter-spacing: 0.5px;
-       text-align: left;
-   }
+/* Повноекранна версія */
 
-   .footer-link {
-       text-decoration: none;
-       color: #000;
-   }
-
-   .footer-link:hover {
-       color: #00B068;
-   }
-
-   .footer-text {
-       font-family: Poppins, sans-serif;
-       font-size: 16px;
-       font-weight: 300;
-       line-height: 24px;
-       letter-spacing: 0.5px;
-       text-align: center;
-       margin: 10px 0 0 0;
-   }
-
-   /* Мобільна версія */
-
-   @media (max-width: 360px) {
-       .footer {
-           padding: 40px 20px 24px 20px;
-       }
-
-       .footer-logo {
-           padding-bottom: 32px;
-       }
-
-       .footer-content {
-           align-items: flex-start;
-       }
-
-       .footer-list {
-           flex-direction: column;
-           gap: 24px;
-           align-items: flex-start;
-       }
-
-       .footer-line {
-           display: block;
-           padding-bottom: 24px;
-       }
-
-       .footer-line:last-child {
-           padding-bottom: 0;
-       }
-
-       .footer-text {
-           text-align: center;
-           margin: 0 auto;
-           white-space: pre-line;
-           padding-left: 80px;
-           padding-right: 80px;
-       }
-   }
-
-   /* Версія для планшетів */
-
-   @media (min-width: 361px) and (max-width: 768px) {
-       .footer {
-           padding: 40px 32px 24px 32px;
-       }
-
-       .footer-content {
-           align-items: flex-start;
-       }
-
-
-       .footer-logo {
-           text-align: left;
-           padding-bottom: 32px;
-       }
-
-       .footer-list {
-           display: flex;
-           gap: 40px;
-           justify-content: flex-start;
-       }
-
-       .footer-line {
-           padding-bottom: 0;
-       }
-
-       .footer-text {
-           margin: 0;
-           text-align: right;
-           padding-top: 40px;
-       }
-   }
-
-   /* Повноекранна версія */
-
-   @media (min-width: 769px) {
-       .footer-content {
-           display: flex;
-           flex-direction: row;
-           justify-content: space-between;
-           align-items: center;
-           padding: 40px 32px;
-       }
-
-       .footer-logo {
-           font-size: 32px;
-           line-height: 32px;
-           text-align: left;
-       }
-
-       .footer-line {
-           margin-right: 40px;
-       }
-
-       .footer li:last-child {
-           margin-right: 0;
-       }
-
-       .footer-link {
-           font-family: Poppins, sans-serif;
-           font-size: 16px;
-           font-weight: 300;
-           line-height: 24px;
-           letter-spacing: 0.5px;
-           text-align: left;
-           text-decoration: none;
-           color: #000;
-       }
-
-       .footer-text {
-           font-size: 16px;
-           margin: 0 auto;
-           text-align: right;
-           padding-right: 32px;
-       }
-   }
+@media (min-width: 769px) {
+.footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 32px;
+}
+.footer-list {
+    gap: 40px;
+}
+.footer-text {
+    text-align: right;
+    padding-right: 32px;
+    padding-bottom: 24px;
+}
+}

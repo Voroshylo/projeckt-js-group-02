@@ -1,0 +1,284 @@
+.Work-Together{
+    margin: 0 auto;
+    max-width: 335px;
+  }
+
+  .Work-TogetherTitle{
+    margin-top: 80px;
+    color: #292929;
+    text-align: left;
+    font-family: 'Impact';
+    font-size: 52px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    font-weight: 400;
+  } 
+
+  .WorkWord{
+    color: #00B068;
+  }
+
+  .NewLine{
+    color: #00B068;
+  }
+
+  .Work-Together-text{
+    margin-top: 40px;
+    width: 320px;
+    color: #292929;
+    font-family: 'Poppins';
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.05em;
+  }
+
+  .ContactsList{
+    margin-top: 32px;
+    gap: 16px;
+  }
+
+  .ContactLink{
+    color:#292929;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    padding-left: 16px;
+  }
+
+  .ContactLink:hover {
+    color: #00B068;
+  }
+
+  #Work-Together-Form{
+    margin-top: 40px;
+
+  }
+
+  .Filling-Input-Item{
+    margin-bottom: 32px;
+  }
+
+  .Filling-Input{
+    width: 288px;
+    height: 16px;
+    background-color: #e4e5e6;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    padding: 16px;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  .Filling-Input2{
+    width: 288px;
+    height: 96px;
+    background-color: #e4e5e6;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    padding: 16px;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  .SubmitBtn{
+    width: 320px;
+    height: 48px;
+    color: #f0f0f0;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    text-align: center;
+    border-radius: 8px;
+    padding: 12px 24px;
+    gap: 10px;
+    background-color: #00B068;
+    border: 1px solid rgba(0, 0, 0, 0);
+  }
+
+  .SubmitBtn:hover{
+    background-color: #009156;
+  }
+
+  .Work-Together-ModalWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 500ms ease-in, visibility 500ms ease-in;
+  }
+  
+  .Work-Together-ModalContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 320px;
+    height: 328px;
+  }
+  
+  .Work-Together-Modal {
+    position: relative;
+    background-color: #f0f0f0;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 20px;
+    height: 328px;
+    width: 320px;
+}
+
+   .IsOpen {
+    overflow: hidden;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.Work-Together-ModalClose {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    background-color: #292929;
+}
+
+.Work-Together-ModalTitle {
+  padding-top: 38px ;
+  padding-left: 32px;
+  padding-right: 32px;
+  text-align: center;
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  color: #00B068;
+}
+
+.Work-Together-ModalText {
+  padding-top: 16px;
+  padding-left: 32px;
+  padding-right: 32px;
+  text-align: center;
+  font-family: 'Poppins';
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  color: #292929;
+}
+
+@media screen and (min-width: 768px) {
+  .Work-Together{
+    margin-bottom: 124px;
+    margin-top: 124px;
+    max-width: 768px;
+  }
+
+  .Work-TogetherTitle{
+    margin-top: 124px;
+    text-align: left;
+    font-size: 108px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    font-weight: 400;
+  } 
+  
+  .Work-Together-text{
+    margin-top: 60px;
+    width: 488px;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  .ContactsList{
+    margin-top: 32px;
+    gap: 16px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  #Work-Together-Form{
+    margin-top: 60px;
+
+  }
+
+  .Filling-Input-Item{
+    margin-bottom: 32px;
+  }
+
+  .Filling-Input{
+    width: 704px;
+    height: 48px;
+  }
+
+  .Filling-Input2{
+    width: 704px;
+    height: 128px;
+  }
+
+  .SubmitBtn{
+    width: 180px;
+    height: 48px;
+  }
+  
+  .Work-Together-ModalContainer {
+    width: 492px;
+    height: 280px;
+  }
+  
+  .Work-Together-Modal {
+    border-radius: 16px;
+    height: 280px;
+    width: 492px;
+}
+
+   .IsOpen {
+    overflow: hidden;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.Work-Together-ModalClose {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    background-color: #292929;
+}
+
+.Work-Together-ModalTitle {
+  padding-top: 64px ;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.Work-Together-ModalText {
+  padding-top: 16px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+}
+
+@media screen and (min-width: 1280px) {
+  
+}

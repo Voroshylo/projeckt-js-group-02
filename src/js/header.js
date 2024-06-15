@@ -1,33 +1,74 @@
 
+
+console.log("start js");
+
+const storageTheme = "datThema";
 const dataThema = {
 colorThema: "",
 };
 
 const nowThema = document.querySelector("body");
-const data = JSON.parse(localStorage.getItem("typeThema"));
+const data = JSON.parse(localStorage.getItem(storageTheme));
+
+console.log("first get", data.colorThema || false);
 
 if (!data) {
     console.log("localstorage is clear");
     dataThema.colorThema = "light";
      nowThema.classList.add('lightthema');
-    localStorage.setItem('typeThema', JSON.stringify(dataThema));
-   // return;
+    localStorage.setItem(storageTheme, JSON.stringify(dataThema));
+   
+}
+else {
+
+     if (data.colorThema === 'dark') {
+        
+      
+            nowThema.classList.remove("darkthema");
+    
+        nowThema.classList.add('darkthema');
+
+        const data = JSON.parse(localStorage.getItem(storageTheme));
+        console.log("localStore Thema is LIGHT:", data.colorThema);
+        
+            
+    }
+    else { 
+      
+        nowThema.classList.add('lightthema');
+       
+        const data = JSON.parse(localStorage.getItem(storageTheme));
+    console.log("localStore Thema is DARK:", data.colorThema);
+
+      
+    }
 }
 
-const switchThema = document.querySelector(".switchthema");
+
+// first load thema color from localStorage +++++++===============
+
+
+
+
+
+const switchThema = document.querySelector("#sitetheme");
 switchThema.addEventListener("click", changeThema);
 
 export function changeThema(element) {
-    const data = JSON.parse(localStorage.getItem("typeThema"));
+    const data = JSON.parse(localStorage.getItem(storageTheme));
     console.log("localStore Thema:", data.colorThema);
-    if (data.colorThema == 'dark') {
+    if (data.colorThema === 'dark') {
         
         if (nowThema.classList.contains("darkthema")) {
             nowThema.classList.remove("darkthema");
        }
         dataThema.colorThema = "light";
-        localStorage.setItem('typeThema', JSON.stringify(dataThema));
+        localStorage.setItem(storageTheme, JSON.stringify(dataThema));
         nowThema.classList.add('lightthema');
+
+        const data = JSON.parse(localStorage.getItem(storageTheme));
+        console.log("localStore Thema is LIGHT:", data.colorThema);
+        
         return;      
     }
     else { 
@@ -35,8 +76,42 @@ export function changeThema(element) {
             nowThema.classList.remove("lightthema");
        }
           dataThema.colorThema = "dark";
-        localStorage.setItem('typeThema', JSON.stringify(dataThema));
+        localStorage.setItem(storageTheme, JSON.stringify(dataThema));
         nowThema.classList.add('darkthema');
+       
+        const data = JSON.parse(localStorage.getItem(storageTheme));
+    console.log("localStore Thema is DARK:", data.colorThema);
+
         return;   
     }
 }
+
+//  function burger menu mob menu ++++++++++++==================================
+
+(() => {
+  const menuBtnRef = document.querySelector("[date-menu-button]");
+  const mobileMenuRef = document.querySelector("[date-menu]");
+  
+
+  menuBtnRef.addEventListener("click", () => {
+    const expanded =
+     menuBtnRef.getAttribute("aria-expanded") === 'true' || false;
+    
+    const styleValue = "background-image: url('../img/header/Group-64.png')";
+    
+      menuBtnRef.classList.toggle("is-open");
+    menuBtnRef.setAttribute("aria-expanded", !expanded);
+     if (mobileMenuRef.hasAttribute("style")) {
+       mobileMenuRef.removeAttribute("style");
+    }
+    else {
+      mobileMenuRef.setAttribute("style", styleValue);
+    } 
+    
+      mobileMenuRef.classList.toggle("is-open");
+      document.body.classList.toggle("is-open");
+
+  });
+})();
+
+//++++++++++++++++=================================================
