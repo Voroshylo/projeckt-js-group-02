@@ -26,7 +26,6 @@
     padding: 0;
     margin: 0;
     display: flex;
-    width: 100%;
 }
 .footer-line {
     font-family: Poppins, sans-serif;
@@ -38,11 +37,11 @@
 .footer-link {
     text-decoration: none;
     color: #000;
-    transition: color 0.3s ease, color 0.3s ease;
+    transition: color 0.2s ease, color 0.2s ease;
 }
 .footer-link:hover {
     color: #00B068;
-    transition-delay: 0.2s;
+    transition-delay: 0.1s;
 }
 .footer-text {
     font-family: Poppins, sans-serif;
