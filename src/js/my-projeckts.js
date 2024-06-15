@@ -129,7 +129,7 @@ function loadProjects() {
         <a href="${project.link}" class="projects-btn">
           VISIT
           <svg class="btn-projects-icon" width="14" height="14">
-            <use href="./img/sprite.svg#icon-Vector-Projects"></use>
+            <use href="../img/sprite.svg#icon-Vector-Projects"></use>
           </svg>
         </a>
       </div>
