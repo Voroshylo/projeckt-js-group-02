@@ -24,7 +24,7 @@ import{S as N,N as J,K as q,a as A,i as O,A as P}from"./assets/vendor-655b9ae0.j
         <a href="${r.link}" class="projects-btn">
           VISIT
           <svg class="btn-projects-icon" width="14" height="14">
-            <use href="./img/sprite.svg#icon-Vector-Projects"></use>
+            <use href="../img/sprite.svg#icon-Vector-Projects"></use>
           </svg>
         </a>
       </div>
