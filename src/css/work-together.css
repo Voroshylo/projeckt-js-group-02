@@ -173,13 +173,13 @@
     cursor: pointer;
     background: none;
     border: none;
-    
+    stroke: #292929;
     transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1), background 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .Work-Together-CloseIcon{
-  fill: none;
-  stroke: aqua;
+ 
+  stroke: #292929;
 }
 
 .Work-Together-ModalTitle {
@@ -304,6 +304,7 @@
     cursor: pointer;
     background: none;
     border: none;
+    stroke: #292929;
 
 }
 
@@ -323,75 +324,91 @@
 @media only screen and (min-width: 1280px) {
 
   .Container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 136px;
+  }
+
+  .Left-Column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .Right-Column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .Container {
     background-image: url('../img/work-together/work-desk.png');
     background-position: top right;
     background-repeat: no-repeat;
     background-size: 526px 408px;
-  } 
-
-@media (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-
- .work-together {
-   background-image: url('../img/work-together/work-desk-2x.png');
- }
-} 
-
-.Work-TogetherTitle{
-  margin-top: 164px;
-  color: #292929;
-  text-align: left;
-  font-family: 'Impact';
-  font-size: 108px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  font-weight: 400;
-}
-
-.Work-Together-text{
-  margin-top: 80px;
-  width: 488px;
-  font-size: 20px;
-  line-height: 1.6;
-  letter-spacing: 0.05em;
-}
-
-.ContactsList{
-  position: relative;
-  width: 488px;
-  margin-top: 120px;
-  gap: 16px;
-  display: flex;
-  flex-direction: column;
-}
-
-.ContactLink{
-  width: 154px;
-}
-
-#Work-Together-Form{
-    /*margin-top: 40px;*/
-    position: relative;
-    margin-right: 32px;
   }
 
-  .Filling-Input-Item{
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    .Container {
+      background-image: url('../img/work-together/work-desk-2x.png');
+    }
+  }
+
+  .Work-TogetherTitle {
+    margin-top: 0;
+    color: #292929;
+    text-align: left;
+    font-family: 'Impact';
+    font-size: 108px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    font-weight: 400;
+  }
+
+  .Work-Together-text {
+    margin-top: 80px;
+    width: 488px;
+    font-size: 20px;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+  }
+
+  .ContactsList {
+    width: 488px;
+    margin-top: 120px;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ContactLink {
+    width: 154px;
+  }
+
+  #Work-Together-Form {
+    position: relative;
+    margin-top: 455px;
+  }
+
+  .Filling-Input-Item {
     width: 592px;
     margin-bottom: 32px;
   }
 
-  .Filling-Input{
+  .Filling-Input {
     width: 560px;
     height: 24px;
   }
 
-  .Filling-Input2{
+  .Filling-Input2 {
     width: 560px;
     height: 72px;
   }
 
-  .SubmitBtn{
+  .SubmitBtn {
     width: 180px;
     height: 48px;
     color: #f0f0f0;
@@ -408,5 +425,4 @@
     border: 1px solid rgba(0, 0, 0, 0);
     transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1), background 500ms cubic-bezier(0.4, 0, 0.2, 1);
   }
-
 }
