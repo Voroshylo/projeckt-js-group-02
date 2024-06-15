@@ -43,8 +43,7 @@ function showError(message) {
 }
 
 function cardTemplate(review) {
-  console.log(review);
-  return `<li class="swiper-slide review-list-item">
+  return `<li class="swiper-slide review-list-item" id="list-item-id">
           <p class="review-section-text">${review.review}</p>
           <div class="review-avatar-text">
         <img
@@ -80,7 +79,6 @@ async function fetchReviews() {
       throw new Error('Failed to fetch reviews');
     }
     const data = await response.json();
-    console.log(data);
     if (data && data.length > 0) {
       renderReviews(data);
     } else {
