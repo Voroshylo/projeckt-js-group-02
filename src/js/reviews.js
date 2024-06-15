@@ -1,20 +1,36 @@
-
 import Swiper from 'swiper';
-import 'swiper/swiper-bundle.css'; 
+import 'swiper/swiper-bundle.css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
+import { Navigation, Keyboard, Scrollbar } from 'swiper/modules';
 
 // Ініціалізація Swiper
 const swiper = new Swiper('.reviews-swiper', {
   direction: 'horizontal',
   loop: false,
   navigation: {
-    nextEl: '.review-icon-next',
-    prevEl: '.review-icon-back',
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
   },
   keyboard: {
     enabled: true,
     onlyInViewport: true,
+  },
+  modules: [Navigation, Keyboard, Scrollbar],
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+    },
+    // when window width is >= 768px
+    768: {
+      slidesPerView: 1,
+    },
+    // when window width is >= 1280px
+    1280: {
+      slidesPerView: 2,
+      spaceBetween: 32,
+    },
   },
 });
 
@@ -26,56 +42,52 @@ function showError(message) {
   });
 }
 
-// Функція для створення однієї карточки відгуку
-function createReviewCard(review) {
-  const reviewItem = document.createElement('li');
-  reviewItem.classList.add('swiper-slide', 'review-list-item');
-  reviewItem.innerHTML = `
-    <p class="review-section-text">${review.text}</p>
-    <div class="review-avatar-text">
-      <img
-        srcset="${review.imgSrcSet}"
+function cardTemplate(review) {
+  return `<li class="swiper-slide review-list-item" id="list-item-id">
+          <p class="review-section-text">${review.review}</p>
+          <div class="review-avatar-text">
+        <img
+        srcset="${review.avatar_url}"
         class="review-section-img"
-        src="${review.imgSrc}"
+        src="${review.avatar_url}"
         alt="Avatar"
-      />
-      <h3 class="review-section-title">${review.name}</h3>
-    </div>
-  `;
-  return reviewItem;
+        width="40"
+        height="40"/>
+            <h3 class="review-section-title">${review.author}</h3>
+          </div>
+        </li>`;
 }
 
-// Функція для рендерингу масиву відгуків
+function cardsTemplate(reviews) {
+  return reviews.map(cardTemplate).join('');
+}
+
 function renderReviews(reviews) {
-  const reviewList = document.getElementById('reviews-list');
-  reviewList.innerHTML = ''; // Очищення попередніх відгуків
-
-  reviews.forEach(review => {
-    const reviewCard = createReviewCard(review);
-    reviewList.appendChild(reviewCard);
-  });
-
-  // Оновлення Swiper після додавання нових слайдів
+  const reviewList = document.getElementById('reviews-list-id');
+  const markup = cardsTemplate(reviews);
+  reviewList.innerHTML = markup;
   swiper.update();
 }
 
 // Функція для отримання відгуків з бекенду
 async function fetchReviews() {
   try {
-    const response = await fetch('https://your-backend-api.com/reviews');
+    const response = await fetch(
+      'https://portfolio-js.b.goit.study/api/reviews'
+    );
     if (!response.ok) {
       throw new Error('Failed to fetch reviews');
     }
     const data = await response.json();
-    if (data.reviews && data.reviews.length > 0) {
-      renderReviews(data.reviews);
+    if (data && data.length > 0) {
+      renderReviews(data);
     } else {
       showError('No reviews found');
-      document.getElementById('reviews-list').innerHTML = '<p>Not found</p>';
+      document.getElementById('reviews-list-id').innerHTML = '<p>Not found</p>';
     }
   } catch (error) {
     showError('An error occurred while fetching reviews');
-    document.getElementById('reviews-list').innerHTML = '<p>Not found</p>';
+    document.getElementById('reviews-list-id').innerHTML = '<p>Not found</p>';
   }
 }
 
