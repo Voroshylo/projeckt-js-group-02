@@ -93,5 +93,34 @@ async function fetchReviews() {
   }
 }
 
+// Функція для оновлення стану кнопок
+function updateNavigationButtons() {
+  const prevButton = document.querySelector('.button-prev');
+  const nextButton = document.querySelector('.button-next');
+
+  // Перевірка чи це перший слайд
+  if (swiper.isBeginning) {
+    prevButton.classList.add('disabled');
+  } else {
+    prevButton.classList.remove('disabled');
+  }
+
+  // Перевірка чи це останній слайд
+  if (swiper.isEnd) {
+    nextButton.classList.add('disabled');
+  } else {
+    nextButton.classList.remove('disabled');
+  }
+}
+
+// Додаємо обробники подій для оновлення стану кнопок при зміні слайду
+swiper.on('slideChange', updateNavigationButtons);
+
+// Додаємо обробники подій для оновлення стану кнопок при ініціалізації
+swiper.on('init', updateNavigationButtons);
+
+// Ініціалізація Swiper (якщо ви не використовуєте автозапуск)
+swiper.init();
+
 // Завантаження відгуків при завантаженні сторінки
 document.addEventListener('DOMContentLoaded', fetchReviews);

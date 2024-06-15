@@ -156,6 +156,12 @@
   background-color: transparent;
 }
 
+.button-prev.disabled,
+.button-next.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none; /* Дезактивація подій */
+}
 .review-arrow-nav {
   display: flex;
   flex-direction: row;
