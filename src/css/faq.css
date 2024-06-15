@@ -1,4 +1,7 @@
-
+.section-faq {
+    display: flex;
+    justify-content: center;
+}
 
 .faq-title-span {
     color: #00B068;
