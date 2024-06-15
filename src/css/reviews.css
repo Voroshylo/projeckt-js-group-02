@@ -156,11 +156,10 @@
 }
 
 
-/* .review-icon-next,
-.review-icon-back {
-  fill: black;
-
-} */
+ .review-icon-next{
+  fill: none;
+  stroke:  black;
+} 
 
 /* Навігаційні стрілки */
 .review-arrow-nav .button-prev,

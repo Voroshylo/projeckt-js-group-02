@@ -3,6 +3,8 @@ import 'swiper/swiper-bundle.css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import { Navigation, Keyboard, Scrollbar } from 'swiper/modules';
+// import project10Retina from `./img/my-projeckts/10-2x.jpg`;
+// import spriteSvg from `./img/sprite.svg`;
 
 // Ініціалізація Swiper
 const swiper = new Swiper('.reviews-swiper', {
