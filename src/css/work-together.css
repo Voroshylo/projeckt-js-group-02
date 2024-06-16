@@ -342,7 +342,7 @@
   .container1 {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-end;
     gap: 136px;
   }
 
@@ -373,6 +373,16 @@
     }
   }
 
+  .work-together {
+    /*margin-bottom: 124px;
+    margin-top: 124px;
+    max-width: 768px;
+    max-width: 335px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;*/
+  }
+
   .work-together-title {
     margin-top: 0;
     color: #292929;
@@ -400,9 +410,14 @@
     flex-direction: column;
   }
 
+  .contacts-list li:last-child {
+    margin-bottom: 0; /* Прибираємо відступ у останнього елемента */
+  }
+
   .contact-item{
     display: flex;
     align-items: center;
+    /*margin-bottom: 16px;*/
   }
 
   .contact-link {
@@ -411,7 +426,9 @@
 
   #work-together-form {
     position: relative;
-    margin-top: 455px;
+    /*margin-top: 455px;*/
+    /*margin-top: 60px;
+    margin-top: 40px;*/
   }
 
   .filling-input-item {
