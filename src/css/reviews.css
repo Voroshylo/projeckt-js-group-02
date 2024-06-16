@@ -8,6 +8,7 @@
 
 .review-container {
   display: flex;
+
   flex-direction: column;
   box-sizing: border-box;
 }
@@ -32,9 +33,6 @@
   box-sizing: border-box;
 }
 
-#list-item-id{
-  margin-bottom: 24px;
-}
 .review-section-title {
   font-weight: 600;
   font-size: 16px;
@@ -182,6 +180,7 @@
   flex-direction: row;
   column-gap: 16px;
   justify-content: flex-end;
+  margin-top: 24px;
 }
 
 
