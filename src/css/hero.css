@@ -119,6 +119,7 @@
 @media screen and (min-width: 335px) {
   .hero-link-rectangle {
     top: 392px;
+    right: 55px;
   }
 }
 
@@ -168,7 +169,7 @@
     width: 261px;
     height: 96px;
     top: 592px;
-    right: 320px;
+    right: 380px;
   }
   .hero-text {
     padding-top: 0;
@@ -233,7 +234,7 @@
   }
   .hero-link-rectangle {
     top: 612px;
-    right: 923px;
+    right: 820px;
   }
   .hero-text {
     padding-bottom: 0;
