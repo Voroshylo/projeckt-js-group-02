@@ -3,6 +3,11 @@
 .benefits {
     display: flex;
     justify-content: center;
+    padding-top: 80px;
+}
+
+.benefits-image {
+    display: none;
 }
 
 .benefits-title {
@@ -63,7 +68,9 @@
 /*=====TABLET STYLES===== */
 
 @media screen and (min-width: 768px) {
-
+.benefits{
+padding-top: 124px;
+}
     .benefits-title {
         font-size: 108px;
         line-height: 1.15;
@@ -113,7 +120,7 @@
     /* .benefits {
         background-image: url(../img/benefits/benefits-desk.png);
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: 40%;
         background-position: top right;
     }
 
@@ -125,28 +132,36 @@
         }
     } */
 
-    /* .benefits {
+    .benefits {
         position: relative;
+        padding-top: 164px;
     }
 
     .benefits-image {
         display: block;
         position: absolute;
-        top: 0;
-        right: 0;
+        /* top: 32px;
+        right: 0; */
         left: 754px;
-        bottom: 760px;
-    } */
+        bottom: 600px;
+    }
 
-    /* @media screen and (min-width: 1281px; ) {
-        .benefits-image {
-            left: auto;
-        }
-    } */
+    .benefits-image {
+        left: 55%;
+        right: 32px
+    }
+
+
+    .benefits-container {
+        position: relative;
+    }
 
 
     .benefits-title {
         max-width: 681px;
+        margin-bottom: -75px;
+        /* position: absolute;
+        bottom: 85%; */
     }
 
     .benefits-list {

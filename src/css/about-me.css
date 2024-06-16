@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   padding-bottom: 80px;
 }
 
@@ -77,6 +78,7 @@
   margin-right: 8px;
   width: 4px;
   height: 4px;
+  border-radius: 1px;
 }
 
 .about-me-briefcase,
@@ -96,20 +98,6 @@
     text-transform: uppercase;
     margin-bottom: 0px;
   }
-
-  .bio-portf {
-    position: relative;
-  }
-  .bio-portf:after {
-    background: url(../img/about-me/decor-bg-2.png);
-    background-repeat: no-repeat;
-    content: '';
-    position: absolute;
-    bottom: -210px;
-    width: 333px;
-    height: 226px;
-    background-size: cover;
-    z-index: -1;
   }
 
   .title-about {
@@ -159,6 +147,11 @@
 }
 
 @media screen and (min-width: 1280px) {
+  .section.about{
+    max-width: 1280px;
+    padding-top: 164px;
+    padding-bottom: 164px;
+  }
   .wrapper {
     justify-content: end;
     gap: 136px;
@@ -170,9 +163,7 @@
     display: none;
   }
 
-  .section.about {
-    padding-bottom: 164px;
-  }
+
   .information-about {
     width: 488px;
     margin-bottom: 0px;
