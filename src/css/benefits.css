@@ -3,6 +3,7 @@
 .benefits {
     display: flex;
     justify-content: center;
+    padding-top: 80px;
 }
 
 .benefits-image {
@@ -67,7 +68,9 @@
 /*=====TABLET STYLES===== */
 
 @media screen and (min-width: 768px) {
-
+.benefits{
+padding-top: 124px;
+}
     .benefits-title {
         font-size: 108px;
         line-height: 1.15;
@@ -131,6 +134,7 @@
 
     .benefits {
         position: relative;
+        padding-top: 164px;
     }
 
     .benefits-image {

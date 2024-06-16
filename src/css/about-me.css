@@ -1,12 +1,10 @@
 .section.about {
   margin: 0 auto;
-  max-width: 335px;
+  max-width: 360px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
-.about-me-container {
-  width: 320px;
-  align-content: center;
-  margin: 0 auto;
-}
+
 .title {
   text-align: left;
   font-family: Impact;
@@ -20,12 +18,16 @@
   color: #00b068;
 }
 
-.about-photo img {
-  max-width: 100%;
-  width: 100%;
-  height: auto;
+.about-photo {
+  display: inline-block;
+  max-width: 320px;
   border-radius: 16px;
+  overflow: hidden;
+  position: relative;
   margin-bottom: 40px;
+}
+.about-photo img {
+  width: 100%;
 }
 .title-about {
   font-size: 32px;
@@ -46,16 +48,20 @@
 .information-about:not(:last-child) {
   margin-bottom: 24px;
 }
+.information-about.cl {
+  margin-bottom: 0;
+}
 .title-about.education {
   margin-top: 40px;
 }
 
 .about-me-item {
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   font-size: 16px;
   font-weight: 300;
   line-height: 24px;
   letter-spacing: 0.5px;
+  padding-left: 10px;
 }
 .about-me-item:last-child {
   margin-bottom: 40px;
@@ -66,14 +72,12 @@
 .about-me-item::before {
   content: '•';
   color: #00b068;
-  margin-right: 18px;
+  margin-right: 8px;
   width: 4px;
   height: 4px;
+  border-radius: 1px;
 }
-.section.about {
-  margin-bottom: 80px;
-  margin-top: 80px;
-}
+
 .about-me-briefcase,
 .about-role {
   width: 320px;
@@ -81,29 +85,43 @@
 
 @media screen and (min-width: 768px) {
   .section.about {
-    margin-bottom: 124px;
-    margin-top: 124px;
     max-width: 768px;
+    padding-top: 124px;
+    padding-bottom: 124px;
   }
-  .about-me-container {
-    align-content: center;
-    width: auto;
-  }
+
   .title {
     font-size: 108px;
     line-height: 1.15;
     letter-spacing: 1.8px;
     text-transform: uppercase;
+    margin-bottom: 0px;
   }
-  .about-me-container.container {
-    padding: 0 32px;
-    max-width: 768px;
+  .stars {
+  background-image: url(../img/about-me/decor-bg-2.png);
+  background-size: cover;
+  background-position: center;
+  width: 333px;
+  height: 226px;
+  display: flex;
+  position: absolute;
+  right: 37px;
+  z-index: -1;
+  top: 2326px;
+  }
+
+  .about-photo {
+    max-width: 336px;
+    height: 392px;
+    margin-top: 408px;
+    margin-right: 32px;
   }
   .about-photo img {
-    border-radius: 16px;
     width: 336px;
-    margin-bottom: 60px;
-    padding-top: 336px;
+    height: 392px;
+    border-radius: 16px;
+    margin-bottom: 40px;
+    object-fit: cover;
   }
   .container-photo {
     display: flex;
@@ -111,12 +129,17 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
   .title-about {
     font-size: 36px;
     letter-spacing: 0.5px;
     line-height: 48px;
     text-align: start;
     margin-bottom: 32px;
+    margin-top: 40px;
+  }
+  .title-about.role {
+    margin-top: 0px;
   }
   .information-about {
     margin-bottom: 24px;
@@ -125,7 +148,6 @@
   .wrapper {
     display: flex;
     align-items: flex-start;
-    gap: 32px;
   }
   .title-about.education {
     margin-top: 0;
@@ -140,35 +162,54 @@
     width: 336px;
   }
   .photo-back {
-    float: right;
-    right: 32px;
-    bottom: 156px;
-    display: flex;
-    padding: 26.378px 0px 0px 3.298px;
+    /* float: right;
+    display: flex; */
+    display: none;
+  }
+  .about-me-item {
+    margin-bottom: 16px;
+  }
+  .about-me-item.ad {
+    margin-bottom: 0px;
   }
 }
 
 @media screen and (min-width: 1280px) {
+  .section.about{
+    max-width: 1280px;
+    padding-top: 164px;
+    padding-bottom: 164px;
+  }
   .wrapper {
     justify-content: end;
+    gap: 0;
   }
-  .about-me-container.container {
-    max-width: 1280px;
+
+  .stars {
+    display: none;
   }
+
   .information-about {
     width: 488px;
     margin-bottom: 0px;
   }
-  .about-photo img {
-    margin-right: 136px;
-    border-radius: 16px;
+  .about-photo {
     width: 384px;
-    padding-top: 272px;
+    height: 448px;
+    margin-top: 272px;
+    border-radius: 16px;
+    overflow: hidden;
     margin-bottom: 80px;
+    margin-right: 136px;
   }
-
-  .wrapper-briefcase {
-    gap: 160px;
+  .about-photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    margin-bottom: 0px;
+  }
+  .about-me-briefcase {
+    margin-right: 136px;
   }
   .about-role {
     display: flex;
@@ -181,13 +222,15 @@
     padding: 30.149px 0px 0px 3.77px;
     justify-content: center;
     align-items: center;
+    width: 380px;
+    height: 258px;
   }
   .wrapper-briefcase {
-    margin-left: 180px;
+    gap: 0;
+    justify-content: center;
+    margin-left: 100px;
   }
-  .about-me-briefcase {
-    width: 384px;
-  }
+
   .section.about {
     max-width: 1280px;
   }
