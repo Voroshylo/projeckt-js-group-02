@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 80px;
 }
 .projects-title {
 color: var(--Black, #292929);
@@ -148,6 +149,9 @@ color: var(--Accet-green, #00B068);
   fill: var(--Accet-green, #00B068);
 } */
 @media  screen and (min-width: 768px){
+  .my-projects{
+    padding-top: 124px;
+}
 
   .projects-title{
     max-width: 584px;
@@ -202,6 +206,9 @@ max-width: 547px;
 }
 }
 @media  screen and (min-width: 1280px){
+  .my-projects{
+    padding-top: 164px;
+}
   .projects-title{
     margin-bottom: 80px;
   }
