@@ -409,6 +409,8 @@ body.themeDark .theme__dark {
     display: block;
 }
 
+
+
 .menu-button.is-open .icon-menu {
     display: none;
 }
@@ -445,7 +447,8 @@ body.themeDark .theme__dark {
 
 .site-nav--list {
     height: 100%;
-    margin-top: 68px;
+    margin-top: 340px;
+    margin-left: 139px;
 }
 
 
@@ -527,6 +530,18 @@ body.themeDark .theme__dark {
     position: relative;
    /* bottom: 18px;*/
 }
+
+   .switch-mob-menu {
+       display: flex;
+      /* align-items: center;*/
+        margin-top: auto;
+        position: absolute;
+      /* position: relative;*/
+       bottom: 18px;
+      /* top: 0px;*/
+       /* right: -340px;*/
+       /*margin-top: 0px;*/
+   }
 
 .theme-descr {
     display: none;

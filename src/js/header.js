@@ -92,13 +92,14 @@ export function changeThema(element) {
 (() => {
   const menuBtnRef = document.querySelector("[date-menu-button]");
   const mobileMenuRef = document.querySelector("[date-menu]");
+  const mobSwitch = document.querySelector(".theme-toggle");
   
 
   menuBtnRef.addEventListener("click", () => {
     const expanded =
     menuBtnRef.getAttribute("aria-expanded") === 'true' || false;
     
-    const styleValue = "background-image: url('../img/header/Group-64.png')";
+    const styleValue = "background-image: url('./img/header/Group-64.png')";
     
       menuBtnRef.classList.toggle("is-open");
      menuBtnRef.setAttribute("aria-expanded", !expanded);
@@ -109,7 +110,8 @@ export function changeThema(element) {
       mobileMenuRef.setAttribute("style", styleValue);
     } 
     
-      mobileMenuRef.classList.toggle("is-open");
+    mobileMenuRef.classList.toggle("is-open");
+    mobSwitch.classList.toggle("switch-mob-menu");
       document.body.classList.toggle("is-open");
 
   });
