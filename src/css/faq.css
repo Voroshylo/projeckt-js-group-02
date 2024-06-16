@@ -1,6 +1,5 @@
 .section-faq {
-    display: flex;
-    justify-content: center;
+    padding-top: 80px;
 }
 
 .faq-title-span {
@@ -15,8 +14,8 @@
 .faq-scroll-button-icon {
 stroke: #000000;
 fill: none;
-width: 32px;
-height: 32px;
+width: 24px;
+height: 24px;
 }
 
 .faq-title {
@@ -49,7 +48,7 @@ text-transform: uppercase;
 
 .faq-item.is-active {
     border-radius: 16px;
-    background-color: var(--accent-light-green);
+    background-color: #BCDFD1;
 }
 
 .faq-list .faq-item .item-title-wrap {
@@ -92,6 +91,9 @@ text-transform: uppercase;
 
 /* -------768-------- */
 @media (min-width: 768px) {
+    .section-faq{
+        padding-top: 124px;
+    }
     .faq-container {
         padding: 0 32px;
     }
@@ -118,6 +120,9 @@ letter-spacing: 1.8px;
 
 /* -------1280-------- */
 @media (min-width: 1280px) {
+    .section-faq{
+        padding-top: 164px;
+    }
     .faq-title {
         margin-bottom: 0;
     }
