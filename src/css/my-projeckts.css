@@ -13,10 +13,11 @@ font-weight: 400;
 line-height: 64px;
 letter-spacing: 1.8px;
 text-transform: uppercase;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 0 auto;
+    align-items: center; */
+    /* margin: 0 auto; */
+    text-align: center;
     margin-bottom: 40px;
 }
 
@@ -43,6 +44,7 @@ text-transform: uppercase;
   min-width: 320px;
 }
 .projects-img {
+  width: 100%;
 border-radius: 16px;
 margin-bottom: 12px;
 transition: transform 0.3s ease-in-out;
@@ -154,7 +156,8 @@ color: var(--Accet-green, #00B068);
 }
 
   .projects-title{
-    max-width: 584px;
+    /* max-width: 584px; */
+    text-align: center;
 font-size: 108px;
 line-height: 124px; /* 114.815% */
 margin-bottom: 60px;
