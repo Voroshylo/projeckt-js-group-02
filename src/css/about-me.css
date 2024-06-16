@@ -1,7 +1,8 @@
 .section.about {
   margin: 0 auto;
   max-width: 360px;
-  margin-top: 80px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .title {
@@ -74,6 +75,7 @@
   margin-right: 8px;
   width: 4px;
   height: 4px;
+  border-radius: 1px;
 }
 
 .about-me-briefcase,
@@ -84,7 +86,8 @@
 @media screen and (min-width: 768px) {
   .section.about {
     max-width: 768px;
-    margin-top: 124px;
+    padding-top: 124px;
+    padding-bottom: 124px;
   }
 
   .title {
@@ -95,16 +98,16 @@
     margin-bottom: 0px;
   }
   .stars {
-    background-image: url('../img/about-me/decor bg 2.png');
-    background-size: cover;
-    background-position: center;
-    width: 333px;
-    height: 226px;
-    display: flex;
-    position: absolute;
-    right: 50px;
-    z-index: -1;
-    top: 1050px;
+  background-image: url(../img/about-me/decor-bg-2.png);
+  background-size: cover;
+  background-position: center;
+  width: 333px;
+  height: 226px;
+  display: flex;
+  position: absolute;
+  right: 37px;
+  z-index: -1;
+  top: 2326px;
   }
 
   .about-photo {
@@ -172,6 +175,11 @@
 }
 
 @media screen and (min-width: 1280px) {
+  .section.about{
+    max-width: 1280px;
+    padding-top: 164px;
+    padding-bottom: 164px;
+  }
   .wrapper {
     justify-content: end;
     gap: 0;
@@ -181,10 +189,6 @@
     display: none;
   }
 
-  .section.about {
-    max-width: 1280px;
-    margin-top: 164px;
-  }
   .information-about {
     width: 488px;
     margin-bottom: 0px;

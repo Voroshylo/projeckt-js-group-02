@@ -3,6 +3,7 @@
     justify-content: center;
     margin: 0 auto;
     max-width: 335px;
+    padding-bottom: 80px;
   }
 
   /* .work-together {
@@ -217,7 +218,9 @@
 }
 
 @media screen and (min-width: 768px) {
-
+.work-together{
+  padding-bottom: 124px;
+}
   .container1 {
     background-image: url('../img/work-together/work-desk.png');
     background-position: top right;
@@ -333,7 +336,9 @@
 }
 
 @media only screen and (min-width: 1280px) {
-
+.work-together{
+  padding-bottom: 164px;
+}
   .container1 {
     display: flex;
     justify-content: space-between;
