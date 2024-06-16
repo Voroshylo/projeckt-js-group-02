@@ -218,7 +218,7 @@
 
 @media screen and (min-width: 768px) {
 
-  .container {
+  .container1 {
     background-image: url('../img/work-together/work-desk.png');
     background-position: top right;
     background-repeat: no-repeat;
@@ -229,9 +229,6 @@
    (min-resolution: 192dpi),
    (min-resolution: 2dppx) {
 
-  .work-together {
-    background-image: url('../img/work-together/work-desk-2x.png');
-   }
  } 
 
   .work-together{
@@ -337,7 +334,7 @@
 
 @media only screen and (min-width: 1280px) {
 
-  .container {
+  .container1 {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -356,7 +353,7 @@
     align-items: flex-end;
   }
 
-  .container {
+  .container1 {
     background-image: url('../img/work-together/work-desk.png');
     background-position: top right;
     background-repeat: no-repeat;
@@ -366,7 +363,7 @@
   @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
-    .container {
+    .container1 {
       background-image: url('../img/work-together/work-desk-2x.png');
     }
   }
