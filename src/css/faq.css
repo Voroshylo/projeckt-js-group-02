@@ -1,6 +1,5 @@
 .section-faq {
-    display: flex;
-    justify-content: center;
+    padding-top: 80px;
 }
 
 .faq-title-span {
@@ -92,6 +91,9 @@ text-transform: uppercase;
 
 /* -------768-------- */
 @media (min-width: 768px) {
+    .section-faq{
+        padding-top: 124px;
+    }
     .faq-container {
         padding: 0 32px;
     }
@@ -118,6 +120,9 @@ letter-spacing: 1.8px;
 
 /* -------1280-------- */
 @media (min-width: 1280px) {
+    .section-faq{
+        padding-top: 164px;
+    }
     .faq-title {
         margin-bottom: 0;
     }
