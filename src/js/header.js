@@ -105,38 +105,11 @@
 
 //++++++++++++++++=================================================
 
-//=====MOBILE MODAL JS=====
-
-document.addEventListener('DOMContentLoaded', () => {
-  const openMenuBtn = document.querySelector('[data-menu-open]');
-  const closeMenuBtn = document.querySelector('.close-menu');
-  const mobileMenu = document.querySelector('.menu');
-
-  function openMenu() {
-    mobileMenu.classList.add('is-open');
-    document.body.classList.add('no-scroll');
-  }
-
-  function closeMenu() {
-    mobileMenu.classList.remove('is-open');
-    document.body.classList.remove('no-scroll');
-  }
-
-  openMenuBtn.addEventListener('click', openMenu);
-  closeMenuBtn.addEventListener('click', closeMenu);
-
-  document.querySelectorAll('.nav-mob-menu a').forEach(link => {
-    link.addEventListener('click', closeMenu);
-  });
-});
-
-// =====================================================================
-
 //  Dark Thema switch
 
 console.log("start js");
 
-const storageTheme = "infoThema";
+const storageTheme = "onThema";
 const dataThema = {
 colorThema: "",
 };
@@ -145,7 +118,7 @@ colorThema: "",
 
 const nowThema = document.querySelector("body");
 
-//localStorage.clear();
+// localStorage.clear();
 
 const data = JSON.parse(localStorage.getItem(storageTheme));
 
@@ -220,3 +193,34 @@ export function changeThema(element) {
         return;   
     }
 }
+
+
+
+
+//=====MOBILE MODAL JS=====
+
+document.addEventListener('DOMContentLoaded', () => {
+  const openMenuBtn = document.querySelector('[data-menu-open]');
+  const closeMenuBtn = document.querySelector('.close-menu');
+  const mobileMenu = document.querySelector('.menu');
+
+  function openMenu() {
+    mobileMenu.classList.add('is-open');
+    document.body.classList.add('no-scroll');
+  }
+
+  function closeMenu() {
+    mobileMenu.classList.remove('is-open');
+    document.body.classList.remove('no-scroll');
+  }
+
+  openMenuBtn.addEventListener('click', openMenu);
+  closeMenuBtn.addEventListener('click', closeMenu);
+
+  document.querySelectorAll('.nav-mob-menu a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+});
+
+// =====================================================================
+
