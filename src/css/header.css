@@ -217,7 +217,7 @@ body.themeDark .home-header {
 
 #sitetheme+.theme-label,
 #sitetheme+.theme-label::after {
-    transition: all 0.3s;
+    transition: all 500ms, cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #sitetheme+.theme-label {
@@ -241,6 +241,7 @@ body.themeDark .home-header {
     width: 16px;
     height: 16px;
     background-color: var(--theme-color);
+    transition: all 500ms, cubic-bezier(0.4, 0, 0.2, 1);/*14-04*/
 }
 
 #sitetheme:checked+.theme-label::after {
@@ -434,7 +435,7 @@ body.themeDark .theme__dark {
 
 .site-nav--item {
     margin-bottom: 0;
-    width: 320px;
+    width: 3620px;
 }
 
 .icon-right {
@@ -520,10 +521,11 @@ body.themeDark .theme__dark {
 
 .theme-toggle {
     display: flex;
-    align-items: flex-end;
-    margin-top: auto;
-    position: absolute;
-    bottom: 18px;
+    align-items: center; 
+    margin-top: 0px;
+    /* position: absolute; */
+    position: relative;
+   /* bottom: 18px;*/
 }
 
 .theme-descr {
@@ -557,11 +559,7 @@ body.themeDark .theme__dark {
     margin-top: 20px;
 }
 
-.login {
-    margin-bottom: 20px;
-    font-weight: 400;
-    color: var(--main-color);
-}
+
 
 /* body.themeDark .login {
   
@@ -575,10 +573,7 @@ body.themeDark .theme__dark {
 /* body.themeDark .registr {
   color: var(--third-color);
 } */
-.logout {
-    color: var(--main-color);
-    font-weight: 400;
-}
+
 
 /* body.themeDark .logout {
   color: var(--third-color);
@@ -589,9 +584,7 @@ body.themeDark .theme__dark {
         line-height: 44px;
     }
 
-    .container {
-        width: 768px;
-    }
+   
 
     .position-header {
         position: static;
@@ -661,12 +654,7 @@ body.themeDark .theme__dark {
         display: flex;
     }
 
-    .form-search {
-        fill: #000000;
-        position: relative;
-        top: 0;
-        right: 0;
-    }
+    
 
     .input-label {
         display: flex;
@@ -685,27 +673,20 @@ body.themeDark .theme__dark {
         background-color: #fff;
     }
 
-    .icon-search {
-        position: absolute;
-        top: 0px;
-    }
+   
 
-    .icon-search {
-        margin-right: 14px;
-        cursor: pointer;
-        position: absolute;
-        top: 4px;
-        left: 8px;
-    }
+    
 
     .theme-toggle {
         display: flex;
         align-items: center;
-        margin-top: auto;
-        position: absolute;
-        bottom: 0;
+       /* margin-top: auto;*/
+       /* position: absolute;*/
+       position: relative;
+        bottom: 0px;
         top: 0px;
-        right: -340px;
+       /* right: -340px;*/
+       margin-top: 0px;
     }
 
     .current-page {
@@ -760,10 +741,11 @@ body.themeDark .theme__dark {
     .theme-toggle {
         display: flex;
         align-items: center;
-        margin-top: auto;
-        position: absolute;
+        margin-top: 0px;
+       /* position: absolute;*/
+       position: relative;
         top: 0px;
-        right: -600px;
+       /* right: -600px;*/
     }
 
     .theme-descr {
