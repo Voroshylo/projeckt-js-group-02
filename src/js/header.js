@@ -7,12 +7,15 @@ const dataThema = {
 colorThema: "",
 };
 
+
+
 const nowThema = document.querySelector("body");
+
+//localStorage.clear();
+
 const data = JSON.parse(localStorage.getItem(storageTheme));
 
-console.log("first get", data.colorThema || false);
-
-if (!data) {
+if (data === null) {
     console.log("localstorage is clear");
     dataThema.colorThema = "light";
      nowThema.classList.add('lightthema');
@@ -23,10 +26,9 @@ else {
 
      if (data.colorThema === 'dark') {
               
-           // nowThema.classList.remove("darkthema");
-    
+           
      nowThema.classList.add('darkthema');
-// nowThema.classList.add('themeDark');
+
         const data = JSON.parse(localStorage.getItem(storageTheme));
         console.log("localStore Thema is Dark:", data.colorThema);
         
