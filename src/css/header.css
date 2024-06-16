@@ -105,7 +105,7 @@ color: var(--Accet-green, #00B068);
 .nav-menu {
     display: flex;
     gap: 40px;
-    /* padding: 24px 0; */
+    padding: 24px 0; 
    
 }
 
@@ -343,12 +343,12 @@ body.themeDark .theme__dark {
 
 .position-header {
     position: relative;
-    flex-direction: column;
+   flex-direction: column;
 }
 
 .home-header {
     display: flex;
-    padding: 24px 0px 24px 0px;
+   /* padding: 24px 0px 24px 0px;*/
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     position: relative;
 }
@@ -371,6 +371,7 @@ body.themeDark .theme__dark {
 }
 
 .menu-button {
+    /*display: block;*/
     display: inline-block;
     padding: 0;
     margin-left: auto;
