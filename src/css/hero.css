@@ -7,11 +7,12 @@
   position: relative;
   padding-top: 112px;
   padding-bottom: 72px;
-  background-image: url(./img/hero/hero-dekor-mob.png);
+  background-image: url(../img/hero/hero-dekor-mob.png);
   background-repeat: no-repeat;
   background-size: 320px 704px;
   background-position-y: 16px;
   background-position-x: 20px;
+  margin: 0 auto;
 }
 
 .hero-title {
@@ -67,7 +68,7 @@
   transition: background-color 300ms ease;
 }
 
-.hero-link + .hero-link-rectangle {
+.hero-link:hover + .hero-link-rectangle {
   background-color: rgba(0, 176, 104, 0.6);
 }
 .hero-text {
@@ -233,7 +234,7 @@
   }
   .hero-link-rectangle {
     top: 612px;
-    right: 760px;
+    right: 923px;
   }
   .hero-text {
     padding-bottom: 0;

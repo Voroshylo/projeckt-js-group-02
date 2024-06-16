@@ -10,10 +10,9 @@
 @import url('./work-together.css');
 @import url('./footer.css');
 
-
 .container {
   max-width: 360px;
-  margin: 0;
+  margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 80px;
@@ -22,17 +21,17 @@
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
-  padding-bottom: 124px;
+    padding-bottom: 124px;
     padding-left: 32px;
-  padding-right: 32px;
+    padding-right: 32px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .container {
     max-width: 1280px;
-  padding-bottom: 164px;
-      padding-left: 136px;
-  padding-right: 136px;
+    padding-bottom: 164px;
+    padding-left: 136px;
+    padding-right: 136px;
   }
 }
