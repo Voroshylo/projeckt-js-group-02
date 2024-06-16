@@ -3,10 +3,13 @@ import 'swiper/swiper-bundle.css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import { Navigation, Keyboard, Scrollbar } from 'swiper/modules';
+// import project10Retina from `./img/my-projeckts/10-2x.jpg`;
+// import spriteSvg from `./img/sprite.svg`;
 
 // Ініціалізація Swiper
 const swiper = new Swiper('.reviews-swiper', {
   direction: 'horizontal',
+ 
   loop: false,
   navigation: {
     nextEl: '.button-next',
@@ -17,19 +20,34 @@ const swiper = new Swiper('.reviews-swiper', {
     onlyInViewport: true,
   },
   modules: [Navigation, Keyboard, Scrollbar],
+  slidesPerView: 2,
+  spaceBetween: 32,
   breakpoints: {
     // when window width is >= 320px
     320: {
       slidesPerView: 1,
+      spaceBetween: 32,
     },
     // when window width is >= 768px
     768: {
       slidesPerView: 1,
+      spaceBetween: 32,
     },
     // when window width is >= 1280px
     1280: {
       slidesPerView: 2,
       spaceBetween: 32,
+    },
+  },
+  effect: 'creative',
+  creativeEffect: {
+    prev: {
+      // will set `translateZ(-400px)` on previous slides
+      translate: [0, 0, -400],
+    },
+    next: {
+      // will set `translateX(100%)` on next slides
+      translate: ['100%', 0, 0],
     },
   },
 });
@@ -61,7 +79,6 @@ function cardTemplate(review) {
 function cardsTemplate(reviews) {
   return reviews.map(cardTemplate).join('');
 }
-
 function renderReviews(reviews) {
   const reviewList = document.getElementById('reviews-list-id');
   const markup = cardsTemplate(reviews);
@@ -90,6 +107,34 @@ async function fetchReviews() {
     document.getElementById('reviews-list-id').innerHTML = '<p>Not found</p>';
   }
 }
+
+// Функція для оновлення стану кнопок
+function updateNavigationButtons() {
+  const prevButton = document.querySelector('.button-prev');
+  const nextButton = document.querySelector('.button-next');
+  // Перевірка чи це перший слайд
+  if (swiper.isBeginning) {
+    prevButton.classList.add('disabled');
+  } else {
+    prevButton.classList.remove('disabled');
+  }
+  // Перевірка чи це останній слайд
+  if (swiper.isEnd) {
+    nextButton.classList.add('disabled');
+  } else {
+    nextButton.classList.remove('disabled');
+  }
+}
+// Додаємо обробники подій для оновлення стану кнопок при зміні слайду
+swiper.on('slideChange', updateNavigationButtons);
+
+// Додаємо обробники подій для оновлення стану кнопок при ініціалізації
+swiper.on('init', updateNavigationButtons);
+
+// Ініціалізація Swiper (якщо ви не використовуєте автозапуск)
+swiper.init();
+
+
 
 // Завантаження відгуків при завантаженні сторінки
 document.addEventListener('DOMContentLoaded', fetchReviews);

@@ -5,6 +5,10 @@
     justify-content: center;
 }
 
+.benefits-image {
+    display: none;
+}
+
 .benefits-title {
     font-family: Impact, sans-serif;
     font-weight: 400;
@@ -113,7 +117,7 @@
     /* .benefits {
         background-image: url(../img/benefits/benefits-desk.png);
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: 40%;
         background-position: top right;
     }
 
@@ -135,19 +139,25 @@
         /* top: 32px;
         right: 0; */
         left: 754px;
-        bottom: 760px;
+        bottom: 600px;
     }
 
-    @media screen and (min-width: 1281px) {
-        .benefits-image {
-            left: 55%;
-            right: 32px
-        }
+    .benefits-image {
+        left: 55%;
+        right: 32px
+    }
+
+
+    .benefits-container {
+        position: relative;
     }
 
 
     .benefits-title {
         max-width: 681px;
+        margin-bottom: -75px;
+        /* position: absolute;
+        bottom: 85%; */
     }
 
     .benefits-list {
