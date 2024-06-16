@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  padding-top: 80px;
 }
 
 .review-container {
@@ -120,7 +121,11 @@
 .review-section-img {
   border-radius: 50%;
 }
-
+.review-section-img:hover {
+  /* transform: scale(1.05); */
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out; 
+}
 .review-section-title {
   color: #292929;
   font-family: Poppins;
@@ -182,6 +187,9 @@
 
 @media screen and (min-width: 768px) {
 
+  .reviews {
+  padding-top: 124px;
+}
   .review-list-item {
     width: 704px !important;
     height: 224px !important;
@@ -200,6 +208,9 @@
 
 @media screen and (min-width: 1280px) {
 
+    .reviews {
+  padding-top: 164px;
+}
   .review-list-item {
     width: 592px !important;
     height: auto !important;
