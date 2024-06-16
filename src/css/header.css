@@ -589,10 +589,6 @@ body.themeDark .theme__dark {
         line-height: 44px;
     }
 
-    .container {
-        width: 768px;
-    }
-
     .position-header {
         position: static;
         display: flex;
