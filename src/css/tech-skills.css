@@ -35,7 +35,6 @@
     overflow: hidden;
     margin-right: auto;
     margin-left: auto;
-    padding-bottom: 80px;
 }
 
 .marquee {
@@ -112,8 +111,10 @@ body.darkthema .marquee_incline {
 .marquee-li-incline {}
 
 .marquee-li::before {
+        display: inline-block;
     content: '•';
     border-radius: 2px;
+    /* background-color: var(--accet-green); */
     color: var(--accet-green);
     width: 8px;
     height: 8px;
@@ -126,6 +127,7 @@ body.darkthema .marquee-li::before {
 }
 
 .marquee-li-incline::before {
+        display: inline-block;
     content: '•';
     border-radius: 2px;
     color: var(--black);
@@ -174,7 +176,6 @@ ul {
 
     .tech-skills {
         height: 282px;
-        padding-bottom: 124px;
     }
 }
 
@@ -183,7 +184,7 @@ ul {
         margin-bottom: 3px;
     }
 
-    .tech-skills {
+    /* .tech-skills {
         padding-bottom: 165px;
-    }
+    } */
 }

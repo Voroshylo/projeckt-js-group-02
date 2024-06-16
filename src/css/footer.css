@@ -1,9 +1,9 @@
-.container {
-}
+
 .footer-content {
     display: flex;
     flex-direction: column;
     padding-top: 40px;
+    border-top: 1px solid var(--Light-grey, #E4E5E6);
 }
 .footer-logo {
     
@@ -64,6 +64,7 @@ letter-spacing: 0.5px;
 @media  screen and (min-width: 768px){
 .footer-content {
     display: flex;
+    
 }
 .footer-logo {
 }
