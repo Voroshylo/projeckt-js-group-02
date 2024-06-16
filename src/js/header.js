@@ -23,12 +23,12 @@ else {
 
      if (data.colorThema === 'dark') {
               
-            nowThema.classList.remove("darkthema");
+           // nowThema.classList.remove("darkthema");
     
      nowThema.classList.add('darkthema');
 // nowThema.classList.add('themeDark');
         const data = JSON.parse(localStorage.getItem(storageTheme));
-        console.log("localStore Thema is LIGHT:", data.colorThema);
+        console.log("localStore Thema is Dark:", data.colorThema);
         
             
     }
@@ -37,7 +37,7 @@ else {
         nowThema.classList.add('lightthema');
        
         const data = JSON.parse(localStorage.getItem(storageTheme));
-    console.log("localStore Thema is DARK:", data.colorThema);
+    console.log("localStore Thema is Light:", data.colorThema);
 
       
     }
