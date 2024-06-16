@@ -447,13 +447,7 @@ body.themeDark .theme__dark {
     margin-top: 68px;
 }
 
-.form-search {
-    fill: #000000;
-    position: absolute;
-    top: 4px;
-    right: 32px;
-    overflow: hidden;
-}
+
 
 .input-label {
     display: flex;
@@ -736,10 +730,7 @@ body.themeDark .theme__dark {
         line-height: 57px;
     }
 
-    .container {
-        width: 1280px;
-    }
-
+  
     .home-header {
         padding: 28px 0px 28px 0px;
     }
