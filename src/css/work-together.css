@@ -493,11 +493,13 @@ body.darkthema .newline {
 }
 
 .darkthema .filling-input {
-  color: #2A2D32;
+  background-color: #2A2D32;
+  color: #f0f0f0;
 }
 
 .darkthema .filling-input2 {
-  color: #2A2D32;
+  background-color: #2A2D32;
+  color: #f0f0f0;
 }
 
 .darkthema .submitbtn {
