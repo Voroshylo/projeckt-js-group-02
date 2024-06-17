@@ -152,7 +152,11 @@
   stroke: black;
   color: var(--main-color);
 }
-
+body.darkthema .review-icon-back,
+.review-icon-next{
+  fill: none;
+  stroke: white;
+}
 /* Навігаційні стрілки */
 .review-arrow-nav .button-prev,
 .review-arrow-nav .button-next {
