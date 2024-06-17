@@ -2,10 +2,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   padding-bottom: 80px;
 }
-
+.bio-portf {
+  margin-top: 40px;
+}
 .title {
   text-align: left;
   font-family: Impact;
@@ -20,6 +21,7 @@
 }
 .about-me-briefcase {
   margin-bottom: 40px;
+  margin-top: 40px;
 }
 .about-me-item.ad {
   margin-bottom: 0px;
@@ -27,11 +29,6 @@
 
 .about-photo {
   display: inline-block;
-  max-width: 320px;
-  border-radius: 16px;
-  overflow: hidden;
-  position: relative;
-  margin-bottom: 40px;
 }
 
 .title-about {
@@ -56,9 +53,6 @@
 .information-about.cl {
   margin-bottom: 0;
 }
-.title-about.education {
-  margin-top: 40px;
-}
 
 .about-me-item {
   margin-bottom: 12px;
@@ -78,7 +72,6 @@
   margin-right: 8px;
   width: 4px;
   height: 4px;
-  border-radius: 1px;
 }
 
 .about-me-briefcase,
@@ -98,6 +91,23 @@
     text-transform: uppercase;
     margin-bottom: 0px;
   }
+
+  .bio-portf {
+    position: relative;
+  }
+  .about-me-briefcase {
+    margin-top: 0;
+  }
+  .bio-portf:after {
+    background: url(../img/about-me/decor-bg-2.png);
+    background-repeat: no-repeat;
+    content: '';
+    position: absolute;
+    bottom: -210px;
+    width: 333px;
+    height: 226px;
+    background-size: cover;
+    z-index: -1;
   }
 
   .title-about {
@@ -119,6 +129,7 @@
     align-items: flex-start;
     margin-top: 40px;
     gap: 32px;
+    margin-bottom: 60px;
   }
   .about-photo {
     margin-top: 408px;
@@ -147,23 +158,27 @@
 }
 
 @media screen and (min-width: 1280px) {
-  .section.about{
-    max-width: 1280px;
-    padding-top: 164px;
+  .wrapper {
+    gap: 136px;
+    margin-bottom: 80px;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .bio-portf:after {
+    background-repeat: no-repeat;
+    content: '';
+    position: absolute;
+    bottom: -280px;
+    width: 380px;
+    height: 258px;
+    background-size: cover;
+    z-index: -1;
+    left: 140px;
+  }
+  .section.about {
     padding-bottom: 164px;
   }
-  .wrapper {
-    justify-content: end;
-    gap: 136px;
-    align-items: flex-end;
-    margin-bottom: 0px;
-  }
-
-  .bio-portf::after {
-    display: none;
-  }
-
-
   .information-about {
     width: 488px;
     margin-bottom: 0px;
@@ -171,7 +186,7 @@
   .about-photo {
     border-radius: 16px;
     overflow: hidden;
-    margin-top: 0;
+    margin-top: 312px;
   }
   .about-photo img {
     border-radius: 16px;
@@ -185,12 +200,7 @@
     flex-direction: column;
     align-items: flex-start;
   }
-  .photo-back {
-    float: right;
-    display: inline-flex;
-    width: 380px;
-    height: 258px;
-  }
+
   .wrapper-briefcase {
     gap: 0;
   }
