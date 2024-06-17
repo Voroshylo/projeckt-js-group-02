@@ -95,13 +95,13 @@ border-bottom: 1px solid #CCC;
     background-color: #1E2023;
 }
 body.darkthema .ac{
-    background-color: #1E2023;
+    background-color: var(--accent-bg-color)
 }
 body.darkthema .faq-item-title{
     color: white;
 }
 body.darkthema .faq-item{
-    border-bottom: 1px solid #2A2D32;
+    border-bottom: var(--accent-bg-color);
 }
 body.darkthema .faq-item.is-active{
     background-color: #204136;

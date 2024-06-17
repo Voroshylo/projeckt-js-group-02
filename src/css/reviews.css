@@ -65,7 +65,18 @@
   flex-direction: column;
   width: auto;
 }
-
+body.darkthema .swiper-slide{
+  background-color: var(--bg-silver);
+}
+body.darkthema .review-section-text{
+  color: #f0f0f0;
+}
+body.darkthema .review-avatar-text{
+  color: #f0f0f0;
+}
+body.darkthema .review-section-title {
+  color: #f0f0f0;
+}
 .review-arrow-nav {
   display: flex;
   justify-content: flex-end;
@@ -150,12 +161,12 @@
 .review-icon-next {
   fill: none;
   stroke: black;
-  color: var(--main-color);
+
 }
 body.darkthema .review-icon-back,
 .review-icon-next{
   fill: none;
-  stroke: white;
+  stroke: var(--main-color);
 }
 /* Навігаційні стрілки */
 .review-arrow-nav .button-prev,

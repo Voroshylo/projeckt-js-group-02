@@ -272,6 +272,7 @@
 }
 
 .darkthema {
+    --bg-silver: #2A2D32;
     --bg-color: #1E2023;
     --main-color: #f0f0f0;
     color: var(--main-color);
