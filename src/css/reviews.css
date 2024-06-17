@@ -86,7 +86,7 @@
   border-radius: 16px;
   background: #E4E5E6;
   padding: 32px;
-  min-height: 296px;
+  /* min-height: 296px; */
   width: 320px;
   overflow: hidden;
   flex: 1 0 auto;
@@ -150,6 +150,7 @@
 .review-icon-next {
   fill: none;
   stroke: black;
+  color: var(--main-color);
 }
 
 /* Навігаційні стрілки */
@@ -203,7 +204,6 @@
   .review-list-item {
     width: 704px !important;
     height: 224px !important;
-    height: auto;
     margin-right: 0 !important;
   }
 
@@ -226,7 +226,6 @@
 
   .review-list-item {
     width: 592px !important;
-    height: auto !important;
   }
 
   #reviews-list-id {
