@@ -240,8 +240,7 @@
     width: 40px;
     height: 20px;
 
-    background: var(--third-color);
-    border: 1px solid var(--theme-color);
+    background: var(--input-silver);
     border-radius: 20px;
     cursor: pointer;
 }
@@ -250,7 +249,7 @@
     border-radius: 50%;
     content: '';
     position: absolute;
-    top: 1px;
+    top: 2px;
     left: 1px;
     width: 16px;
     height: 16px;
@@ -259,19 +258,21 @@
 
 #sitetheme:checked+.theme-label::after {
     left: 54%;
-    background-color: var(--third-color);
+    background-color: var(--check-color);
 }
 
 #sitetheme:checked+.theme-label {
-    background: var(--theme-color);
+    background: var(--bg-silver);
 }
 .lightthema {
+    --input-silver: #E4E5E6;
     --main-color: #292929;
     color: var(--main-color);
     background-color: var(--bg-color);
 }
 
 .darkthema {
+    --check-color:#14C57C;
     --bg-silver: #2A2D32;
     --bg-color: #1E2023;
     --main-color: #f0f0f0;
