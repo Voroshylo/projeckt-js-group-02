@@ -7,7 +7,7 @@
   position: relative;
   padding-top: 112px;
   padding-bottom: 72px;
-  background-image: url(./img/hero/hero-dekor-mob.png);
+  background-image: url(../img/hero/hero-dekor-mob.png);
   background-repeat: no-repeat;
   background-size: 320px 704px;
   background-position-y: 16px;
@@ -31,7 +31,6 @@
 }
 .hero-data-container {
   margin-top: 40px;
-  margin-bottom: 0;
 }
 .hero-link {
   position: relative;
@@ -67,7 +66,7 @@
   transition: background-color 300ms ease;
 }
 
-.hero-link + .hero-link-rectangle {
+.hero-link:hover + .hero-link-rectangle {
   background-color: rgba(0, 176, 104, 0.6);
 }
 .hero-text {
@@ -104,6 +103,11 @@
 }
 .hero-social-link:hover {
   color: #00b068;
+}
+
+.hero-photo {
+  border-radius: 32px;
+  overflow: hidden;
 }
 
 /* Adaptive */
@@ -240,4 +244,25 @@
     width: 592px;
     letter-spacing: 0.027em;
   }
+}
+
+/* dark */
+
+body.darkthema .hero-title,
+body.darkthema .hero-link,
+body.darkthema .hero-text,
+body.darkthema .hero-social-link {
+  color: #f0f0f0;
+}
+
+body.darkthema .hero-social-list {
+  background-color: #2a2d32;
+}
+
+body.darkthema .hero-social-link {
+  transition: color 0.3s ease;
+}
+
+body.darkthema .hero-social-link:hover {
+  color: #14c57c;
 }

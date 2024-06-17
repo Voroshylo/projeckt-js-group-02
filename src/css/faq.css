@@ -1,6 +1,5 @@
 .section-faq {
-    display: flex;
-    justify-content: center;
+    padding-top: 80px;
 }
 
 .faq-title-span {
@@ -15,8 +14,12 @@
 .faq-scroll-button-icon {
 stroke: #000000;
 fill: none;
-width: 32px;
-height: 32px;
+width: 24px;
+height: 24px;
+}
+body.darkthema .faq-scroll-button-icon{
+    stroke: white;
+    fill: none;
 }
 
 .faq-title {
@@ -44,12 +47,13 @@ text-transform: uppercase;
 }
 
 .faq-list .faq-item {
-    background-color: var(--bg-color);
+border-bottom: 1px solid #CCC;
 }
 
 .faq-item.is-active {
     border-radius: 16px;
-    background-color: var(--accent-light-green);
+    background-color: #BCDFD1;
+    border:none;
 }
 
 .faq-list .faq-item .item-title-wrap {
@@ -59,8 +63,6 @@ text-transform: uppercase;
 }
 
 .faq-item-arrow {
-    width: 32px;
-    height: 32px;
 }
 
 .faq-list .faq-item-title {
@@ -89,9 +91,26 @@ text-transform: uppercase;
     padding: 0;
     margin-top: 24px;
 }
-
+ .faq-item {
+    background-color: #1E2023;
+}
+body.darkthema .ac{
+    background-color: #1E2023;
+}
+body.darkthema .faq-item-title{
+    color: white;
+}
+body.darkthema .faq-item{
+    border-bottom: 1px solid #2A2D32;
+}
+body.darkthema .faq-item.is-active{
+    background-color: #204136;
+}
 /* -------768-------- */
 @media (min-width: 768px) {
+    .section-faq{
+        padding-top: 124px;
+    }
     .faq-container {
         padding: 0 32px;
     }
@@ -118,6 +137,9 @@ letter-spacing: 1.8px;
 
 /* -------1280-------- */
 @media (min-width: 1280px) {
+    .section-faq{
+        padding-top: 164px;
+    }
     .faq-title {
         margin-bottom: 0;
     }

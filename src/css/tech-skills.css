@@ -26,18 +26,15 @@
     overflow: hidden;
 }
 .container_tech_skills {
-    overflow: hidden;
+    margin: 0;
 }
 
 .tech-skills {
-    display: flex;
     justify-content: center;
     height: 245px;
-    overflow: hidden;
-    max-width: 360px;
     margin-right: auto;
     margin-left: auto;
-    padding-bottom: 80px;
+    overflow: hidden;
 }
 
 .marquee {
@@ -56,9 +53,6 @@
     color: #292929;
     position: relative;
     z-index: 2;
-    width: 1392px;
-    margin-bottom: 20px;
-    overflow: hidden;
 
 }
 
@@ -73,6 +67,7 @@ body.darkthema .marquee {
     transform: rotate(+2deg);
     left: -3px;
     z-index: 1;
+    width: 105%;
 }
 
 body.darkthema .marquee_incline {
@@ -109,17 +104,19 @@ body.darkthema .marquee_incline {
     padding: 0 20px 0 0;
 }
 
-.marquee-li {}
+.marquee-li {
+}
 
-.marquee-li-incline {}
+.marquee-li-incline {
+}
 
 .marquee-li::before {
+        display: inline-block;
     content: '•';
     border-radius: 2px;
     color: var(--accet-green);
-    width: 8px;
-    height: 8px;
-    padding: 0 20px 0 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 body.darkthema .marquee-li::before {
@@ -128,12 +125,11 @@ body.darkthema .marquee-li::before {
 }
 
 .marquee-li-incline::before {
+        display: inline-block;
     content: '•';
-    border-radius: 2px;
     color: var(--black);
-    width: 8px;
-    height: 8px;
-    padding: 0 20px 0 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 body.darkthema .marquee-li-incline::before {
@@ -142,11 +138,11 @@ body.darkthema .marquee-li-incline::before {
 }
 
 .marquee-li:first-child::before {
-    padding: 0 20px 0 0;
+    content: none;
 }
 
 .marquee-li-incline:first-child::before {
-    padding: 0 20px 0 0;
+    content: none;
 }
 
 ul {
@@ -170,24 +166,20 @@ ul {
         font-size: 36px;
         line-height: 1.33em;
         letter-spacing: 0.01em;
-        margin-bottom: 15px;
 
     }
 
     .tech-skills {
         height: 282px;
-        max-width: 768px;
-        padding-bottom: 124px;
     }
 }
 
 @media screen and (min-width: 1280px) {
     .marquee {
-        margin-bottom: 3px;
+        margin-bottom: 0;
     }
 
-    .tech-skills {
-        max-width: 1280px;
+    /* .tech-skills {
         padding-bottom: 165px;
-    }
+    } */
 }

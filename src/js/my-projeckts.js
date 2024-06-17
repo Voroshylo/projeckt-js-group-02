@@ -18,6 +18,7 @@ import project9 from '../img/my-projeckts/9.jpg';
 import project9Retina from '../img/my-projeckts/9-2x.jpg';
 import project10 from '../img/my-projeckts/10.jpg';
 import project10Retina from '../img/my-projeckts/10-2x.jpg';
+import spriteSvg from '../img/sprite.svg'
 
 const projects = [
   {
@@ -26,7 +27,7 @@ const projects = [
     alt: "power-pulse-webservice",
     tech: "React, JavaScript, Node JS, Git",
     description: "power pulse webservice",
-    link: "#"
+    link: "https://github.com/Voroshylo/projeckt-js-group-02"
   },
   {
     imgSrc: project2,
@@ -34,7 +35,7 @@ const projects = [
     alt: "mimino-website",
     tech: "React, JavaScript, Node JS, Git",
     description: "mimino website",
-    link: "#"
+    link: "https://github.com/Voroshylo/projeckt-js-group-02"
   },
   {
     imgSrc: project3,
@@ -42,7 +43,7 @@ const projects = [
     alt: "vyshyvanka",
     tech: "React, JavaScript, Node JS, Git",
     description: "vyshyvanka vibes Landing Page",
-    link: "#"
+    link: "https://github.com/Voroshylo/projeckt-js-group-02"
   },
   {
     imgSrc: project4,
@@ -58,7 +59,7 @@ const projects = [
     alt: "wallet-webservice",
     tech: "React, JavaScript, Node JS, Git",
     description: "wallet webservice",
-    link: "#"
+    link: "https://github.com/Voroshylo/projeckt-js-group-02"
   },
   {
     imgSrc: project6,
@@ -66,7 +67,7 @@ const projects = [
     alt: "chego-jewelry-website",
     tech: "React, JavaScript, Node JS, Git",
     description: "chego jewelry website",
-    link: "#"
+    link: "https://github.com/Voroshylo/projeckt-js-group-02"
   },
   {
     imgSrc: project7,
@@ -74,7 +75,7 @@ const projects = [
     alt: "energy-flow-webservice",
     tech: "React, JavaScript, Node JS, Git",
     description: "energy flow webservice",
-    link: "#"
+    link: "https://github.com/Voroshylo/projeckt-js-group-02"
   },
   {
     imgSrc: project8,
@@ -82,7 +83,7 @@ const projects = [
     alt: "fruitbox-online-store",
     tech: "React, JavaScript, Node JS, Git",
     description: "fruitbox online store",
-    link: "#"
+    link: "https://github.com/Voroshylo/projeckt-js-group-02"
   },
   {
     imgSrc: project9,
@@ -90,7 +91,7 @@ const projects = [
     alt: "English-excellence-webservice",
     tech: "React, JavaScript, Node JS, Git",
     description: "English excellence webservice",
-    link: "#"
+    link: "https://github.com/Voroshylo/projeckt-js-group-02"
   },
   {
     imgSrc: project10,
@@ -98,7 +99,7 @@ const projects = [
     alt: "starlight-studio-landing-page",
     tech: "React, JavaScript, Node JS, Git",
     description: "starlight studio landing page",
-    link: "#"
+    link: "https://github.com/Voroshylo/projeckt-js-group-02"
   },
 ];
 const projectsPerPage = 3;
@@ -116,6 +117,7 @@ function loadProjects() {
     li.classList.add('projects-li');
     
     li.innerHTML = `
+    <div class="div-projects">
       <img
         class="projects-img"
         srcset="${project.imgSrcSet}"
@@ -123,16 +125,18 @@ function loadProjects() {
         alt="${project.alt}"
         width="320"
       />
-      <div class="div-projects-h-p">
+      </div>
         <h3 class="projects-h">${project.tech}</h3>
+        <div class="div-p-a">
         <p class="projects-p">${project.description}</p>
-        <a href="${project.link}" class="projects-btn">
+        <a href="${project.link}" class="projects-btn" target="_blank" rel="noopener noreferrer">
           VISIT
           <svg class="btn-projects-icon" width="14" height="14">
-            <use href="../img/sprite.svg#icon-Vector-Projects"></use>
+            <use href="${spriteSvg}#icon-Vector-Projects"></use>
           </svg>
         </a>
-      </div>
+        </div>
+      
     `;
 
     projectsUl.appendChild(li);
