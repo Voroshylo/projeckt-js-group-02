@@ -107,95 +107,72 @@
 
 //  Dark Thema switch
 
-console.log("start js");
+console.log('start js');
 
-const storageTheme = "onThema";
+const storageTheme = 'onThema';
 const dataThema = {
-colorThema: "",
+  colorThema: '',
 };
 
-
-
-const nowThema = document.querySelector("body");
+const nowThema = document.querySelector('body');
 
 // localStorage.clear();
 
 const data = JSON.parse(localStorage.getItem(storageTheme));
 
 if (data === null) {
-    console.log("localstorage is clear");
-    dataThema.colorThema = "light";
-     nowThema.classList.add('lightthema');
-    localStorage.setItem(storageTheme, JSON.stringify(dataThema));
-   
+  console.log('localstorage is clear');
+  dataThema.colorThema = 'light';
+  nowThema.classList.add('lightthema');
+  localStorage.setItem(storageTheme, JSON.stringify(dataThema));
+} else {
+  if (data.colorThema === 'dark') {
+    nowThema.classList.add('darkthema');
+
+    const data = JSON.parse(localStorage.getItem(storageTheme));
+    console.log('localStore Thema is Dark:', data.colorThema);
+  } else {
+    nowThema.classList.add('lightthema');
+
+    const data = JSON.parse(localStorage.getItem(storageTheme));
+    console.log('localStore Thema is Light:', data.colorThema);
+  }
 }
-else {
-
-     if (data.colorThema === 'dark') {
-              
-           
-     nowThema.classList.add('darkthema');
-
-        const data = JSON.parse(localStorage.getItem(storageTheme));
-        console.log("localStore Thema is Dark:", data.colorThema);
-        
-            
-    }
-    else { 
-      
-        nowThema.classList.add('lightthema');
-       
-        const data = JSON.parse(localStorage.getItem(storageTheme));
-    console.log("localStore Thema is Light:", data.colorThema);
-
-      
-    }
-}
-
 
 // first load thema color from localStorage +++++++===============
 
-
-
-
-
-const switchThema = document.querySelector("#sitetheme");
-switchThema.addEventListener("click", changeThema);
+const switchThema = document.querySelector('#sitetheme');
+switchThema.addEventListener('click', changeThema);
 
 export function changeThema(element) {
+  const data = JSON.parse(localStorage.getItem(storageTheme));
+  console.log('localStore Thema:', data.colorThema);
+  if (data.colorThema === 'dark') {
+    if (nowThema.classList.contains('darkthema')) {
+      nowThema.classList.remove('darkthema');
+    }
+    dataThema.colorThema = 'light';
+    localStorage.setItem(storageTheme, JSON.stringify(dataThema));
+    nowThema.classList.add('lightthema');
+
     const data = JSON.parse(localStorage.getItem(storageTheme));
-    console.log("localStore Thema:", data.colorThema);
-    if (data.colorThema === 'dark') {
-        
-        if (nowThema.classList.contains("darkthema")) {
-            nowThema.classList.remove("darkthema");
-       }
-        dataThema.colorThema = "light";
-        localStorage.setItem(storageTheme, JSON.stringify(dataThema));
-        nowThema.classList.add('lightthema');
+    console.log('localStore Thema is LIGHT:', data.colorThema);
 
-        const data = JSON.parse(localStorage.getItem(storageTheme));
-        console.log("localStore Thema is LIGHT:", data.colorThema);
-        
-        return;      
+    return;
+  } else {
+    if (nowThema.classList.contains('lightthema')) {
+      nowThema.classList.remove('lightthema');
     }
-    else { 
-         if (nowThema.classList.contains("lightthema")) {
-            nowThema.classList.remove("lightthema");
-       }
-          dataThema.colorThema = "dark";
-        localStorage.setItem(storageTheme, JSON.stringify(dataThema));
-        nowThema.classList.add('darkthema');
-       
-        const data = JSON.parse(localStorage.getItem(storageTheme));
-    console.log("localStore Thema is DARK:", data.colorThema);
+    dataThema.colorThema = 'dark';
+    localStorage.setItem(storageTheme, JSON.stringify(dataThema));
+    nowThema.classList.add('darkthema');
 
-        return;   
-    }
+    const data = JSON.parse(localStorage.getItem(storageTheme));
+    console.log('localStore Thema is DARK:', data.colorThema);
+
+    return;
+  }
 }
-
-
-
 
 //=====MOBILE MODAL JS=====
 
@@ -223,4 +200,3 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // =====================================================================
-
