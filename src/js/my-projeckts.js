@@ -27,7 +27,7 @@ const projects = [
     alt: "power-pulse-webservice",
     tech: "React, JavaScript, Node JS, Git",
     description: "power pulse webservice",
-    link: "#"
+    link: "#projects"
   },
   {
     imgSrc: project2,
@@ -35,7 +35,7 @@ const projects = [
     alt: "mimino-website",
     tech: "React, JavaScript, Node JS, Git",
     description: "mimino website",
-    link: "#"
+    link: "#projects"
   },
   {
     imgSrc: project3,
@@ -43,7 +43,7 @@ const projects = [
     alt: "vyshyvanka",
     tech: "React, JavaScript, Node JS, Git",
     description: "vyshyvanka vibes Landing Page",
-    link: "#"
+    link: "#projects"
   },
   {
     imgSrc: project4,
@@ -59,7 +59,7 @@ const projects = [
     alt: "wallet-webservice",
     tech: "React, JavaScript, Node JS, Git",
     description: "wallet webservice",
-    link: "#"
+    link: "#projects"
   },
   {
     imgSrc: project6,
@@ -67,7 +67,7 @@ const projects = [
     alt: "chego-jewelry-website",
     tech: "React, JavaScript, Node JS, Git",
     description: "chego jewelry website",
-    link: "#"
+    link: "#projects"
   },
   {
     imgSrc: project7,
@@ -75,7 +75,7 @@ const projects = [
     alt: "energy-flow-webservice",
     tech: "React, JavaScript, Node JS, Git",
     description: "energy flow webservice",
-    link: "#"
+    link: "#projects"
   },
   {
     imgSrc: project8,
@@ -83,7 +83,7 @@ const projects = [
     alt: "fruitbox-online-store",
     tech: "React, JavaScript, Node JS, Git",
     description: "fruitbox online store",
-    link: "#"
+    link: "#projects"
   },
   {
     imgSrc: project9,
@@ -91,7 +91,7 @@ const projects = [
     alt: "English-excellence-webservice",
     tech: "React, JavaScript, Node JS, Git",
     description: "English excellence webservice",
-    link: "#"
+    link: "#projects"
   },
   {
     imgSrc: project10,
@@ -99,7 +99,7 @@ const projects = [
     alt: "starlight-studio-landing-page",
     tech: "React, JavaScript, Node JS, Git",
     description: "starlight studio landing page",
-    link: "#"
+    link: "#projects"
   },
 ];
 const projectsPerPage = 3;
@@ -129,7 +129,7 @@ function loadProjects() {
         <h3 class="projects-h">${project.tech}</h3>
         <div class="div-p-a">
         <p class="projects-p">${project.description}</p>
-        <a href="${project.link}" class="projects-btn">
+        <a href="${project.link}" class="projects-btn" target="_blank" rel="noopener noreferrer">
           VISIT
           <svg class="btn-projects-icon" width="14" height="14">
             <use href="${spriteSvg}#icon-Vector-Projects"></use>

@@ -1,11 +1,11 @@
 .section.about {
-  margin: 0 auto;
-  max-width: 335px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 80px;
 }
-.about-me-container {
-  width: 320px;
-  align-content: center;
-  margin: 0 auto;
+.bio-portf {
+  margin-top: 40px;
 }
 .title {
   text-align: left;
@@ -19,14 +19,18 @@
 .spanabout {
   color: #00b068;
 }
-
-.about-photo img {
-  max-width: 100%;
-  width: 100%;
-  height: auto;
-  border-radius: 16px;
+.about-me-briefcase {
   margin-bottom: 40px;
+  margin-top: 40px;
 }
+.about-me-item.ad {
+  margin-bottom: 0px;
+}
+
+.about-photo {
+  display: inline-block;
+}
+
 .title-about {
   font-size: 32px;
   font-weight: 500;
@@ -46,34 +50,30 @@
 .information-about:not(:last-child) {
   margin-bottom: 24px;
 }
-.title-about.education {
-  margin-top: 40px;
+.information-about.cl {
+  margin-bottom: 0;
 }
 
 .about-me-item {
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   font-size: 16px;
   font-weight: 300;
   line-height: 24px;
   letter-spacing: 0.5px;
+  padding-left: 10px;
 }
-.about-me-item:last-child {
-  margin-bottom: 40px;
-}
+
 .about-me-item.bl {
   margin-bottom: 0px;
 }
 .about-me-item::before {
   content: '•';
   color: #00b068;
-  margin-right: 18px;
+  margin-right: 8px;
   width: 4px;
   height: 4px;
 }
-.section.about {
-  margin-bottom: 80px;
-  margin-top: 80px;
-}
+
 .about-me-briefcase,
 .about-role {
   width: 320px;
@@ -81,42 +81,44 @@
 
 @media screen and (min-width: 768px) {
   .section.about {
-    margin-bottom: 124px;
-    margin-top: 124px;
-    max-width: 768px;
+    padding-bottom: 124px;
   }
-  .about-me-container {
-    align-content: center;
-    width: auto;
-  }
+
   .title {
     font-size: 108px;
     line-height: 1.15;
     letter-spacing: 1.8px;
     text-transform: uppercase;
+    margin-bottom: 0px;
   }
-  .about-me-container.container {
-    padding: 0 32px;
-    max-width: 768px;
+
+  .bio-portf {
+    position: relative;
   }
-  .about-photo img {
-    border-radius: 16px;
-    width: 336px;
-    margin-bottom: 60px;
-    padding-top: 336px;
+  .about-me-briefcase {
+    margin-top: 0;
   }
-  .container-photo {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  .bio-portf:after {
+    background: url(../img/about-me/decor-bg-2.png);
+    background-repeat: no-repeat;
+    content: '';
+    position: absolute;
+    bottom: -210px;
+    width: 333px;
+    height: 226px;
+    background-size: cover;
+    z-index: -1;
   }
+
   .title-about {
     font-size: 36px;
     letter-spacing: 0.5px;
     line-height: 48px;
     text-align: start;
     margin-bottom: 32px;
+  }
+  .title-about.role {
+    margin-top: 0px;
   }
   .information-about {
     margin-bottom: 24px;
@@ -125,7 +127,12 @@
   .wrapper {
     display: flex;
     align-items: flex-start;
+    margin-top: 40px;
     gap: 32px;
+    margin-bottom: 60px;
+  }
+  .about-photo {
+    margin-top: 408px;
   }
   .title-about.education {
     margin-top: 0;
@@ -133,62 +140,68 @@
   .wrapper-briefcase {
     display: flex;
     gap: 32px;
-    position: relative;
   }
   .about-me-briefcase,
   .about-role {
     width: 336px;
+    margin-bottom: 0;
   }
   .photo-back {
-    float: right;
-    right: 32px;
-    bottom: 156px;
-    display: flex;
-    padding: 26.378px 0px 0px 3.298px;
+    display: none;
+  }
+  .about-me-item {
+    margin-bottom: 16px;
+  }
+  .about-me-item.ad {
+    margin-bottom: 0px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .wrapper {
-    justify-content: end;
+    gap: 136px;
+    margin-bottom: 80px;
+    display: flex;
+    align-items: flex-start;
   }
-  .about-me-container.container {
-    max-width: 1280px;
+
+  .bio-portf:after {
+    background-repeat: no-repeat;
+    content: '';
+    position: absolute;
+    bottom: -280px;
+    width: 380px;
+    height: 258px;
+    background-size: cover;
+    z-index: -1;
+    left: 140px;
+  }
+  .section.about {
+    padding-bottom: 164px;
   }
   .information-about {
     width: 488px;
     margin-bottom: 0px;
   }
-  .about-photo img {
-    margin-right: 136px;
+  .about-photo {
     border-radius: 16px;
-    width: 384px;
-    padding-top: 272px;
-    margin-bottom: 80px;
+    overflow: hidden;
+    margin-top: 312px;
+  }
+  .about-photo img {
+    border-radius: 16px;
   }
 
-  .wrapper-briefcase {
-    gap: 160px;
+  .about-me-briefcase {
+    margin-right: 136px;
   }
   .about-role {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
-  .photo-back {
-    float: right;
-    display: inline-flex;
-    padding: 30.149px 0px 0px 3.77px;
-    justify-content: center;
-    align-items: center;
-  }
+
   .wrapper-briefcase {
-    margin-left: 180px;
-  }
-  .about-me-briefcase {
-    width: 384px;
-  }
-  .section.about {
-    max-width: 1280px;
+    gap: 0;
   }
 }

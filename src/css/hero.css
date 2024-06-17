@@ -1,6 +1,6 @@
 .hero {
-  padding-top: 80px;
-  padding-bottom: 112px;
+  /* padding-top: 80px; */
+  /* padding-bottom: 112px; */
 }
 
 .hero-container {
@@ -85,6 +85,7 @@
   background-color: #e4e5e6;
   margin: 0 auto;
   padding: 0;
+  padding-top: 16px;
 }
 .hero-social-list {
   display: flex;
@@ -119,12 +120,13 @@
 @media screen and (min-width: 335px) {
   .hero-link-rectangle {
     top: 392px;
+    right: 55px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .hero {
-    padding-bottom: 124px;
+    /* padding-bottom: 124px; */
   }
 
   .hero-container {
@@ -168,7 +170,7 @@
     width: 261px;
     height: 96px;
     top: 592px;
-    right: 320px;
+    right: 380px;
   }
   .hero-text {
     padding-top: 0;
@@ -188,7 +190,7 @@
 
 @media screen and (min-width: 1280px) {
   .hero {
-    padding-bottom: 164px;
+    /* padding-bottom: 164px; */
   }
   .hero-container {
     padding-bottom: 96px;
@@ -233,7 +235,7 @@
   }
   .hero-link-rectangle {
     top: 612px;
-    right: 923px;
+    right: 820px;
   }
   .hero-text {
     padding-bottom: 0;

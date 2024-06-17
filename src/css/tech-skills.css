@@ -26,18 +26,15 @@
     overflow: hidden;
 }
 .container_tech_skills {
-    overflow: hidden;
+    margin: 0;
 }
 
 .tech-skills {
-    display: flex;
     justify-content: center;
     height: 245px;
     overflow: hidden;
-    max-width: 360px;
     margin-right: auto;
     margin-left: auto;
-    padding-bottom: 80px;
 }
 
 .marquee {
@@ -56,9 +53,8 @@
     color: #292929;
     position: relative;
     z-index: 2;
-    width: 1392px;
     margin-bottom: 20px;
-    overflow: hidden;
+    /* overflow: hidden; */
 
 }
 
@@ -73,6 +69,7 @@ body.darkthema .marquee {
     transform: rotate(+2deg);
     left: -3px;
     z-index: 1;
+    width: 105%;
 }
 
 body.darkthema .marquee_incline {
@@ -114,8 +111,10 @@ body.darkthema .marquee_incline {
 .marquee-li-incline {}
 
 .marquee-li::before {
+        display: inline-block;
     content: '•';
     border-radius: 2px;
+    /* background-color: var(--accet-green); */
     color: var(--accet-green);
     width: 8px;
     height: 8px;
@@ -128,6 +127,7 @@ body.darkthema .marquee-li::before {
 }
 
 .marquee-li-incline::before {
+        display: inline-block;
     content: '•';
     border-radius: 2px;
     color: var(--black);
@@ -142,11 +142,11 @@ body.darkthema .marquee-li-incline::before {
 }
 
 .marquee-li:first-child::before {
-    padding: 0 20px 0 0;
+    content: none;
 }
 
 .marquee-li-incline:first-child::before {
-    padding: 0 20px 0 0;
+    content: none;
 }
 
 ul {
@@ -155,11 +155,11 @@ ul {
 
 @keyframes marqueeLine {
     from {
-        transform: translateX(0%);
+        transform: translateX(1%);
     }
 
     to {
-        transform: translateX(-100%);
+        transform: translateX(-99%);
     }
 }
 
@@ -176,8 +176,6 @@ ul {
 
     .tech-skills {
         height: 282px;
-        max-width: 768px;
-        padding-bottom: 124px;
     }
 }
 
@@ -186,8 +184,7 @@ ul {
         margin-bottom: 3px;
     }
 
-    .tech-skills {
-        max-width: 1280px;
+    /* .tech-skills {
         padding-bottom: 165px;
-    }
+    } */
 }
