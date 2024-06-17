@@ -17,6 +17,10 @@ fill: none;
 width: 24px;
 height: 24px;
 }
+body.darkthema .faq-scroll-button-icon{
+    stroke: white;
+    fill: none;
+}
 
 .faq-title {
 font-family: Impact;
@@ -87,7 +91,21 @@ border-bottom: 1px solid #CCC;
     padding: 0;
     margin-top: 24px;
 }
-
+ .faq-item {
+    background-color: #1E2023;
+}
+body.darkthema .ac{
+    background-color: #1E2023;
+}
+body.darkthema .faq-item-title{
+    color: white;
+}
+body.darkthema .faq-item{
+    border-bottom: 1px solid #2A2D32;
+}
+body.darkthema .faq-item.is-active{
+    background-color: #204136;
+}
 /* -------768-------- */
 @media (min-width: 768px) {
     .section-faq{

@@ -25,11 +25,15 @@
 }
 
 #reviews-list-id {
-  display: flex;        /* Встановлює flex-контейнер */
-  padding: 0;           /* Внутрішні відступи відсутні */
-  margin: 0;            /* Зовнішні відступи відсутні */
-  list-style: none;     /* Відміняє маркери списку для <ul> або <ol> */
-  justify-content:space-around;
+  display: flex;
+  /* Встановлює flex-контейнер */
+  padding: 0;
+  /* Внутрішні відступи відсутні */
+  margin: 0;
+  /* Зовнішні відступи відсутні */
+  list-style: none;
+  /* Відміняє маркери списку для <ul> або <ol> */
+  justify-content: space-around;
   box-sizing: border-box;
 }
 
@@ -45,7 +49,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  width: 100%; 
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -82,10 +86,11 @@
   border-radius: 16px;
   background: #E4E5E6;
   padding: 32px;
-  min-height: 296px;
+  /* min-height: 296px; */
   width: 320px;
   overflow: hidden;
-   flex: 1 0 auto; /* Адаптивна ширина */
+  flex: 1 0 auto;
+  /* Адаптивна ширина */
   box-sizing: border-box;
 }
 
@@ -119,11 +124,13 @@
 .review-section-img {
   border-radius: 50%;
 }
+
 .review-section-img:hover {
   /* transform: scale(1.05); */
   transform: scale(1.2);
-  transition: transform 0.3s ease-in-out; 
+  transition: transform 0.3s ease-in-out;
 }
+
 .review-section-title {
   color: #292929;
   font-family: Poppins;
@@ -138,12 +145,18 @@
   display: flex;
   flex-direction: row;
 }
+
 .review-icon-back,
-.review-icon-next{
+.review-icon-next {
   fill: none;
   stroke: black;
+  color: var(--main-color);
 }
-
+body.darkthema .review-icon-back,
+.review-icon-next{
+  fill: none;
+  stroke: white;
+}
 /* Навігаційні стрілки */
 .review-arrow-nav .button-prev,
 .review-arrow-nav .button-next {
@@ -173,8 +186,10 @@
 .button-next.disabled {
   opacity: 0.5;
   cursor: not-allowed;
-  pointer-events: none; /* Дезактивація подій */
+  pointer-events: none;
+  /* Дезактивація подій */
 }
+
 .review-arrow-nav {
   display: flex;
   flex-direction: row;
@@ -187,17 +202,19 @@
 @media screen and (min-width: 768px) {
 
   .reviews {
-  padding-top: 124px;
-}
+    padding-top: 124px;
+  }
+
   .review-list-item {
     width: 704px !important;
     height: 224px !important;
-    height: auto;
     margin-right: 0 !important;
   }
-#reviews-list-id {
-    gap: 32px;  
-}  
+
+  #reviews-list-id {
+    gap: 32px;
+  }
+
   .review-title {
     font-size: 108px;
     line-height: 1.15;
@@ -207,16 +224,15 @@
 
 @media screen and (min-width: 1280px) {
 
-    .reviews {
-  padding-top: 164px;
-}
+  .reviews {
+    padding-top: 164px;
+  }
+
   .review-list-item {
     width: 592px !important;
-    height: auto !important;
   }
+
   #reviews-list-id {
-    gap: 32px;  
-}  
+    gap: 32px;
+  }
 }
-
-
