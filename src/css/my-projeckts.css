@@ -1,10 +1,8 @@
 .my-projects{
     padding-top: 80px;
-    --accet-project: #008068;
 }
 .projects-title {
-/*color: var(--main-color, #292929);*/
-color: var(--accet-project);
+color: var(--main-color, #292929);
 font-family: Impact;
 font-size: 52px;
 font-style: normal;
@@ -16,6 +14,9 @@ text-transform: uppercase;
     margin-bottom: 40px;
 }
 
+body.darkthema .projects-title {
+    color: white;
+}
 .span-title{
 color: var(--Accet-green, #00B068);
 font-family: Impact;
@@ -59,6 +60,9 @@ letter-spacing: 0.5px;
   margin-top: 12px;
   margin-bottom: 16px;
 }
+body.darkthema .projects-h{
+  color: white;
+}
 .div-p-a{
   display: flex;
   flex-direction: column;
@@ -72,6 +76,9 @@ font-weight: 500;
 line-height: 40px; /* 125% */
 letter-spacing: 0.5px;
 text-transform: uppercase;
+}
+body.darkthema .projects-p{
+  color: white;
 }
 .projects-btn {
       display: flex;
@@ -95,6 +102,10 @@ letter-spacing: 0.5px;
 transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1), 
 background 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+body.darkthema .projects-btn{
+  background-color: #2A2D32;
+  color: white;
+}
 .btn-projects-icon{
   margin-left: 12px;
 
@@ -102,7 +113,11 @@ background 500ms cubic-bezier(0.4, 0, 0.2, 1);
 .projects-btn:hover, 
 .projects-btn:focus {
 background: #BBB;
-
+}
+body.darkthema .projects-btn:hover, 
+.projects-btn:focus{
+ background-color:  #3B3F45;
+ color: white;
 }
 .btn-load-more{
   width: 154px;
@@ -138,11 +153,18 @@ background 500ms cubic-bezier(0.4, 0, 0.2, 1);
   height: 2px;
   background-color: var(--Accet-green, #00B068);
 }
+body.darkthema .btn-load-more{
+  background-color: #1E2023;
+  color: white;
+}
 .btn-load-more:hover, 
 .btn-load-more:focus{
 color: var(--Accet-green, #00B068);
 }
-
+body.darkthema .btn-load-more:hover, 
+.btn-load-more:focus {
+  color: #14C57C;
+}
 @media  screen and (min-width: 768px){
   .my-projects{
     padding-top: 124px;
