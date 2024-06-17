@@ -105,6 +105,11 @@
   color: #00b068;
 }
 
+.hero-photo {
+  border-radius: 32px;
+  overflow: hidden;
+}
+
 /* Adaptive */
 
 @media screen and (min-device-pixel-ratio: 2),
@@ -216,7 +221,6 @@
   }
   .hero-img {
     display: block;
-    border-radius: 32px;
   }
   .hero-data-container {
     flex-direction: row;
