@@ -53,7 +53,6 @@
     color: #292929;
     position: relative;
     z-index: 2;
-    margin-bottom: 20px;
 
 }
 
@@ -167,7 +166,6 @@ ul {
         font-size: 36px;
         line-height: 1.33em;
         letter-spacing: 0.01em;
-        margin-bottom: 15px;
 
     }
 
