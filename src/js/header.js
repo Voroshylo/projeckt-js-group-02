@@ -105,74 +105,48 @@
 
 //++++++++++++++++=================================================
 
-//  Dark Thema switch
-
 console.log('start js');
 
 const storageTheme = 'onThema';
 const dataThema = {
-  colorThema: '',
+  colorThema: 'light', // стандартна тема
 };
 
-const nowThema = document.querySelector('body');
+const bodyElement = document.querySelector('body');
+const switchThemaButton = document.querySelector('#sitetheme');
+const storedData = JSON.parse(localStorage.getItem(storageTheme));
 
-// localStorage.clear();
-
-const data = JSON.parse(localStorage.getItem(storageTheme));
-
-if (data === null) {
-  console.log('localstorage is clear');
-  dataThema.colorThema = 'light';
-  nowThema.classList.add('lightthema');
+// Ініціалізація теми на основі localStorage
+if (storedData === null) {
+  console.log('localStorage порожній, встановлюємо стандартну світлу тему.');
   localStorage.setItem(storageTheme, JSON.stringify(dataThema));
+  bodyElement.classList.add('lightthema');
 } else {
-  if (data.colorThema === 'dark') {
-    nowThema.classList.add('darkthema');
-
-    const data = JSON.parse(localStorage.getItem(storageTheme));
-    console.log('localStore Thema is Dark:', data.colorThema);
-  } else {
-    nowThema.classList.add('lightthema');
-
-    const data = JSON.parse(localStorage.getItem(storageTheme));
-    console.log('localStore Thema is Light:', data.colorThema);
-  }
+  bodyElement.classList.add(storedData.colorThema === 'dark' ? 'darkthema' : 'lightthema');
+  switchThemaButton.checked = storedData.colorThema === 'dark'; // оновлення стану перемикача
+  console.log(`Тема з localStorage: ${storedData.colorThema.toUpperCase()}`);
 }
 
-// first load thema color from localStorage +++++++===============
+// Обробка перемикання теми
+switchThemaButton.addEventListener('click', () => {
+  const currentTheme = bodyElement.classList.contains('darkthema') ? 'dark' : 'light';
+  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
-const switchThema = document.querySelector('#sitetheme');
-switchThema.addEventListener('click', changeThema);
+  bodyElement.classList.remove(`${currentTheme}thema`);
+  bodyElement.classList.add(`${newTheme}thema`);
 
-export function changeThema(element) {
-  const data = JSON.parse(localStorage.getItem(storageTheme));
-  console.log('localStore Thema:', data.colorThema);
-  if (data.colorThema === 'dark') {
-    if (nowThema.classList.contains('darkthema')) {
-      nowThema.classList.remove('darkthema');
-    }
-    dataThema.colorThema = 'light';
-    localStorage.setItem(storageTheme, JSON.stringify(dataThema));
-    nowThema.classList.add('lightthema');
+  dataThema.colorThema = newTheme;
+  localStorage.setItem(storageTheme, JSON.stringify(dataThema));
 
-    const data = JSON.parse(localStorage.getItem(storageTheme));
-    console.log('localStore Thema is LIGHT:', data.colorThema);
+  console.log(`Тема з localStorage змінена на ${newTheme.toUpperCase()}`);
+});
 
-    return;
-  } else {
-    if (nowThema.classList.contains('lightthema')) {
-      nowThema.classList.remove('lightthema');
-    }
-    dataThema.colorThema = 'dark';
-    localStorage.setItem(storageTheme, JSON.stringify(dataThema));
-    nowThema.classList.add('darkthema');
-
-    const data = JSON.parse(localStorage.getItem(storageTheme));
-    console.log('localStore Thema is DARK:', data.colorThema);
-
-    return;
+// Оновлення стану перемикача при завантаженні сторінки
+document.addEventListener('DOMContentLoaded', () => {
+  if (storedData && storedData.colorThema === 'dark') {
+    switchThemaButton.checked = true;
   }
-}
+});
 
 //=====MOBILE MODAL JS=====
 
