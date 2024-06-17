@@ -68,9 +68,11 @@
 /*=====TABLET STYLES===== */
 
 @media screen and (min-width: 768px) {
-.benefits{
-padding-top: 124px;
-}
+    .benefits {
+        padding-top: 124px;
+        display: block;
+    }
+
     .benefits-title {
         font-size: 108px;
         line-height: 1.15;
@@ -82,7 +84,7 @@ padding-top: 124px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
-        column-gap: 32px;
+        gap: 32px;
     }
 
     .benefits-grid-1 {
@@ -108,6 +110,10 @@ padding-top: 124px;
     .benefits-item-title {
         font-size: 20px;
         line-height: 1.6;
+    }
+
+    .benefits-text-margin {
+        margin-bottom: 0;
     }
 }
 
@@ -167,7 +173,6 @@ padding-top: 124px;
     .benefits-list {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(1, 1fr);
-        row-gap: 32px;
     }
 
     .benefits-grid-1 {
