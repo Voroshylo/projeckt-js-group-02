@@ -5,7 +5,7 @@
   box-sizing: border-box;
   text-align: left;
   padding-bottom: 80px;
-  padding-top: 80px;
+  /* padding-top: 80px; */
 }
 
 .bio-portf {
@@ -84,7 +84,7 @@
 @media screen and (min-width: 768px) {
   .section.about {
     padding-bottom: 124px;
-    padding-top: 124px;
+    /* padding-top: 124px; */
   }
 
   .title {
@@ -181,7 +181,7 @@
   }
   .section.about {
     padding-bottom: 164px;
-    padding-top: 164px;
+    /* padding-top: 164px; */
   }
   .information-about {
     width: 488px;
