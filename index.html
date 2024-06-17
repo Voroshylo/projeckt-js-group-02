@@ -20,9 +20,9 @@
     />
     
     <script type="module" crossorigin src="/projeckt-js-group-02/commonHelpers.js"></script>
-    <link rel="modulepreload" crossorigin href="/projeckt-js-group-02/assets/vendor-655b9ae0.js">
-    <link rel="stylesheet" href="/projeckt-js-group-02/assets/vendor-82a7aa7f.css">
-    <link rel="stylesheet" href="/projeckt-js-group-02/assets/index-699633b7.css">
+    <link rel="modulepreload" crossorigin href="/projeckt-js-group-02/assets/vendor-21c62013.js">
+    <link rel="stylesheet" href="/projeckt-js-group-02/assets/vendor-ffa4f3df.css">
+    <link rel="stylesheet" href="/projeckt-js-group-02/assets/index-22a9d52b.css">
   </head>
   <body>
     <header class="home-header" id="header">
@@ -223,9 +223,11 @@
 
       <section class="section about" id="about-me">
   <div class="about-me-container container">
-    <h2 class="title">About <span class="spanabout">me</span></h2>
+    <h2 class="title" data-aos="flip-left">
+      About <span class="spanabout">me</span>
+    </h2>
     <div class="wrapper">
-      <div class="container-photo">
+      <div class="container-photo" data-aos="fade-right">
         <picture class="about-photo">
           <source
             srcset="/projeckt-js-group-02/assets/about-desk-1x-319c7827.jpg 1x, /projeckt-js-group-02/assets/about-desk-2x-a7e625e8.jpg 2x"
@@ -249,7 +251,7 @@
           />
         </picture>
       </div>
-      <div class="bio-portf">
+      <div class="bio-portf" data-aos="fade-left">
         <h3 class="title-about">BIO</h3>
         <p class="information-about">
           I'm Lloyd Jefferson, a talented programmer specializing in software
@@ -266,13 +268,13 @@
           and stressful situations with a calm demeanor, maintaining a
           consistently high quality of work. Committed to self-improvement, I
           actively engage in studying new technologies and practices to stay
-          current with the latest innovations in the field.
+          current with the <br />latest innovations in the field.
         </p>
       </div>
     </div>
     <div class="stars"></div>
 
-    <div class="wrapper-briefcase">
+    <div class="wrapper-briefcase" data-aos="zoom-in">
       <div class="about-me-briefcase">
         <h3 class="title-about education">EDUCATION</h3>
         <ul class="about-me-education-list">
@@ -299,6 +301,9 @@
     </div>
   </div>
 </section>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 
       <section class="tech-skills">
   <h2 class="visually-hidden">Tech skills</h2>
