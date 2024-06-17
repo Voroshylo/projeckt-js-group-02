@@ -1,8 +1,10 @@
 .my-projects{
     padding-top: 80px;
+    --accet-project: #008068;
 }
 .projects-title {
-color: var(--Black, #292929);
+/*color: var(--main-color, #292929);*/
+color: var(--accet-project);
 font-family: Impact;
 font-size: 52px;
 font-style: normal;
