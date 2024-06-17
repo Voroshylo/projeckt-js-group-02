@@ -32,9 +32,9 @@
 .tech-skills {
     justify-content: center;
     height: 245px;
-    overflow: hidden;
     margin-right: auto;
     margin-left: auto;
+    overflow: hidden;
 }
 
 .marquee {
@@ -54,7 +54,6 @@
     position: relative;
     z-index: 2;
     margin-bottom: 20px;
-    /* overflow: hidden; */
 
 }
 
@@ -106,19 +105,20 @@ body.darkthema .marquee_incline {
     padding: 0 20px 0 0;
 }
 
-.marquee-li {}
+.marquee-li {
+}
 
-.marquee-li-incline {}
+.marquee-li-incline {
+    overflow: hidden;
+}
 
 .marquee-li::before {
         display: inline-block;
     content: '•';
     border-radius: 2px;
-    /* background-color: var(--accet-green); */
     color: var(--accet-green);
-    width: 8px;
-    height: 8px;
-    padding: 0 20px 0 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 body.darkthema .marquee-li::before {
@@ -129,11 +129,9 @@ body.darkthema .marquee-li::before {
 .marquee-li-incline::before {
         display: inline-block;
     content: '•';
-    border-radius: 2px;
     color: var(--black);
-    width: 8px;
-    height: 8px;
-    padding: 0 20px 0 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 body.darkthema .marquee-li-incline::before {
@@ -181,7 +179,7 @@ ul {
 
 @media screen and (min-width: 1280px) {
     .marquee {
-        margin-bottom: 3px;
+        margin-bottom: 0;
     }
 
     /* .tech-skills {
