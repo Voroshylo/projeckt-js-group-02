@@ -6,6 +6,10 @@
     padding-top: 80px;
 }
 
+.benefits-icon {
+    box-sizing: unset;
+}
+
 .benefits-image {
     display: none;
 }
@@ -123,21 +127,6 @@
 
 @media screen and (min-width: 1280px) {
 
-    /* .benefits {
-        background-image: url(../img/benefits/benefits-desk.png);
-        background-repeat: no-repeat;
-        background-size: 40%;
-        background-position: top right;
-    }
-
-    @media screen and (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-        .benefits {
-            background-image: url(../img/benefits/benefits-desk-2x.png);
-        }
-    } */
-
     .benefits {
         position: relative;
         padding-top: 164px;
@@ -148,13 +137,11 @@
         position: absolute;
         /* top: 32px;
         right: 0; */
-        left: 754px;
-        bottom: 600px;
+        bottom: 500px;
     }
 
     .benefits-image {
-        left: 55%;
-        right: 32px
+        left: 57%;
     }
 
 
