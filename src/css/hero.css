@@ -254,3 +254,11 @@ body.darkthema .hero-social-link {
 body.darkthema .hero-social-list {
   background-color: #2a2d32;
 }
+
+body.darkthema .hero-social-link {
+  transition: color 0.3s ease;
+}
+
+body.darkthema .hero-social-link:hover {
+  color: #14c57c;
+}
