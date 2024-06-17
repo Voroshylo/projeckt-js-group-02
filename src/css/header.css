@@ -237,9 +237,9 @@
 #sitetheme+.theme-label {
     display: inline-block;
     position: relative;
-    width: 40px;
-    height: 20px;
-
+    width: 48px;
+    height: 24px;
+flex-shrink: 0;
     background: var(--input-silver);
     border-radius: 20px;
     cursor: pointer;
@@ -249,10 +249,11 @@
     border-radius: 50%;
     content: '';
     position: absolute;
-    top: 2px;
-    left: 1px;
-    width: 16px;
-    height: 16px;
+    top: 8%;
+ 
+    left: 2px;
+    width: 20px;
+    height: 20px;
     background-color: var(--theme-color);
 }
 
