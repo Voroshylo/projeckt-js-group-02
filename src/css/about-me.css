@@ -83,6 +83,8 @@
 
 @media screen and (min-width: 768px) {
   .section.about {
+    padding-bottom: 124px;
+    padding-top: 124px;
   }
 
   .title {
@@ -178,6 +180,8 @@
     left: 110px;
   }
   .section.about {
+    padding-bottom: 164px;
+    padding-top: 164px;
   }
   .information-about {
     width: 488px;
