@@ -27,7 +27,7 @@ const projects = [
     alt: "power-pulse-webservice",
     tech: "React, JavaScript, Node JS, Git",
     description: "power pulse webservice",
-    link: "#projects"
+    link: "https://github.com/Voroshylo/projeckt-js-group-02"
   },
   {
     imgSrc: project2,
@@ -35,7 +35,7 @@ const projects = [
     alt: "mimino-website",
     tech: "React, JavaScript, Node JS, Git",
     description: "mimino website",
-    link: "#projects"
+    link: "https://github.com/Voroshylo/projeckt-js-group-02"
   },
   {
     imgSrc: project3,
@@ -43,7 +43,7 @@ const projects = [
     alt: "vyshyvanka",
     tech: "React, JavaScript, Node JS, Git",
     description: "vyshyvanka vibes Landing Page",
-    link: "#projects"
+    link: "https://github.com/Voroshylo/projeckt-js-group-02"
   },
   {
     imgSrc: project4,
@@ -59,7 +59,7 @@ const projects = [
     alt: "wallet-webservice",
     tech: "React, JavaScript, Node JS, Git",
     description: "wallet webservice",
-    link: "#projects"
+    link: "https://github.com/Voroshylo/projeckt-js-group-02"
   },
   {
     imgSrc: project6,
@@ -67,7 +67,7 @@ const projects = [
     alt: "chego-jewelry-website",
     tech: "React, JavaScript, Node JS, Git",
     description: "chego jewelry website",
-    link: "#projects"
+    link: "https://github.com/Voroshylo/projeckt-js-group-02"
   },
   {
     imgSrc: project7,
@@ -75,7 +75,7 @@ const projects = [
     alt: "energy-flow-webservice",
     tech: "React, JavaScript, Node JS, Git",
     description: "energy flow webservice",
-    link: "#projects"
+    link: "https://github.com/Voroshylo/projeckt-js-group-02"
   },
   {
     imgSrc: project8,
@@ -83,7 +83,7 @@ const projects = [
     alt: "fruitbox-online-store",
     tech: "React, JavaScript, Node JS, Git",
     description: "fruitbox online store",
-    link: "#projects"
+    link: "https://github.com/Voroshylo/projeckt-js-group-02"
   },
   {
     imgSrc: project9,
@@ -91,7 +91,7 @@ const projects = [
     alt: "English-excellence-webservice",
     tech: "React, JavaScript, Node JS, Git",
     description: "English excellence webservice",
-    link: "#projects"
+    link: "https://github.com/Voroshylo/projeckt-js-group-02"
   },
   {
     imgSrc: project10,
@@ -99,7 +99,7 @@ const projects = [
     alt: "starlight-studio-landing-page",
     tech: "React, JavaScript, Node JS, Git",
     description: "starlight studio landing page",
-    link: "#projects"
+    link: "https://github.com/Voroshylo/projeckt-js-group-02"
   },
 ];
 const projectsPerPage = 3;

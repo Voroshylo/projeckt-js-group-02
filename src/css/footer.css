@@ -3,6 +3,9 @@
     padding-top: 40px;
     padding-bottom: 24px;
 }
+.body.darkthema .footer{
+   border-top:  1px solid var(--Light-grey, #E4E5E6);
+}
 .footer-content {
     display: flex;
     flex-direction: column;
