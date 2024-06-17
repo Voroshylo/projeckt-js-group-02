@@ -109,7 +109,6 @@ body.darkthema .marquee_incline {
 }
 
 .marquee-li-incline {
-    overflow: hidden;
 }
 
 .marquee-li::before {
