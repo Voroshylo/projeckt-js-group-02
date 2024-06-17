@@ -145,3 +145,4 @@ function openWtModal({ title, message }) {
   function inputFullString(event) {
     if (event.target.value) event.target.value = event.target.getAttribute('data-value');
   }
+

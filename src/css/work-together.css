@@ -464,3 +464,63 @@
     transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1), background 500ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
+
+body.darkthema .workword {
+  color: #f0f0f0;
+}
+
+body.darkthema .work-together-title {
+  color: #14C57C;
+}
+body.darkthema .newline {
+  color: #14C57C;
+}
+
+.darkthema .work-together-text {
+  color: #f0f0f0;
+}
+
+.darkthema .contact-icon {
+  color: #14C57C;
+}
+
+.darkthema .contact-link {
+  color: #f0f0f0;
+}
+
+.darkthema .contact-link:hover {
+  color: #14C57C;
+}
+
+.darkthema .filling-input-item {
+  color: #2A2D32;
+}
+
+.darkthema .submitbtn {
+  background-color: #14C57C;
+  color: #f0f0f0;
+}
+
+.darkthema .submitbtn:hover {
+  background-color: #009156;
+}
+
+.darkthema .work-together-modal {
+  background-color: #2A2D32;
+}
+
+.darkthema .work-together-modal-close {
+  stroke: #f0f0f0;
+}
+
+.darkthema #work-together-modal-resp-title {
+  color: #14C57C;
+}
+
+.darkthema #work-together-modal-resp-message {
+  color: #f0f0f0;
+}
+
+
+
+
