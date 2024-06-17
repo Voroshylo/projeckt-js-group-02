@@ -216,6 +216,7 @@
   }
   .hero-img {
     display: block;
+    border-radius: 32px;
   }
   .hero-data-container {
     flex-direction: row;
@@ -242,3 +243,14 @@
 }
 
 /* dark */
+
+body.darkthema .hero-title,
+body.darkthema .hero-link,
+body.darkthema .hero-text,
+body.darkthema .hero-social-link {
+  color: #f0f0f0;
+}
+
+body.darkthema .hero-social-list {
+  background-color: #2a2d32;
+}
