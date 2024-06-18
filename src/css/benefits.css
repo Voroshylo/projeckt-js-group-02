@@ -138,12 +138,9 @@
         /* top: 32px;
         right: 0; */
         bottom: 500px;
-    }
-
-    .benefits-image {
         left: 57%;
+        z-index: -1;
     }
-
 
     .benefits-container {
         position: relative;
