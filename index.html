@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/projeckt-js-group-02/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
+    <script type="module" crossorigin src="/projeckt-js-group-02/commonHelpers.js"></script>
+    <link rel="modulepreload" crossorigin href="/projeckt-js-group-02/assets/vendor-21c62013.js">
+    <link rel="stylesheet" href="/projeckt-js-group-02/assets/vendor-ffa4f3df.css">
+    <link rel="stylesheet" href="/projeckt-js-group-02/assets/index-3eb2aaee.css">
+  </head>
+  <body>
+    <header class="home-header" id="header">
+  <div class="container position-header">
+    <a class="logo-header" href="./index.html"
+      >LLOYD<span class="logo-span">JEFFERSON</span></a
+    >
+    <div class="switch-and-menu">
+      <div class="theme-site theme-site__mobile theme-toggle">
+        <input type="checkbox" id="sitetheme" name="highload" />
+        <label for="sitetheme" class="theme-label"></label>
+      </div>
+
+      <div class="menu-container">
+        <nav class="site-nav">
+          <ul class="site-nav-list">
+            <li class="site-nav-item">
+              <a class="site-nav-link" href="#about-me">About me</a>
+            </li>
+            <li class="site-nav-item">
+              <a class="site-nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="site-nav-item">
+              <a class="site-nav-link" href="#footer">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <button type="button" class="mobile-btn" data-menu-open>
+      <svg class="mobile-icon" width="32" height="32">
+        <use href="/projeckt-js-group-02/assets/sprite-4c574536.svg#icon-burger-menu" class="icon-menu"></use>
+      </svg>
+    </button>
+  </div>
+  <div class="menu">
+    <div class="div-menu">
+      <a class="logo-header logo-header-modal" href="./index.html"
+        >LLOYD<span class="logo-span">JEFFERSON</span></a
+      >
+      <button class="close-menu" type="button">
+        <svg class="icon-close" width="16" height="16">
+          <use href="/projeckt-js-group-02/assets/sprite-4c574536.svg#close" class="icon-close"></use>
+        </svg>
+      </button>
+      <nav class="nav-mob-menu">
+        <ul class="ul-menu">
+          <li class="li-menu">
+            <a class="li-nav" href="#about-me">About me</a>
+          </li>
+
+          <li class="li-menu">
+            <a class="li-nav" href="#projects">Projects</a>
+          </li>
+
+          <li class="li-menu">
+            <a class="li-nav" href="#footer">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- <div class="div-btn-mob-menu-order">
+        <a class="btn-mob-menu-order" href="#work-together">
+          Order the project
+        </a>
+      </div> -->
+    </div>
+  </div>
+</header>
+
+<!-- <div class="theme-site theme-site__mobile theme-toggle">
+                     
+            <input type="checkbox" id="sitetheme" name="highload">
+            <label for="sitetheme" class="theme-label"></label>
+                      
+        </div>  
+        </div>
+
+        
+
+<button type="button" class="menu-button" date-menu-button aria-expanded="false" >
+    <svg width="24" height="24" class="menu-button--icon">
+        <use href="./img/sprite.svg#icon-burger-menu" class="icon-menu"></use>
+        <use href="./img/sprite.svg#close" class="icon-close"></use>
+    </svg>
+</button>
+
+
+        </div>
+        -->
+
+    <main>
+      <section class="hero" id="hero">
+  <div class="hero-container container">
+    <div class="hero-title-container">
+      <h1 class="hero-title">
+        Hello, i am <span class="hero-title-part">fullstack developer</span>
+      </h1>
+      <picture class="hero-photo">
+        <source
+          srcset="/projeckt-js-group-02/assets/hero-desk-b95d6ed4.jpg 1x, /projeckt-js-group-02/assets/hero-desk-2x-34e3d151.jpg 2x"
+          media="(min-width: 1280px)"
+          type="image/png"
+        />
+        <img
+          src="/projeckt-js-group-02/assets/hero-desk-b95d6ed4.jpg"
+          alt="Developer"
+          width="592"
+          height="444"
+          class="hero-img"
+        />
+      </picture>
+    </div>
+    <div class="hero-data-container">
+      <a class="hero-link" href="#work-together">
+        <div class="hero-link-div">
+          <svg class="hero-link-icon">
+            <use href="/projeckt-js-group-02/assets/sprite-4c574536.svg#icon-ArrowHero"></use>
+          </svg>
+          Order the project
+        </div>
+      </a>
+      <a class="hero-link-rectangle" href="#work-together"></a>
+      <p class="hero-text">
+        I work with people all over the world to create
+        <span class="hero-text-part">impressive</span> and
+        <span class="hero-text-part">functional websites</span> that reflect
+        each client's unique personality.
+      </p>
+    </div>
+  </div>
+  <div class="hero-social-container">
+    <ul class="hero-social-list">
+      <li class="hero-social-list-item">
+        <a
+          class="hero-social-link"
+          href="https://www.instagram.com/goitclub/"
+          target="blank"
+          rel="noopener noreferrer nofollow"
+          >Instagram</a
+        >
+      </li>
+      <li class="hero-social-list-item">
+        <a
+          class="hero-social-link"
+          href="https://www.facebook.com/goITclub/"
+          target="blank"
+          rel="noopener noreferrer nofollow"
+          >Facebook</a
+        >
+      </li>
+      <li class="hero-social-list-item">
+        <a
+          class="hero-social-link"
+          href="https://www.linkedin.com/school/goit-start-your-career-in-it"
+          target="blank"
+          rel="noopener noreferrer nofollow"
+          >LinkedIn</a
+        >
+      </li>
+      <li class="hero-social-list-item">
+        <a
+          class="hero-social-link"
+          href="https://github.com/Voroshylo/projeckt-js-group-02"
+          target="blank"
+          rel="noopener noreferrer nofollow"
+          >GitHub</a
+        >
+      </li>
+    </ul>
+  </div>
+</section>
+
+      <section class="section about" id="about-me">
+  <div class="about-me-container container">
+    <h2 class="title" data-aos="flip-left">
+      About <span class="spanabout">me</span>
+    </h2>
+    <div class="wrapper">
+      <div class="container-photo" data-aos="fade-right">
+        <picture class="about-photo">
+          <source
+            srcset="/projeckt-js-group-02/assets/about-desk-1x-319c7827.jpg 1x, /projeckt-js-group-02/assets/about-desk-2x-a7e625e8.jpg 2x"
+            media="(min-width: 1158px)"
+          />
+          <source
+            srcset="/projeckt-js-group-02/assets/abaut-pad-b4263256.jpg 1x, /projeckt-js-group-02/assets/abaut-pad-2x-6c9553a8.jpg 2x"
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="/projeckt-js-group-02/assets/abaut-mob-b0b84eff.jpg 1x, /projeckt-js-group-02/assets/abaut-mob-2x-8b18307b.jpg 2x"
+            media="(max-width: 767px)"
+          />
+          <img
+            src="/projeckt-js-group-02/assets/abaut-mob-b0b84eff.jpg"
+            alt="It's me, hello"
+            width="320"
+            height="374"
+            class="photo-img"
+            srcset="/projeckt-js-group-02/assets/abaut-mob-b0b84eff.jpg 1x, /projeckt-js-group-02/assets/abaut-mob-2x-8b18307b.jpg 2x"
+          />
+        </picture>
+      </div>
+      <div class="bio-portf" data-aos="fade-left">
+        <h3 class="title-about">BIO</h3>
+        <p class="information-about">
+          I'm Lloyd Jefferson, a talented programmer specializing in software
+          development. My expertise spans various programming languages and
+          technologies, and I am dedicated to continually enhancing my skills. I
+          thrive on seeking unconventional and creative solutions to problems,
+          leveraging a high level of analytical skills to effectively tackle
+          even the most challenging tasks.
+        </p>
+        <p class="information-about cl">
+          Adaptable to both independent and team-oriented work, I collaborate
+          seamlessly with colleagues, exchanging ideas and finding optimal
+          solutions. My professional maturity enables me to navigate challenges
+          and stressful situations with a calm demeanor, maintaining a
+          consistently high quality of work. Committed to self-improvement, I
+          actively engage in studying new technologies and practices to stay
+          current with the <br />latest innovations in the field.
+        </p>
+      </div>
+    </div>
+    <div class="stars"></div>
+
+    <div class="wrapper-briefcase" data-aos="zoom-in">
+      <div class="about-me-briefcase">
+        <h3 class="title-about education">EDUCATION</h3>
+        <ul class="about-me-education-list">
+          <li class="about-me-item">
+            2018 - 2019 / Frontend Development Diploma, GoIT IT School, New York
+          </li>
+          <li class="about-me-item">
+            2019 - 2020 / Advanced Web Development Certificate, GoIT IT School,
+            New York
+          </li>
+          <li class="about-me-item ad">
+            2020 - 2022 / Advanced Blender Animation Techniques, Udemy
+          </li>
+        </ul>
+      </div>
+      <div class="about-role hs">
+        <h3 class="title-about role">ROLE</h3>
+        <ul class="about-me-role-list">
+          <li class="about-me-item">Frontend development</li>
+          <li class="about-me-item">HeadlessCMS, Wordpress</li>
+          <li class="about-me-item bl">Blender (enjoy)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+      <section class="tech-skills">
+  <h2 class="visually-hidden">Tech skills</h2>
+  <div class="container_tech_skills">
+    <div class="marquee">
+      <ul class="marquee-ul marquee__line">
+        <li class="marquee-li">HTML/CSS</li>
+        <li class="marquee-li">JavaScript</li>
+        <li class="marquee-li">React</li>
+        <li class="marquee-li">Node. js</li>
+        <li class="marquee-li">React Native</li>
+        <li class="marquee-li">Typescript</li>
+      </ul>
+      <ul class="marquee-ul marquee__line">
+        <li class="marquee-li">HTML/CSS</li>
+        <li class="marquee-li">JavaScript</li>
+        <li class="marquee-li">React</li>
+        <li class="marquee-li">Node. js</li>
+        <li class="marquee-li">React Native</li>
+        <li class="marquee-li">Typescript</li>
+      </ul>
+    </div>
+
+    <div class="marquee marquee_incline">
+      <ul class="marquee-ul marquee__line line_incline">
+        <li class="marquee-li-incline">HTML/CSS</li>
+        <li class="marquee-li-incline">JavaScript</li>
+        <li class="marquee-li-incline">React</li>
+        <li class="marquee-li-incline">Node. js</li>
+        <li class="marquee-li-incline">React Native</li>
+        <li class="marquee-li-incline">Typescript</li>
+      </ul>
+      <ul class="marquee-ul marquee__line line_incline">
+        <li class="marquee-li-incline">HTML/CSS</li>
+        <li class="marquee-li-incline">JavaScript</li>
+        <li class="marquee-li-incline">React</li>
+        <li class="marquee-li-incline">Node. js</li>
+        <li class="marquee-li-incline">React Native</li>
+        <li class="marquee-li-incline">Typescript</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+      <section class="my-projects" id="projects">
+  <div class="container">
+    <h2 class="projects-title">MY <span class="span-title">PROJECTS</span></h2>
+    <ul class="projects-ul"></ul>
+    <button class="btn-load-more">LOAD MORE</button>
+  </div>
+</section>
+
+      <section class="benefits">
+  <div class="container benefits-container">
+    <div class="benefits-background">
+      <img
+        srcset="/projeckt-js-group-02/assets/benefits-desk-23d72cec.png 1x, /projeckt-js-group-02/assets/benefits-desk-2x-3b5d50a0.png 2x"
+        src="/projeckt-js-group-02/assets/benefits-desk-23d72cec.png"
+        alt="photo of man"
+        width="526"
+        height="408"
+        class="benefits-image"
+      />
+    </div>
+    <h2 class="benefits-title">
+      <span class="benefits-title-span">Benefits</span> of working with me
+    </h2>
+    <ul class="benefits-list">
+      <li class="benefits-item benefits-grid-1">
+        <div class="benefits-item-container">
+          <span class="benefits-icon-container">
+            <svg class="benefits-icon" width="24" height="24">
+              <use href="/projeckt-js-group-02/assets/sprite-4c574536.svg#icon-user-Benefits"></use>
+            </svg>
+          </span>
+          <h3 class="benefits-item-title">Expertise</h3>
+          <p class="benefits-text benefits-text-margin">
+            With extensive experience in development, I have a deep
+            understanding of programming and website development.
+          </p>
+        </div>
+      </li>
+      <li class="benefits-item benefits-grid-2">
+        <div class="benefits-item-container">
+          <span class="benefits-icon-container">
+            <svg class="benefits-icon" width="24" height="24">
+              <use
+                href="/projeckt-js-group-02/assets/sprite-4c574536.svg#icon-message-chat-circle--Benefits"
+              ></use>
+            </svg>
+          </span>
+          <h3 class="benefits-item-title">Communication</h3>
+          <p class="benefits-text benefits-text-margin">
+            Understanding your needs and wants is my priority and I am always
+            available for discussions and open to corrections.
+          </p>
+        </div>
+      </li>
+      <li class="benefits-item benefits-grid-3">
+        <div class="benefits-item-container">
+          <span class="benefits-icon-container">
+            <svg class="benefits-icon" width="24" height="24">
+              <use href="/projeckt-js-group-02/assets/sprite-4c574536.svg#icon-Icon-Pensil-Benefits"></use>
+            </svg>
+          </span>
+          <h3 class="benefits-item-title">Art</h3>
+          <p class="benefits-text benefits-text-margin">
+            Thanks to my creative nature, I am ready to accept challenges and
+            help you bring your ideas to life.
+          </p>
+        </div>
+      </li>
+      <li class="benefits-item benefits-grid-4">
+        <div class="benefits-item-container">
+          <span class="benefits-icon-container">
+            <svg class="benefits-icon" width="24" height="24">
+              <use href="/projeckt-js-group-02/assets/sprite-4c574536.svg#icon-Icon-Timer-Benefits"></use>
+            </svg>
+          </span>
+          <h3 class="benefits-item-title">Urgent execution</h3>
+          <p class="benefits-text">
+            I understand how important time is to you. Ready to work quickly and
+            efficiently, without reducing the quality of work.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+      <section class="section-faq">
+  <div class="container">
+    <div class="wrapper-faq">
+      <h2 class="faq-title">
+        frequently asked <span class="faq-title-span">question</span>
+      </h2>
+      <div class="faq-desctop">
+        <ul class="faq-list accordion-container">
+          <li class="faq-item ac">
+            <div class="item-title-wrap ac-trigger">
+              <h3 class="faq-item-title ac-header">
+                What programming languages ​​are most often used in your
+                project?
+              </h3>
+              <div class="faq-item-arrow">
+                <svg class="faq-scroll-button-icon" width="24" height="24">
+                  <use href="/projeckt-js-group-02/assets/sprite-4c574536.svg#icon-Arrow-Up-Quetions"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="faq-item-wrapper ac-panel">
+              <p class="faq-item-text ac-text">
+                In the field of web development, there are various technologies
+                and programming languages. Typically, this includes a
+                combination of frontend (client side) and backend (server side)
+                languages.
+              </p>
+            </div>
+          </li>
+
+          <li class="faq-item ac">
+            <div class="item-title-wrap ac-trigger">
+              <h3 class="faq-item-title ac-header">
+                What are the deadlines for the project?
+              </h3>
+              <div class="faq-item-arrow">
+                <svg class="faq-scroll-button-icon" width="24" height="24">
+                  <use href="/projeckt-js-group-02/assets/sprite-4c574536.svg#icon-Arrow-Down-Quetions"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="faq-item-wrapper ac-panel">
+              <p class="faq-item-text ac-text">
+                The terms of project implementation depend to a large extent on
+                a number of factors, such as the scope of the project, its
+                complexity, and the availability of resources. Determining exact
+                deadlines is a difficult task, and it usually occurs during the
+                planning phase of the project.
+              </p>
+            </div>
+          </li>
+
+          <li class="faq-item ac">
+            <div class="item-title-wrap ac-trigger">
+              <h3 class="faq-item-title ac-header">
+                What payment methods do you accept?
+              </h3>
+              <div class="faq-item-arrow">
+                <svg class="faq-scroll-button-icon" width="32" height="32">
+                  <use href="/projeckt-js-group-02/assets/sprite-4c574536.svg#icon-Arrow-Down-Quetions"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="faq-item-wrapper ac-panel">
+              <p class="faq-item-text ac-text">
+                Payment through credit and debit cards such as Visa, MasterCard,
+                specialized electronic payment systems such as PayPal, as well
+                aspayments in cryptocurrencies such as Bitcoin, Ethereum and
+                others.
+              </p>
+            </div>
+          </li>
+
+          <li class="faq-item ac">
+            <div class="item-title-wrap ac-trigger">
+              <h3 class="faq-item-title ac-header">How can I contact you?</h3>
+              <div class="faq-item-arrow">
+                <svg class="faq-scroll-button-icon" width="32" height="32">
+                  <use href="/projeckt-js-group-02/assets/sprite-4c574536.svg#icon-Arrow-Down-Quetions"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="faq-item-wrapper ac-panel">
+              <p class="faq-item-text ac-text">
+                In the field of web development, there are various technologies
+                and programming languages. Typically, this includes a
+                combination of frontend (client side) and backend (server side)
+                languages.
+              </p>
+            </div>
+          </li>
+
+          <li class="faq-item ac">
+            <div class="item-title-wrap ac-trigger">
+              <h3 class="faq-item-title ac-header">
+                Do you provide advice or support?
+              </h3>
+              <div class="faq-item-arrow">
+                <svg class="faq-scroll-button-icon" width="32" height="32">
+                  <use href="/projeckt-js-group-02/assets/sprite-4c574536.svg#icon-Arrow-Down-Quetions"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="faq-item-wrapper ac-panel">
+              <p class="faq-item-text ac-text">
+                The terms of project implementation depend to a large extent on
+                a number of factors, such as the scope of the project, its
+                complexity, and the availability of resources. Determining exact
+                deadlines is a difficult task, and it usually occurs during the
+                planning phase of the project.
+              </p>
+            </div>
+          </li>
+
+          <li class="faq-item ac">
+            <div class="item-title-wrap ac-trigger">
+              <h3 class="faq-item-title ac-header">
+                What does the process of developing a software product look like
+                from idea to implementation?
+              </h3>
+              <div class="faq-item-arrow">
+                <svg class="faq-scroll-button-icon" width="32" height="32">
+                  <use href="/projeckt-js-group-02/assets/sprite-4c574536.svg#icon-Arrow-Down-Quetions"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="faq-item-wrapper ac-panel">
+              <p class="faq-item-text ac-text">
+                Payment through credit and debit cards such as Visa, MasterCard,
+                specialized electronic payment systems such as PayPal, as well
+                as payments in cryptocurrencies such as Bitcoin, Ethereum and
+                others.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="reviews" id="reviews-id">
+  <div class="container review-container">
+    <h2 class="review-title">Reviews</h2>
+
+    <!-- Swiper -->
+    <div class="reviews-swiper">
+      <ul class="swiper-wrapper review-list" id="reviews-list-id"></ul>
+      <div class="review-arrow-nav">
+        <div class="button-prev">
+          <svg class="review-icon-back" width="24" height="24">
+            <use href="/projeckt-js-group-02/assets/sprite-4c574536.svg#icon-arrow-narrow-left-REVIEWS"></use>
+          </svg>
+        </div>
+        <div class="button-next">
+          <svg class="review-icon-next" width="24" height="24">
+            <use href="/projeckt-js-group-02/assets/sprite-4c574536.svg#icon-arrow-narrow-right-Reviews"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="work-together" id="work-together">
+  <div class="container container1">
+    <div class="left-column">
+      <h2 class="work-together-title">
+        LET'S <span class="workword">WORK </span
+        ><span class="newline">TOGETHER</span>
+      </h2>
+      <h3 class="work-together-text">
+        Contact me to transform your ideas into exceptional solutions.
+      </h3>
+      <ul class="contacts-list">
+        <li class="contact-item">
+          <svg class="contact-icon" width="24" height="24">
+            <use href="/projeckt-js-group-02/assets/sprite-4c574536.svg#icon-phone-lets-work-together"></use>
+          </svg>
+          <a class="contact-link" href="tel:+380904567890">+38 090 456 78 90</a>
+        </li>
+        <li class="contact-item">
+          <svg class="contact-icon" width="24" height="24">
+            <use href="/projeckt-js-group-02/assets/sprite-4c574536.svg#icon-mail-lets-work-together"></use>
+          </svg>
+          <a class="contact-link" href="mailto:lloydjefferson@gmail.com">
+            lloydjefferson@gmail.com</a
+          >
+        </li>
+        <li class="contact-item">
+          <svg class="contact-icon" width="24" height="24">
+            <use href="/projeckt-js-group-02/assets/sprite-4c574536.svg#icon-location-lets-work-together"></use>
+          </svg>
+          <a
+            class="contact-link"
+            href="https://www.google.com/maps/search/?api=1&query=USA,+New+York"
+            target="_blank"
+          >
+            USA, New York</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="right-column">
+      <form id="work-together-form" class="filling-form" autocomplete="off">
+        <div class="filling-input-item">
+          <input
+            class="filling-input"
+            type="email"
+            name="email"
+            pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+            placeholder="Your email*"
+            required
+          />
+          <p class="filling-result-msg"></p>
+        </div>
+        <div class="filling-input-item">
+          <input
+            class="filling-input2"
+            type="text"
+            name="comment"
+            pattern="[\S\s]+[\S]+"
+            placeholder="Message"
+            data-value
+            required
+          />
+        </div>
+        <button class="submitbtn" type="submit">SEND MESSAGE</button>
+      </form>
+    </div>
+  </div>
+</section>
+<div class="work-together-modal-wrapper">
+  <div class="container work-together-modalcontainer">
+    <div class="work-together-modal">
+      <button class="work-together-modal-close" type="button">
+        <svg
+          class="work-together-close-icon"
+          width="24"
+          height="24"
+          aria-label="close"
+        >
+          <use href="/projeckt-js-group-02/assets/sprite-4c574536.svg#close"></use>
+        </svg>
+      </button>
+      <ul class="work-together-modal-list">
+        <li class="work-together-modal-title">
+          <h2 id="work-together-modal-resp-title"></h2>
+        </li>
+        <li class="work-together-modal-text">
+          <p id="work-together-modal-resp-message"></p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+    </main>
+    <footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer-content">
+      <a href="./footer.html" class="footer-logo"
+        >LLOYD<span class="span">JEFFERSON.</span></a
+      >
+      <ul class="footer-list">
+        <li class="footer-line">
+          <a
+            class="footer-link"
+            href="https://www.instagram.com/goitclub/"
+            target="_blank"
+            >Instagram</a
+          >
+        </li>
+        <li class="footer-line">
+          <a
+            class="footer-link"
+            href="https://www.facebook.com/goITclub/"
+            target="_blank"
+            >Facebook</a
+          >
+        </li>
+        <li class="footer-line">
+          <a
+            class="footer-link"
+            href="https://www.linkedin.com/school/goit-start-your-career-in-it"
+            target="_blank"
+            >Linkedin</a
+          >
+        </li>
+        <li class="footer-line">
+          <a
+            class="footer-link"
+            href="https://github.com/Voroshylo/projeckt-js-group-02/"
+            target="_blank"
+            >GitHub</a
+          >
+        </li>
+      </ul>
+    </div>
+    <p class="footer-text">© Copyright 2024. Made by LloydJefferson</p>
+  </div>
+</footer>
+
+    
+    
+    
+    
+    
+    
+  </body>
+</html>
