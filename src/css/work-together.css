@@ -338,6 +338,10 @@
 @media only screen and (min-width: 1280px) {
 .work-together{
   padding-bottom: 164px;
+  /*margin-bottom: 124px 
+  margin-top: 124px;*/
+  /*max-width: 768px;
+  max-width: 335px;*/
 }
   .container1 {
     display: flex;
@@ -427,8 +431,8 @@
   #work-together-form {
     position: relative;
     /*margin-top: 455px;*/
-    /*margin-top: 60px;
-    margin-top: 40px;*/
+    /*margin-top: 60px;*/
+    /*margin-top: 40px;*/
   }
 
   .filling-input-item {
