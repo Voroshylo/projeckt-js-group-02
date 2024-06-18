@@ -518,8 +518,14 @@ body.darkthema .newline {
   background-color: #2A2D32;
 }
 
-.darkthema .work-together-modal-close {
-  stroke: #f0f0f0;
+body.darkthema .work-together-modal-close {
+  fill: none;
+  stroke: var(--main-color);
+}
+
+body.darkthema .work-together-close-icon {
+  fill: #f0f0f0;
+  stroke: var(--main-color);
 }
 
 .darkthema #work-together-modal-resp-title {
