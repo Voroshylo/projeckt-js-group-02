@@ -1,0 +1,250 @@
+.reviews {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  display: block;
+  box-sizing: border-box;
+  padding-top: 80px;
+}
+
+.review-container {
+  display: flex;
+
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.review-title {
+  font-family: Impact, sans-serif;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1.23;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#reviews-list-id {
+  display: flex;
+  /* Встановлює flex-контейнер */
+  padding: 0;
+  /* Внутрішні відступи відсутні */
+  margin: 0;
+  /* Зовнішні відступи відсутні */
+  list-style: none;
+  /* Відміняє маркери списку для <ul> або <ol> */
+  justify-content: space-around;
+  box-sizing: border-box;
+}
+
+.review-section-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  margin-left: 16px;
+}
+
+.reviews-swiper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.swiper-wrapper {
+  align-items: center;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  background-color: #797979;
+  box-sizing: border-box;
+  flex-direction: column;
+  width: auto;
+}
+body.darkthema .swiper-slide{
+  background-color: var(--bg-silver);
+}
+body.darkthema .review-section-text{
+  color: #f0f0f0;
+}
+body.darkthema .review-avatar-text{
+  color: #f0f0f0;
+}
+body.darkthema .review-section-title {
+  color: #f0f0f0;
+}
+.review-arrow-nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-prev,
+.button-next {
+  display: flex;
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid rgba(41, 41, 41, 0.30);
+  gap: 10px;
+}
+
+.review-list-item {
+  border-radius: 16px;
+  background: #E4E5E6;
+  padding: 32px;
+  /* min-height: 296px; */
+  width: 320px;
+  overflow: hidden;
+  flex: 1 0 auto;
+  /* Адаптивна ширина */
+  box-sizing: border-box;
+}
+
+.review-section-text {
+  color: #292929;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+}
+
+.review-section-text {
+  color: #292929;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  align-self: stretch;
+}
+
+.review-avatar-text {
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.review-section-img {
+  border-radius: 50%;
+}
+
+.review-section-img:hover {
+  /* transform: scale(1.05); */
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.review-section-title {
+  color: #292929;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+}
+
+.review-arrow-nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.review-icon-back,
+.review-icon-next {
+  fill: none;
+  stroke: black;
+
+}
+body.darkthema .review-icon-back,
+.review-icon-next{
+  fill: none;
+  stroke: var(--main-color);
+}
+/* Навігаційні стрілки */
+.review-arrow-nav .button-prev,
+.review-arrow-nav .button-next {
+  border-radius: 8px;
+  border: 1px solid rgba(41, 41, 41, 0.30);
+  border-radius: 20%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.button-prev,
+.button-next {
+  border-radius: 8px;
+  border: 1px solid rgba(41, 41, 41, 0.30);
+  background-color: transparent;
+  background-color: transparent;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-prev.disabled,
+.button-next.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  /* Дезактивація подій */
+}
+
+.review-arrow-nav {
+  display: flex;
+  flex-direction: row;
+  column-gap: 16px;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+
+@media screen and (min-width: 768px) {
+
+  .reviews {
+    padding-top: 124px;
+  }
+
+  .review-list-item {
+    width: 704px !important;
+    height: 224px !important;
+    margin-right: 0 !important;
+  }
+
+  #reviews-list-id {
+    gap: 32px;
+  }
+
+  .review-title {
+    font-size: 108px;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+
+  .reviews {
+    padding-top: 164px;
+  }
+
+  .review-list-item {
+    width: 592px !important;
+  }
+
+  #reviews-list-id {
+    gap: 32px;
+  }
+}

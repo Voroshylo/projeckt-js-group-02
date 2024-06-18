@@ -1,0 +1,217 @@
+.about-me-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+}
+.section.about {
+  padding-bottom: 80px;
+  /* padding-top: 80px; */
+}
+.bio-portf {
+  margin-top: 40px;
+}
+.title {
+  text-align: left;
+  font-family: Impact;
+  font-size: 52px;
+  line-height: 64px;
+  letter-spacing: 1.8;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+.spanabout {
+  color: #00b068;
+}
+.about-me-briefcase {
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+.about-me-item.ad {
+  margin-bottom: 0px;
+}
+
+.about-photo {
+  display: inline-block;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.title-about {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 40px; /* 125% */
+  letter-spacing: 0.5px;
+  margin-bottom: 32px;
+}
+
+.information-about {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+.information-about:not(:last-child) {
+  margin-bottom: 24px;
+}
+.information-about.cl {
+  margin-bottom: 0;
+}
+
+.about-me-item {
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  padding-left: 10px;
+}
+
+.about-me-item.bl {
+  margin-bottom: 0px;
+}
+.about-me-item::before {
+  content: '•';
+  color: #00b068;
+  margin-right: 8px;
+}
+
+.about-me-briefcase,
+.about-role {
+  width: 320px;
+}
+
+@media screen and (min-width: 768px) {
+  .section.about {
+    padding-bottom: 124px;
+    /* padding-top: 124px; */
+  }
+
+  .title {
+    font-size: 108px;
+    line-height: 1.15;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+  }
+
+  .bio-portf {
+    position: relative;
+    margin-top: 0;
+  }
+  .about-me-briefcase {
+    margin-top: 0;
+  }
+  .bio-portf:after {
+    background: url(../img/about-me/decor-bg-2.png);
+    background-repeat: no-repeat;
+    content: '';
+    position: absolute;
+    bottom: -120px;
+    width: 333px;
+    height: 226px;
+    background-size: cover;
+    z-index: -1;
+  }
+
+  .title-about {
+    font-size: 36px;
+    letter-spacing: 0.5px;
+    line-height: 48px;
+    text-align: start;
+    margin-bottom: 32px;
+  }
+  .title-about.role {
+    margin-top: 0px;
+  }
+  .information-about {
+    margin-bottom: 24px;
+    width: 336px;
+  }
+  .wrapper {
+    display: flex;
+    margin-top: 40px;
+    gap: 32px;
+    margin-bottom: 60px;
+  }
+  .about-photo {
+    margin-top: 408px;
+  }
+  .title-about.education {
+    margin-top: 0;
+  }
+  .wrapper-briefcase {
+    display: flex;
+    gap: 32px;
+  }
+  .about-me-briefcase,
+  .about-role {
+    width: 336px;
+    margin-bottom: 0;
+  }
+  .photo-back {
+    display: none;
+  }
+  .about-me-item {
+    margin-bottom: 16px;
+  }
+  .about-me-item.ad {
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .wrapper {
+    gap: 136px;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: end;
+  }
+  .bio-portf {
+    position: relative;
+    margin-top: 0;
+  }
+
+  .bio-portf:after {
+    content: '';
+    bottom: -20px;
+    width: 380px;
+    height: 258px;
+    left: 110px;
+  }
+  .section.about {
+    padding-bottom: 164px;
+    /* padding-top: 164px; */
+  }
+  .information-about {
+    width: 488px;
+    margin-bottom: 0px;
+  }
+  .about-photo {
+    border-radius: 16px;
+    overflow: hidden;
+    margin-top: 312px;
+  }
+  .about-photo img {
+    border-radius: 16px;
+  }
+
+  .about-me-briefcase {
+  }
+  .about-role {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .wrapper-briefcase {
+    display: flex;
+    justify-content: center;
+    gap: 186px;
+  }
+
+  .photo-img {
+    width: 384px;
+  }
+}

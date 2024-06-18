@@ -1,0 +1,240 @@
+.my-projects{
+    padding-top: 80px;
+}
+.projects-title {
+color: var(--main-color, #292929);
+font-family: Impact;
+font-size: 52px;
+font-style: normal;
+font-weight: 400;
+line-height: 64px;
+letter-spacing: 1.8px;
+text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+body.darkthema .projects-title {
+    color: white;
+}
+.span-title{
+color: var(--Accet-green, #00B068);
+font-family: Impact;
+font-size: 52px;
+font-style: normal;
+font-weight: 400;
+line-height: 64px;
+letter-spacing: 1.8px;
+text-transform: uppercase;
+}
+
+.projects-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+.projects-li {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+}
+.projects-img {
+  width: 100%;
+border-radius: 16px;
+transition: transform 0.3s ease-in-out;
+}
+
+.projects-img:hover {
+  transform: scale(1.05);
+}
+
+.projects-h {
+  color: var(--Black, #292929);
+font-family: Poppins;
+font-size: 16px;
+font-weight: 300;
+line-height: 24px; /* 150% */
+letter-spacing: 0.5px;
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+body.darkthema .projects-h{
+  color: white;
+}
+.div-p-a{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.projects-p {
+  color: var(--Black, #292929);
+font-family: Poppins;
+font-size: 32px;
+font-weight: 500;
+line-height: 40px; /* 125% */
+letter-spacing: 0.5px;
+text-transform: uppercase;
+}
+body.darkthema .projects-p{
+  color: white;
+}
+.projects-btn {
+      display: flex;
+    align-items: center;
+    justify-content: center;
+  width: 125px;
+  height: 48px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  margin-left: auto;
+  background: var(--Light-grey, #E4E5E6);
+  border: none;
+  cursor: pointer;
+  color: var(--Black, #292929);
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 150% */
+letter-spacing: 0.5px;
+transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1), 
+background 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+body.darkthema .projects-btn{
+  background-color: #2A2D32;
+  color: white;
+}
+.btn-projects-icon{
+  margin-left: 12px;
+
+}
+.projects-btn:hover, 
+.projects-btn:focus {
+background: #BBB;
+}
+body.darkthema .projects-btn:hover, 
+.projects-btn:focus{
+ background-color:  #3B3F45;
+ color: white;
+}
+.btn-load-more{
+  width: 154px;
+  height: 52px;
+  margin: 0 auto;
+   margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 12px 24px;
+  border: none;
+  background-color: white;
+  color: #292929;
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px; /* 155.556% */
+letter-spacing: 0.5px;
+text-transform: uppercase;
+transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1),
+background 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-load-more::after {
+  content: "";
+  position: absolute;
+  bottom: 8px; /* Відстань від нижнього краю кнопки */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 118px;
+  height: 2px;
+  background-color: var(--Accet-green, #00B068);
+}
+body.darkthema .btn-load-more{
+  background-color: #1E2023;
+  color: white;
+}
+.btn-load-more:hover, 
+.btn-load-more:focus{
+color: var(--Accet-green, #00B068);
+}
+body.darkthema .btn-load-more:hover, 
+.btn-load-more:focus {
+  color: #14C57C;
+}
+@media  screen and (min-width: 768px){
+  .my-projects{
+    padding-top: 124px;
+}
+
+  .projects-title{
+    text-align: center;
+font-size: 108px;
+line-height: 124px; /* 114.815% */
+margin-bottom: 60px;
+  }
+.span-title {
+font-size: 108px;
+line-height: 124px;
+}
+.projects-ul {
+  gap: 60px;
+}
+.projects-li {
+  max-width: 704px;
+}
+.projects-img {
+  border-radius: 24px;
+width: 704px;
+
+}
+
+.projects-h {
+      margin-top: 16px;
+    margin-bottom: 20px;
+}
+.div-p-a {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: unset;
+}
+.projects-p {
+/* Desktop-Tablet/H3 */
+font-size: 36px;
+font-weight: 500;
+line-height: 48px; /* 133.333% */
+letter-spacing: 0.5px;
+margin-bottom: unset;
+max-width: 547px;
+}
+
+.btn-load-more{
+  width: 165px;
+  height: 56px;
+  margin-top: 60px;
+}
+}
+@media  screen and (min-width: 1280px){
+  .my-projects{
+    padding-top: 164px;
+}
+  .projects-title{
+    margin-bottom: 80px;
+  }
+.projects-ul {
+  gap: 80px;
+}
+
+.projects-p {
+  max-width: 763px;
+
+}
+
+.btn-load-more{
+
+  margin-top: 80px;
+}
+}
