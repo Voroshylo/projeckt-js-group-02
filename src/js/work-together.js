@@ -80,6 +80,8 @@ function openWtModal({ title, message }) {
     wtGlobal.wtModalRespTitle.textContent = title;
     wtGlobal.wtModalRespMessage.textContent = message;
     wtGlobal.wtModal.classList.add('IsOpen');
+    wtGlobal.wtModal.addEventListener('click', closeWtModal);
+    window.addEventListener('keydown', closeWtModal);
   }
   
   function closeWtModal(event) {
@@ -90,6 +92,8 @@ function openWtModal({ title, message }) {
     ) {
       wtGlobal.wtModal.classList.remove('IsOpen');
       wtGlobal.wtResultMsg.textContent = '';
+      wtGlobal.wtModal.removeEventListener('click', closeWtModal);
+      window.removeEventListener('keydown', closeWtModal);
     }
   }
   
