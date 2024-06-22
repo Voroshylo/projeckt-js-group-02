@@ -3,13 +3,10 @@ import 'swiper/swiper-bundle.css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import { Navigation, Keyboard, Scrollbar } from 'swiper/modules';
-// import project10Retina from `./img/my-projeckts/10-2x.jpg`;
-// import spriteSvg from `./img/sprite.svg`;
 
 // Ініціалізація Swiper
 const swiper = new Swiper('.reviews-swiper', {
   direction: 'horizontal',
- 
   loop: false,
   navigation: {
     nextEl: '.button-next',
@@ -23,17 +20,14 @@ const swiper = new Swiper('.reviews-swiper', {
   slidesPerView: 2,
   spaceBetween: 32,
   breakpoints: {
-    // when window width is >= 320px
     320: {
       slidesPerView: 1,
       spaceBetween: 32,
     },
-    // when window width is >= 768px
     768: {
       slidesPerView: 1,
       spaceBetween: 32,
     },
-    // when window width is >= 1280px
     1280: {
       slidesPerView: 2,
       spaceBetween: 32,
@@ -42,11 +36,9 @@ const swiper = new Swiper('.reviews-swiper', {
   effect: 'creative',
   creativeEffect: {
     prev: {
-      // will set `translateZ(-400px)` on previous slides
       translate: [0, 0, -400],
     },
     next: {
-      // will set `translateX(100%)` on next slides
       translate: ['100%', 0, 0],
     },
   },
@@ -56,45 +48,44 @@ const swiper = new Swiper('.reviews-swiper', {
 function showError(message) {
   iziToast.error({
     title: 'Error',
-    message: message,
+    message,
   });
 }
 
-function cardTemplate(review) {
-  return `<li class="swiper-slide review-list-item" id="list-item-id">
-          <p class="review-section-text">${review.review}</p>
-          <div class="review-avatar-text">
+function cardTemplate({ review, avatar_url, author }) {
+  return `
+    <li class="swiper-slide review-list-item" id="list-item-id">
+      <p class="review-section-text">${review}</p>
+      <div class="review-avatar-text">
         <img
-        srcset="${review.avatar_url}"
-        class="review-section-img"
-        src="${review.avatar_url}"
-        alt="Avatar"
-        width="40"
-        height="40"/>
-            <h3 class="review-section-title">${review.author}</h3>
-          </div>
-        </li>`;
+          srcset="${avatar_url}"
+          class="review-section-img"
+          src="${avatar_url}"
+          alt="Avatar"
+          width="40"
+          height="40"
+        />
+        <h3 class="review-section-title">${author}</h3>
+      </div>
+    </li>`;
 }
 
 function cardsTemplate(reviews) {
   return reviews.map(cardTemplate).join('');
 }
+
 function renderReviews(reviews) {
   const reviewList = document.getElementById('reviews-list-id');
-  const markup = cardsTemplate(reviews);
-  reviewList.innerHTML = markup;
+  reviewList.innerHTML = cardsTemplate(reviews);
   swiper.update();
 }
 
 // Функція для отримання відгуків з бекенду
 async function fetchReviews() {
   try {
-    const response = await fetch(
-      'https://portfolio-js.b.goit.study/api/reviews'
-    );
-    if (!response.ok) {
-      throw new Error('Failed to fetch reviews');
-    }
+    const response = await fetch('https://portfolio-js.b.goit.study/api/reviews');
+    if (!response.ok) throw new Error('Failed to fetch reviews');
+
     const data = await response.json();
     if (data && data.length > 0) {
       renderReviews(data);
@@ -112,29 +103,17 @@ async function fetchReviews() {
 function updateNavigationButtons() {
   const prevButton = document.querySelector('.button-prev');
   const nextButton = document.querySelector('.button-next');
-  // Перевірка чи це перший слайд
-  if (swiper.isBeginning) {
-    prevButton.classList.add('disabled');
-  } else {
-    prevButton.classList.remove('disabled');
-  }
-  // Перевірка чи це останній слайд
-  if (swiper.isEnd) {
-    nextButton.classList.add('disabled');
-  } else {
-    nextButton.classList.remove('disabled');
-  }
+  
+  prevButton.classList.toggle('disabled', swiper.isBeginning);
+  nextButton.classList.toggle('disabled', swiper.isEnd);
 }
-// Додаємо обробники подій для оновлення стану кнопок при зміні слайду
-swiper.on('slideChange', updateNavigationButtons);
 
-// Додаємо обробники подій для оновлення стану кнопок при ініціалізації
+// Додаємо обробники подій для оновлення стану кнопок при зміні слайду та ініціалізації
+swiper.on('slideChange', updateNavigationButtons);
 swiper.on('init', updateNavigationButtons);
 
 // Ініціалізація Swiper (якщо ви не використовуєте автозапуск)
 swiper.init();
-
-
 
 // Завантаження відгуків при завантаженні сторінки
 document.addEventListener('DOMContentLoaded', fetchReviews);

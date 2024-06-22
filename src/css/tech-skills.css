@@ -79,7 +79,7 @@ body.darkthema .marquee_incline {
     display: flex;
 }
 
-.inner_incline {}
+
 
 .marquee__line {
     flex-shrink: 0;
@@ -104,11 +104,6 @@ body.darkthema .marquee_incline {
     padding: 0 20px 0 0;
 }
 
-.marquee-li {
-}
-
-.marquee-li-incline {
-}
 
 .marquee-li::before {
         display: inline-block;

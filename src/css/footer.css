@@ -38,8 +38,7 @@ text-transform: uppercase;
     margin-top: 32px;
     margin-bottom: 40px;
 }
-.footer-line {
-}
+
 .footer-link {
     font-family: Poppins;
 font-size: 16px;
@@ -73,19 +72,13 @@ letter-spacing: 0.5px;
     display: flex;
     
 }
-.footer-logo {
-}
-.span {
-}
+
 .footer-list {
     display: flex;
     gap: 40px;
     flex-direction: row;
 }
-.footer-line {
-}
-.footer-link {
-}
+
 .footer-text {
         width: auto;
     text-align: right;
@@ -100,18 +93,13 @@ letter-spacing: 0.5px;
 .footer-logo {
     text-align: left;
 }
-.span {
-}
+
 .footer-list {
                 display: flex;
             gap: 40px;
             margin: 0;
 }
-.footer-line {
-}
-.footer-link {
 
-}
 .footer-text {
     width: auto;
     text-align: right;

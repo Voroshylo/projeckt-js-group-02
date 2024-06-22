@@ -324,17 +324,6 @@
 
 }
 
-.work-together-modal-title {
-  /*padding-top: 64px ;
-  padding-left: 40px;
-  padding-right: 40px;*/
-}
-
-.work-together-modal-text {
-  /*padding-top: 16px;
-  padding-left: 40px;
-  padding-right: 40px;*/
-}
 }
 
 @media only screen and (min-width: 1280px) {
@@ -378,15 +367,7 @@
     }
   }
 
-  .work-together {
-    /*margin-bottom: 124px;
-    margin-top: 124px;
-    max-width: 768px;
-    max-width: 335px;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;*/
-  }
+
 
   .work-together-title {
     margin-top: 0;
@@ -425,9 +406,7 @@
     /*margin-bottom: 16px;*/
   }
 
-  .contact-link {
-    /*width: 154px;*/
-  }
+
 
   #work-together-form {
     position: relative;
@@ -537,7 +516,3 @@ body.darkthema .work-together-close-icon {
 .darkthema #work-together-modal-resp-message {
   color: #f0f0f0;
 }
-
-
-
-

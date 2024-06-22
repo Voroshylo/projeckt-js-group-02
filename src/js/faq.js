@@ -8,21 +8,17 @@ const accordion = new Accordion('.accordion-container', {
   openOnInit: [0],
 });
 
-const changeArrovSvg = event => {
+faqListEl.addEventListener('click', event => {
   const itemWrapEL = event.target.closest('.ac-trigger');
-  if (!itemWrapEL) {
-    return;
-  }
+  if (!itemWrapEL) return;
 
   const faqItemEl = itemWrapEL.closest('.ac');
-
-  const isActive = faqItemEl.classList.contains('is-active');
-
   const itemArrowSvgEL = itemWrapEL.querySelector('.faq-scroll-button-icon');
 
+  if (!faqItemEl || !itemArrowSvgEL) return;
+
+  const isActive = faqItemEl.classList.contains('is-active');
   const svgID = isActive ? '#icon-Arrow-Up-Quetions' : '#icon-Arrow-Down-Quetions';
 
   itemArrowSvgEL.innerHTML = `<use href="${spriteSvg}${svgID}"></use>`;
-};
-
-faqListEl.addEventListener('click', changeArrovSvg);
+});
