@@ -10,6 +10,9 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import { Navigation, Keyboard, Scrollbar } from 'swiper/modules';
 
+// Збереження імпортованих зображень в об'єкт
+const reviewImages = [review1, review2, review3, review4, review5, review6];
+
 // Ініціалізація Swiper
 const swiper = new Swiper('.reviews-swiper', {
   direction: 'horizontal',
@@ -58,15 +61,17 @@ function showError(message) {
   });
 }
 
-function cardTemplate({ review, avatar_url, author }) {
+function cardTemplate({ review, avatar_url, author }, index) {
+  // Використовуємо імпортовані зображення за індексом
+  const image = reviewImages[index % reviewImages.length];
   return `
     <li class="swiper-slide review-list-item" id="list-item-id">
       <p class="review-section-text">${review}</p>
       <div class="review-avatar-text">
         <img
-          srcset="${review1}"
+          srcset="${image}"
           class="review-section-img"
-          src="${review1}"
+          src="${image}"
           alt="Avatar"
           width="40"
           height="40"
@@ -77,7 +82,7 @@ function cardTemplate({ review, avatar_url, author }) {
 }
 
 function cardsTemplate(reviews) {
-  return reviews.map(cardTemplate).join('');
+  return reviews.map((review, index) => cardTemplate(review, index)).join('');
 }
 
 function renderReviews(reviews) {
