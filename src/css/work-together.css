@@ -188,7 +188,7 @@
 }
 
 .work-together-close-icon{
- 
+ pointer-events: none;
   stroke: #292929;
 }
 
