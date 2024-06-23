@@ -237,13 +237,12 @@
  } 
 
   .work-together{
-    margin-bottom: 124px;
-    margin-top: 124px;
+    padding-top: 124px;
+    padding-bottom: 124px;
     max-width: 768px;
   }
 
   .work-together-title{
-    margin-top: 124px;
     text-align: left;
     font-size: 108px;
     line-height: 1.11;
