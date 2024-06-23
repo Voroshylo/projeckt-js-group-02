@@ -1,3 +1,9 @@
+import review1 from '../img/reviews/1.jpg';
+import review2 from '../img/reviews/2.jpg';
+import review3 from '../img/reviews/3.jpg';
+import review4 from '../img/reviews/4.jpg';
+import review5 from '../img/reviews/5.jpg';
+import review6 from '../img/reviews/6.jpg';
 import Swiper from 'swiper';
 import 'swiper/swiper-bundle.css';
 import iziToast from 'izitoast';
@@ -58,9 +64,9 @@ function cardTemplate({ review, avatar_url, author }) {
       <p class="review-section-text">${review}</p>
       <div class="review-avatar-text">
         <img
-          srcset="${avatar_url}"
+          srcset="${review1}"
           class="review-section-img"
-          src="${avatar_url}"
+          src="${review1}"
           alt="Avatar"
           width="40"
           height="40"
